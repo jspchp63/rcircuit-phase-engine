@@ -5,7 +5,7 @@ This repository provides the minimal public engine, experiments, and architectur
 
 ---
 
-## 1. What RCIRCUIT Solves
+## 1.What RCIRCUIT Solves (Why Phase > FLOPS)
 Modern GPUs hit four physical limits:
 • Heat (thermal saturation)  
 • Power density (the energy wall)  
