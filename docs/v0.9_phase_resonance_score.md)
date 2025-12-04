@@ -1,0 +1,90 @@
+# RCIRCUIT v0.9 — Phase Stability Threshold Detector (Skeleton)
+
+This document defines the minimal structure for detecting the point where
+phase propagation becomes unstable under accumulated Δsignal interactions.
+
+## 1. Purpose
+Identify the **stability → instability transition boundary** by tracking:
+- phase variance
+- Δsignal accumulation rate
+- coherence drift
+- noise interference sensitivity
+
+This threshold is required for future v1.0 stability guarantees.
+
+---
+
+## 2. Core Concepts
+
+### (1) Stability Metric (S)
+A simple placeholder formula:
+
+S = 1 / (1 + |phase_variance| + noise_gain)
+
+
+When **S < threshold**, RCIRCUIT enters instability.
+
+---
+
+### (2) Drift Accumulator (D)
+Tracks slow, invisible divergence in phase alignment.
+
+D = Σ (Δsignal * local_susceptibility)
+
+
+Large **D** indicates a pre-collapse state.
+
+---
+
+### (3) Coherence Loss Point (CLP)
+A single number where local phase nodes no longer align.
+
+CLP = variance(phase_neighbors)
+
+
+Higher CLP → lower global stability.
+
+---
+
+## 3. Minimal Algorithm Skeleton
+
+initialize phase_nodes
+initialize stability_threshold = 0.75
+
+for each timestep:
+compute phase_variance
+compute noise_gain
+compute S = 1 / (1 + |phase_variance| + noise_gain)
+
+compute D = drift_accumulator_update()
+compute CLP = coherence_loss(phase_nodes)
+
+if S < stability_threshold:
+    flag("early instability")
+
+if CLP > limit:
+    flag("collapse imminent")
+
+log(S, D, CLP)
+
+
+This is NOT the final algorithm — it is only a **v0.9 conceptual outline**.
+
+---
+
+## 4. Output (Placeholder)
+
+S(t): 0.92 → 0.88 → 0.81 → 0.76 → 0.69 (unstable)
+D(t): 0.01 → 0.03 → 0.09 → 0.12 → 0.20
+CLP(t): 0.002 → 0.008 → 0.014 → 0.030 → 0.055
+
+
+---
+
+## 5. Notes
+- Actual formulas will evolve in v1.0.
+- This skeleton is meant to communicate **intent + architecture**, not implementation.
+- Safe for public release.
+
+---
+**Next:** v1.0 Integration Skeleton (only after v0.9 merges cleanly).
