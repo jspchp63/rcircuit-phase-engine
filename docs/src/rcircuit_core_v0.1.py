@@ -14,17 +14,23 @@ class PhaseNode:
         """
         modulation = 0.1
         self.phase += delta_signal * modulation
-        return self.phase
 
-def propagate(nodes, delta_signal):
-    """
-    Minimal local propagation:
-    each node updates independently.
-    No global sync.
-    """
-    return [node.update(delta_signal) for node in nodes]
+    def coherence(self, other_phase):
+        """
+        Simple coherence metric:
+        returns how close two phases are (1.0 = perfect sync)
+        """
+        return 1.0 - abs(self.phase - other_phase)
+
+# Demo function (optional)
+def run_demo():
+    node = PhaseNode(phase=0.5)
+    inputs = [0.1, -0.05, 0.2, -0.1]
+
+    print("Initial phase:", node.phase)
+    for d in inputs:
+        node.update(d)
+        print(f"Δsignal={d: .3f} → phase={node.phase: .3f}")
 
 if __name__ == "__main__":
-    nodes = [PhaseNode(0.0), PhaseNode(1.2), PhaseNode(-0.5)]
-    result = propagate(nodes, delta_signal=0.3)
-    print("Updated phases:", result)
+    run_demo()
