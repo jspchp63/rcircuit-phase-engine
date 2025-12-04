@@ -1,4 +1,4 @@
-# RCIRCUIT — Phase Computing Research Engine
+RCIRCUIT — Phase Computing Engine (Minimal Public Release)
 
 RCIRCUIT is an experimental phase-based compute model that replaces value movement (FLOPS) with phase propagation and Δsignal coherence.  
 This repository provides the minimal public engine, experiments, and architectural briefs for Phase Computing.
