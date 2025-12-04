@@ -79,3 +79,4 @@ Phase is the next architecture.
 
 ## 7. System Context
 RCIRCUIT is the core engine of the Phase Computing architecture, developed as part of the HROS framework.
+📌 Active RCIRCUIT development has moved to → rcircuit-phase-engine/
