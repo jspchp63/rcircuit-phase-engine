@@ -1,102 +1,81 @@
-# RCIRCUIT Phase Engine
+# RCIRCUIT — Phase Computing Research Engine
 
-⚠ For full project vision (HROS / Phase OS / Interconnect Research), see:
-https://github.com/jspchp63/HROS-RCIRCUIT-LAB
-This repository focuses only on the RCIRCUIT Phase Engine (core model).
-
----
-
-## 0. Research Summary
-
-RCIRCUIT models how **energy and affect** transition into **structured meaning** before language-level reasoning.
-The core loop:
-
-**Feel → Think → Resonance → Return**
-
-This loop reduces noise, stabilizes phase, and produces a machine-readable “resonant state”.
+RCIRCUIT is an experimental phase-based compute model that replaces value movement (FLOPS) with phase propagation and Δsignal coherence.  
+This repository provides the minimal public engine, experiments, and architectural briefs for Phase Computing.
 
 ---
 
-## 1. Scope of This Repository
+## 1. What RCIRCUIT Solves
+Modern GPUs hit four physical limits:
+• Heat (thermal saturation)  
+• Power density (the energy wall)  
+• Distance (propagation delay)  
+• Timing jitter (synchronization instability)
 
-This repository focuses **only** on:
+AI is no longer compute-bound.  
+AI is **interconnect-bound**.
 
-- the minimal RCIRCUIT phase engine (Δsignal loop)
-- sub-semantic processing
-- local coherence and phase stabilization
-- simple experiments for noise → resonance transition
-
-It does **not** include:
-
-- HROS
-- GPU replacement
-- full Phase Compute OS
-- philosophical models
-
-Those belong to separate projects.
+RCIRCUIT shifts the paradigm:
+• Moves **phase**, not raw values  
+• Transmits only **Δsignal** (meaningful change)  
+• Achieves **local coherence** before global propagation  
+• Reduces physical data movement cost  
 
 ---
 
-## 2. Directory Structure (future)
+## 2. Minimal Public Architecture (v0.3–v0.4)
+Layer 0 — Physical Limits  
+Layer 1 — RCIRCUIT Core (phase register · Δsignal engine · local propagation)  
+Layer 2 — Phase Compute Layer (coherence map · stability metric · noise isolation)
 
-rcircuit-phase-engine/
-├─ README.md
-├─ src/
-│ └─ rcircuit_core.py
-├─ docs/
-│ └─ RCIRCUIT_Overview.md
-└─ experiments/
-└─ rcircuit_noise_test.ipynb
-
-markdown
-코드 복사
+Full architecture will be released after safety, IP, and partner verification.
 
 ---
 
-## 3. Minimal RCIRCUIT Loop
+## 3. Repository Contents
+📂 **src/**  
+• rcircuit_core_v0.1.py — minimal Δsignal engine  
+• rcircuit_core_v0.2_skeleton.py — extended hooks for experiments
 
-1. **Feel** — non-linear encoding  
-2. **Think** — aggregation  
-3. **Resonance** — pattern stabilization  
-4. **Return** — state integration  
+📂 **experiments/**  
+• v0.2 — resonance scoring demo  
+• v0.3 — noise-under-phase experiment  
+  (iteration · node_id · phase · delta_signal · resonance_score)
 
-For input `s`:
-
-f1 = Feel(s)
-f2 = Think(f1)
-f3 = Resonance(f2)
-out = Return(f3)
-
-yaml
-코드 복사
-
-A minimal Python implementation will appear in `src/rcircuit_core.py`.
+📂 **docs/**  
+• Interconnect Crisis Brief  
+• Phase Compute OS Notes  
+• Architecture Guide v1
 
 ---
 
-## 4. Intended Audience
+## 4. Who This Repo Is For
+GPU / TPU / HPC engineers  
+Compute-physics & interconnect researchers  
+DeepTech founders  
+Anyone exploring post-FLOPS architectures
 
-- cognitive architecture researchers
-- affective computing researchers
-- signal/phase processing engineers
-- those exploring phase-based computation
-
----
-
-## 5. Status
-
-Research-stage, intentionally minimal.
-
-- Concept loop defined  
-- Minimal implementation pending  
-- Experiments will be added gradually  
-- No production code included  
+If “phase > value” makes instant sense to you,  
+you are the target audience.
 
 ---
 
-## Author
+## 5. Contact
+Founder: **Chulhee Park**  
+Email: **jspchp638@gmail.com**
 
-Chulhee Park — Researcher exploring phase-based computation.
-Founder of the RCIRCUIT / Phase Computing initiative.
+For collaboration, technical review, or research discussion, feel free to reach out.
 
-Contact: **jspchp638@gmail.com**# rcircuit-phase-engine
+---
+
+## 6. Status
+This repository is a **public-safe subset** of the ongoing Phase Computing project.  
+Full implementation will be released after safety, legal, and partner verification.
+
+Physics is the bottleneck.  
+Phase is the next architecture.
+
+---
+
+## 7. System Context
+RCIRCUIT is the core engine of the Phase Computing architecture, developed as part of the HROS framework.
