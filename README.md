@@ -1,6 +1,8 @@
 # ⭐⭐⭐ RCIRCUIT — Phase Computing Engine (Minimal Public Release)
 ### Post-FLOPS Compute Architecture based on Phase Propagation
 
+---
+
 ## ⭐ High-Level Summary
 RCIRCUIT is an experimental compute model that uses phase propagation—not data movement—as the primary carrier of computation.  
 Modern GPUs fail due to interconnect physics (heat, power, distance, timing).  
@@ -13,6 +15,7 @@ This repository contains early-stage architecture documents and a minimal phase-
 # 1. Problem: Why Phase > FLOPS
 
 Modern GPUs collapse under four physical walls:
+
 - **Heat** — thermal saturation  
 - **Power density** — the energy wall  
 - **Distance** — propagation delay  
@@ -98,7 +101,7 @@ Modern compute is failing due to **physics**, not algorithms.
 ---
 
 # 6. System Context
-RCIRCUIT is the compute engine of the broader **HROS (Human Resonance Operating System)**.  
+RCIRCUIT is the compute engine of the broader **HROS (Human Resonance OS)**.  
 Active development continues at:  
 👉 https://github.com/jspchp63/rcircuit-phase-engine
 
@@ -114,7 +117,7 @@ and Δsignal propagation simulations.
 # 8. Limitations
 - No hardware feasibility claims  
 - Conceptual models subject to revision  
-- Phase compute described as abstraction, not device-level engineering  
+- Phase compute presented as abstraction, not device-level engineering  
 - No fabrication path, energy model, or benchmarks included  
 
 RCIRCUIT is a **research proposal**,  
@@ -123,6 +126,7 @@ not a finalized compute architecture.
 ---
 
 # 9. Roadmap
+
 **v0.3 — Phase OS Scheduler**  
 Phase-state update scheduling & propagation rules.
 
