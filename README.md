@@ -1,7 +1,10 @@
-RCIRCUIT — Phase Computing Engine (Minimal Public Release)
+⭐RCIRCUIT High-Level Summary
 
-RCIRCUIT is an experimental phase-based compute model that replaces value movement (FLOPS) with phase propagation and Δsignal coherence.  
-This repository provides the minimal public engine, experiments, and architectural briefs for Phase Computing.
+RCIRCUIT is an experimental compute model that uses phase propagation—not data movement—as the primary carrier of computation.
+Modern GPUs fail due to interconnect physics (heat, power, distance, timing).
+RCIRCUIT computes via Δ-signal transitions, local coherence, and phase alignment.
+No FLOPS scaling; no bulk data transport; only phase-state evolution.
+This repository contains early-stage architecture documents and a minimal phase-propagation simulator.RCIRCUIT — Phase Computing Engine (Minimal Public Release)
 
 ---
 
