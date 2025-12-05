@@ -39,3 +39,4 @@ The full internal system remains under safety and IP review.
 
 Phase is the architecture.  
 Physics is the bottleneck.
+Fix double extension: mdmd → md
