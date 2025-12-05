@@ -1,63 +1,65 @@
 # ⭐⭐⭐ RCIRCUIT — Phase Computing Engine (Minimal Public Release)
-### Post-FLOPS Compute Architecture based on Phase Propagation  
+### Post-FLOPS Compute Architecture based on Phase Propagation
 
 ---
 
-## ⭐ High-Level Summary  
-RCIRCUIT is an experimental compute model that uses **phase propagation**—not data movement—  
-as the primary carrier of computation.
+## ⭐ High-Level Summary
+**RCIRCUIT** is an experimental compute architecture that uses **phase propagation**—  
+not bulk data movement—as the primary carrier of computation.
 
-Modern GPUs fail due to **interconnect physics** (heat, power, distance, timing).
+Modern GPUs fail due to **interconnect physics**:  
+**heat, power density, distance, timing jitter.**
 
-RCIRCUIT computes via:  
-- Δ-signal transitions  
-- Local coherence  
-- Phase alignment  
-- Zero bulk data movement  
+RCIRCUIT computes using:
 
-📌 No FLOPS scaling.  
-📌 Only phase-state evolution.
+- **Δ-signal transitions**  
+- **Local coherence formation**  
+- **Phase alignment dynamics**  
+- **Zero bulk data transport**
 
-This repository contains early-stage architecture documents and a minimal phase propagation simulator.
+📌 **No FLOPS scaling**  
+📌 **Only phase-state evolution**
+
+This repository contains the early-stage architecture and a minimal phase-propagation simulator.
 
 ---
 
-## 1. Problem — Why Phase > FLOPS  
-Modern GPUs collapse under four physical walls:
+## 1. Problem — Why Phase > FLOPS
+Modern GPUs collapse under four hard physical limits:
 
 - **Heat** — thermal saturation  
-- **Power density** — energy wall  
+- **Power density** — the energy wall  
 - **Distance** — propagation delay  
 - **Timing jitter** — synchronization instability  
 
-AI is **not compute-bound** anymore.  
-AI is **interconnect-bound**.
+AI is no longer **compute-bound**.  
+AI is now **interconnect-bound**.
 
-### RCIRCUIT shifts the compute paradigm:
+### RCIRCUIT shifts the paradigm:
 - Moves **phase**, not values  
 - Transmits only **Δsignal** (meaningful change)  
-- Achieves **local coherence** before global propagation  
-- Minimizes the real cost → **data movement**
+- Achieves **local coherence before global propagation**  
+- Minimizes dominant cost → **data movement**
 
 ---
 
 ## 2. Minimal Public Architecture (v0.3–v0.4)
 
 **Layer 0 — Physical Limits**  
-Thermal constraints, propagation delay, jitter instability.
+Thermal constraints • propagation delay • jitter instability
 
 **Layer 1 — RCIRCUIT Core**  
 Phase register • Δ-signal engine • Local propagation loop
 
 **Layer 2 — Phase Compute Layer**  
-Coherence map • Stability metric • Noise isolation
+Coherence map • Stability metrics • Noise isolation
 
 ⚠ Full architecture will be released after safety, IP, and partner verification.
 
 ---
 
 ## 3. Repository Structure  
-(Professional Tree Format — Renders correctly on GitHub)
+*(Professional Tree Format — renders cleanly on GitHub)*
 
 ```
 /docs
@@ -88,7 +90,7 @@ Coherence map • Stability metric • Noise isolation
 
 ---
 
-## 4. Intended Audience  
+## 4. Intended Audience
 This repo is for:
 
 - GPU / TPU / HPC engineers  
@@ -98,7 +100,7 @@ This repo is for:
 
 ---
 
-## 5. Project Status  
+## 5. Project Status
 This repository is a **public-safe subset** of the ongoing Phase Computing project.  
 Full implementation will follow:
 
@@ -107,45 +109,49 @@ Full implementation will follow:
 - Partner review  
 
 📌 Modern compute is failing due to **physics**, not algorithms.  
-📌 Phase is the next architecture.
+📌 **Phase is the next architecture.**
 
 ---
 
-## 6. System Context  
-RCIRCUIT is the compute engine of the broader **HROS (Human Resonance Operating System)**.
+## 6. System Context
+RCIRCUIT is the compute engine of the broader  
+**HROS — Human Resonance Operating System.**
 
 Active development continues at:  
 👉 https://github.com/jspchp63/rcircuit-phase-engine
 
 ---
 
-## 7. Research Status  
-RCIRCUIT is in an **exploratory research phase**.  
-This repository contains conceptual architecture, early modeling,  
-and Δ-signal propagation simulations.
+## 7. Research Status
+RCIRCUIT is currently in an **exploratory research phase**.  
+This repository includes:
+
+- Conceptual architecture  
+- Early theoretical modeling  
+- Δ-signal propagation experiments  
+- Preliminary coherence & stability tools  
 
 ---
 
-## 8. Limitations  
+## 8. Limitations
 - No hardware feasibility claims  
-- Conceptual models subject to revision  
-- Phase compute described as abstraction, not verified silicon mechanism  
-- No fabrication path, energy model, or benchmarks included  
+- Models subject to revision  
+- Phase compute described as *abstraction*, not verified silicon implementation  
+- No fabrication path, energy model, or performance benchmarks included  
 
-**RCIRCUIT is a research proposal — not a finalized compute architecture.**
+📌 **RCIRCUIT is a research proposal — not a finalized compute architecture.**
 
 ---
 
-## 9. Roadmap  
-
+## 9. Roadmap
 **v0.3 — Phase OS Scheduler**  
 Phase-state update scheduling & propagation rules.
 
 **v0.5 — Coherence Kernel**  
-Local coherence evaluation, Δ-signal update, resonance gating.
+Δ-signal update • local coherence evaluation • resonance gating.
 
 **v0.7 — Phase-State Simulation Layer**  
-Noise, stability, propagation-under-load experiments.
+Noise • stability • propagation-under-load experiments.
 
 **v1.0 — RCIRCUIT Integration Prototype**  
 Δ-signal engine + coherence maps + propagation rules.
@@ -155,7 +161,8 @@ Formal limits: heat • power • distance • timing.
 
 ---
 
-## 10. Contact  
+## 10. Contact
 For collaboration or technical feedback:  
 📧 **jspchp638@gmail.com**
+
 
