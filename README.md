@@ -1,3 +1,11 @@
+If you are a VC or deep-tech researcher evaluating this,
+read the following three files:
+
+1. /docs/Phase_Compute_Architecture.md
+2. /src/phase_engine_core_v1.py
+3. /docs/v1.0_integration_skeleton.md
+
+These three explain the paradigm shift.
 # ⭐⭐⭐ RCIRCUIT — Phase Computing Engine (Minimal Public Release)
 ### Post-FLOPS Compute Architecture based on Phase Propagation
 
