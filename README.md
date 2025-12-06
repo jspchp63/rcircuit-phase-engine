@@ -64,15 +64,13 @@ float delta;
 float coupling;
 };
 
-sql
-코드 복사
+
 
 Local update rule:
 phase ← phase + f(delta, neighbors)
 delta ← g(phase_diff)
 
-yaml
-코드 복사
+
 
 ---
 
