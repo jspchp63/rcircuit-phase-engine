@@ -56,16 +56,16 @@ Phase evolves → cheap.**
 
 RCIRCUIT eliminates the three killers of modern AI scaling:
 
-- No tensors  
-- No global sync  
-- No long-distance propagation  
+- No tensors
+- No global sync
+- No long-distance propagation
 
 Only four primitives exist:
 
-- phase registers  
-- Δ–signal transitions  
-- local resonance coupling  
-- coherence evolution  
+- phase registers
+- Δ–signal transitions
+- local resonance coupling
+- coherence evolution
 
 This transforms compute into a purely local physical process.
 
@@ -75,10 +75,13 @@ This transforms compute into a purely local physical process.
 
 ## 4.1 RCIRCUIT Cell
 struct RC_Cell {
-    float phase;
-    float delta;
-    float coupling;
+float phase;
+float delta;
+float coupling;
 };
+
+perl
+코드 복사
 
 ## 4.2 Update Rule (Semi-Formal)
 
@@ -88,6 +91,9 @@ and `N(i)` its neighbors under fixed locality radius r.
 delta_i(t+1) = γ · Σ_j∈N(i) (phase_j(t) - phase_i(t))
 phase_i(t+1) = phase_i(t) + α·delta_i(t+1)
 
+diff
+코드 복사
+
 - α = phase propagation coefficient  
 - γ = local resonance strength  
 
@@ -95,29 +101,30 @@ This discrete rule approximates a phase-field PDE:
 
 ∂φ/∂t = α·∇²φ + γ·R(φ)
 
+yaml
+코드 복사
+
 ---
 
-
-5. Directory Structure (Public)
-
-
+# 5. Directory Structure (Public)
 
 rcircuit-phase-engine/
 ├── docs/
-│   ├── Phase_Compute_Architecture.md
-│   ├── v1.0_integration_skeleton.md
-│   └── Phase_OS_Scheduler_v0.4.md
+│ ├── Phase_Compute_Architecture.md
+│ ├── v1.0_integration_skeleton.md
+│ └── Phase_OS_Scheduler_v0.4.md
 │
 └── src/
-    ├── phase_engine_core_v1.py
-    ├── phase_node.py
-    ├── phase_coupling.py
-    ├── phase_propagation_kernel.py
-    ├── resonance_score.py
-    ├── coherence_metric.py
-    └── phase_state_snapshot.py
+├── phase_engine_core_v1.py
+├── phase_node.py
+├── phase_coupling.py
+├── phase_propagation_kernel.py
+├── resonance_score.py
+├── coherence_metric.py
+└── phase_state_snapshot.py
 
-
+yaml
+코드 복사
 
 ---
 
@@ -140,10 +147,10 @@ All modern accelerators share a fatal constraint:
 
 **Compute is cheap. Moving data is not.**
 
-- GPU → SM stalls due to global memory dependency
-- TPU → systolic arrays choke on boundary conditions
-- Cerebras → wafer-scale fabric saturates
-- Groq → deterministic pipeline still depends on streaming bandwidth
+- GPU → SM stalls due to global memory dependency  
+- TPU → systolic arrays choke on boundary conditions  
+- Cerebras → wafer-scale fabric saturates  
+- Groq → deterministic pipeline still depends on streaming bandwidth  
 
 ## 7.2 RCIRCUIT Avoids This Entire Category
 
