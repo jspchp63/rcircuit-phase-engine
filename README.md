@@ -1,20 +1,20 @@
 # RCIRCUIT — Phase Computing Engine
 ### A Post-MatMul / Post-FLOPS Compute Primitive
 
-RCIRCUIT is not an accelerator.
+RCIRCUIT is not an accelerator.  
 RCIRCUIT is a new compute primitive.
 
-Modern AI collapses at interconnect physics.
+Modern AI collapses at interconnect physics.  
 MatMul dies because transport dies.
 
-RCIRCUIT computes by **phase-state evolution**, not tensor movement.
-This removes the transport bottleneck and enables **local-scaling compute**.
+RCIRCUIT computes by phase-state evolution, not tensor movement.  
+This removes the transport bottleneck and enables local-scaling compute.
 
 ---
 
 # 1. Why This Exists — Transport Collapse Physics
 
-MatMul scaling hits a hard wall due to **transport, not arithmetic**.
+MatMul scaling hits a hard wall due to transport, not arithmetic.
 
 - HBM bandwidth saturates before FLOPS do.
 - Interconnect latency (NVLink / PCIe / NoC) dominates execution time.
@@ -22,30 +22,30 @@ MatMul scaling hits a hard wall due to **transport, not arithmetic**.
 - Thermal jitter corrupts long-distance signal coherence.
 - GPUs/TPUs stall waiting for data, not compute.
 
-> **AI scale = MatMul → FLOPS → bandwidth → heat → jitter → collapse.**
+**AI scale = MatMul → FLOPS → bandwidth → heat → jitter → collapse.**
 
-RCIRCUIT eliminates global data movement and replaces it with
-**purely local phase evolution**.
+RCIRCUIT eliminates global data movement  
+and replaces it with purely local phase evolution.
 
 ---
 
 # 2. Compute Primitive Shift
 
-### **MatMul = value transport**
+### MatMul = value transport  
 Data must move → energy cost ↑, wire delay ↑, synchronization ↑.
 
-### **RCIRCUIT = phase propagation**
-No values move.
-Only **state updates** propagate through local coupling.
+### RCIRCUIT = phase propagation  
+No values move.  
+Only state updates propagate through local coupling.
 
-| Property | MatMul | RCIRCUIT |
-|---------|--------|----------|
-| Compute unit | tensor multiply | phase evolution |
-| Data movement | global | local |
-| Scaling limit | bandwidth | locality |
-| Sync | global | none |
-| Heat | accumulated | localized |
-| Complexity | O(N²) transport | O(N) local updates |
+| Property       | MatMul           | RCIRCUIT          |
+|----------------|------------------|--------------------|
+| Compute unit   | tensor multiply  | phase evolution    |
+| Data movement  | global           | local              |
+| Scaling limit  | bandwidth        | locality           |
+| Sync           | global           | none               |
+| Heat           | accumulated      | localized          |
+| Complexity     | O(N²) transport  | O(N) local updates |
 
 **Value moves → expensive.  
 Phase evolves → cheap.**
@@ -56,63 +56,65 @@ Phase evolves → cheap.**
 
 RCIRCUIT eliminates the three killers of modern AI scaling:
 
-- **No tensors**
-- **No global sync**
-- **No long-distance propagation**
+- No tensors  
+- No global sync  
+- No long-distance propagation  
 
-Only four things exist:
+Only four primitives exist:
 
-1. **phase registers**
-2. **Δ–signal transitions**
-3. **local resonance coupling**
-4. **coherence evolution**
+- phase registers  
+- Δ–signal transitions  
+- local resonance coupling  
+- coherence evolution  
 
-This transforms compute into a purely *local physical process*.
+This transforms compute into a purely local physical process.
 
 ---
 
 # 4. Formal Minimal Architecture
 
 ## 4.1 RCIRCUIT Cell
-
 struct RC_Cell {
-    float phase;
-    float delta;
-    float coupling;
+float phase;
+float delta;
+float coupling;
 };
+
 
 ## 4.2 Update Rule (Semi-Formal)
 
-Let `phase_i` be the state of cell *i*
+Let `phase_i` be the state of cell i  
 and `N(i)` its neighbors under fixed locality radius r.
 
 delta_i(t+1) = γ · Σ_j∈N(i) (phase_j(t) - phase_i(t))
 phase_i(t+1) = phase_i(t) + α·delta_i(t+1)
+
 
 - α = phase propagation coefficient  
 - γ = local resonance strength  
 
 This discrete rule approximates a phase-field PDE:
 
-∂φ/∂t = α·∇²φ  +  γ·R(φ)
-
+∂φ/∂t = α·∇²φ + γ·R(φ)
 
 ---
+
 # 5. Directory Structure (Public)
+
 rcircuit-phase-engine/
 ├── docs/
-│   ├── Phase_Compute_Architecture.md
-│   ├── v1.0_integration_skeleton.md
-│   └── Phase_OS_Scheduler_v0.4.md
+│ ├── Phase_Compute_Architecture.md
+│ ├── v1.0_integration_skeleton.md
+│ └── Phase_OS_Scheduler_v0.4.md
 │
 └── src/
-    ├── phase_engine_core_v1.py
-    ├── phase_node.py
-    ├── phase_coupling.py
-    ├── phase_propagation_kernel.py
-    ├── resonance_score.py
-    ├── coherence_metric.py
-    └── phase_state_snapshot.py
+├── phase_engine_core_v1.py
+├── phase_node.py
+├── phase_coupling.py
+├── phase_propagation_kernel.py
+├── resonance_score.py
+├── coherence_metric.py
+└── phase_state_snapshot.py
 
 
 ---
@@ -125,13 +127,13 @@ Pass through resonance-gate
 Output: phase-aligned / misaligned state → logical XOR
 
 No values transported.  
-Only **phase differences**.
+Only phase differences.
 
 ---
 
 # 7. Why GPUs, TPUs, Cerebras Fail to Scale Further
 
-### 7.1 Global Transport = Hard Stop
+## 7.1 Global Transport = Hard Stop
 
 All modern accelerators share a fatal constraint:
 
@@ -142,7 +144,7 @@ All modern accelerators share a fatal constraint:
 - Cerebras → wafer-scale fabric saturates  
 - Groq → deterministic pipeline still depends on streaming bandwidth  
 
-### 7.2 RCIRCUIT Avoids This Entire Category
+## 7.2 RCIRCUIT Avoids This Entire Category
 
 Because:
 
@@ -157,13 +159,13 @@ Because:
 
 # 8. AI Impact (DeepTech Claim)
 
-| Metric | MatMul AI | RCIRCUIT |
-|--------|-----------|-----------|
-| Token latency | transport-bound | phase-local |
-| Energy/op | high | **30–100× reduced** |
-| Throughput scaling | saturates | **linear** |
-| Heat | global accumulation | **localized** |
-| Failure mode | jitter collapse | **local incoherence only** |
+| Metric            | MatMul AI          | RCIRCUIT            |
+|-------------------|---------------------|----------------------|
+| Token latency      | transport-bound     | phase-local          |
+| Energy/op          | high                | 30–100× reduced      |
+| Throughput scaling | saturates           | linear               |
+| Heat               | global accumulation | localized            |
+| Failure mode       | jitter collapse     | local incoherence    |
 
 Eventually this shifts AI from:
 
@@ -180,6 +182,5 @@ YouTube: @2EmotionCompute
 # 10. Contact
 **Chulhee Park**  
 Email: jspchp638@gmail.com
- 
 
 
