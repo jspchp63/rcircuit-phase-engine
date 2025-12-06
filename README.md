@@ -94,8 +94,7 @@ struct RC_Cell {
 Let phaseᵢ be the state of cell i
 and N(i) the neighbors under locality radius r.
 
-mathematica
-코드 복사
+
 delta_i(t+1) = γ · Σ_j∈N(i)( phase_j(t) - phase_i(t) )
 phase_i(t+1) = phase_i(t) + α · delta_i(t+1)
 α = phase propagation coefficient
@@ -103,11 +102,10 @@ phase_i(t+1) = phase_i(t) + α · delta_i(t+1)
 
 This discretizes a phase-field PDE:
 
-powershell
-코드 복사
+
 ∂φ/∂t = α ∇²φ + γ R(φ)
 5. Directory Structure (Public)
-코드 복사
+
 == docs ==
 Phase_Compute_Architecture.md
 v1.0_integration_skeleton.md
@@ -210,8 +208,7 @@ For research collaboration or POC discussions:
 Chulhee Park
 📩 Email: jspchp638@gmail.com
 
-markdown
-코드 복사
+
 
 ---
 
