@@ -1,4 +1,4 @@
-# RCIRCUIT — Phase Computing Engine
+# ⚡ RCIRCUIT — Phase Computing Engine
 ### Post-MatMul / Post-FLOPS Compute Direction
 
 **What if compute no longer depended on moving values?**
@@ -94,7 +94,8 @@ struct RC_Cell {
 Let phaseᵢ be the state of cell i
 and N(i) the neighbors under locality radius r.
 
-
+mathematica
+코드 복사
 delta_i(t+1) = γ · Σ_j∈N(i)( phase_j(t) - phase_i(t) )
 phase_i(t+1) = phase_i(t) + α · delta_i(t+1)
 α = phase propagation coefficient
@@ -102,10 +103,11 @@ phase_i(t+1) = phase_i(t) + α · delta_i(t+1)
 
 This discretizes a phase-field PDE:
 
-
+powershell
+코드 복사
 ∂φ/∂t = α ∇²φ + γ R(φ)
 5. Directory Structure (Public)
-
+코드 복사
 == docs ==
 Phase_Compute_Architecture.md
 v1.0_integration_skeleton.md
@@ -164,11 +166,9 @@ GitHub: https://github.com/jspchp63/rcircuit-phase-engine
 YouTube: @2EmotionCompute
 
 10. Why This Matters Commercially
-AI cost curves are now dominated by transport power,
-not math.
+AI cost curves are now dominated by transport power, not math.
 
-Any compute model reducing the need for value movement
-directly reduces:
+Any compute model reducing value movement directly reduces:
 
 energy per token
 
@@ -184,7 +184,7 @@ carbon footprint (ESG relevance)
 
 RCIRCUIT provides a research direction
 toward transport-independent compute —
-the next major frontier for hyperscalers, defense, and low-power AI.
+a major frontier for hyperscalers, defense, and low-power AI.
 
 11. Practical Use Cases (Research & Industry)
 RCIRCUIT can be used today for:
@@ -208,8 +208,17 @@ For research collaboration or POC discussions:
 Chulhee Park
 📩 Email: jspchp638@gmail.com
 
-
+yaml
+코드 복사
 
 ---
+
+
+
+
+
+
+
+
 
 
