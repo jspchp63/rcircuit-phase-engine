@@ -1,7 +1,7 @@
-⚡ RCIRCUIT — Phase Computing Engine
+⚡ AI’s real bottleneck isn’t math. It’s electricity.  
 
-AI’s real bottleneck is not algorithms.
-It’s electricity.
+Modern AI moves values endlessly — and dies at HBM, heat, jitter, interconnect.  
+RCIRCUIT experiments a compute direction where nothing moves except local phase.
 
 현대 AI는 “값(value)을 끝없이 옮기는 구조” 위에서 굴러간다.
 텐서를 옮기고 → 곱하고 → 누적하고 → 다시 옮기는 과정이 반복된다.
