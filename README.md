@@ -16,10 +16,10 @@ This removes the transport bottleneck and enables local-scaling compute.
 
 MatMul scaling hits a hard wall due to transport, not arithmetic.
 
-- HBM bandwidth saturates before FLOPS do.
-- Interconnect latency (NVLink / PCIe / NoC) dominates execution time.
-- Wire delay grows superlinearly with array size.
-- Thermal jitter corrupts long-distance signal coherence.
+- HBM bandwidth saturates before FLOPS do.  
+- Interconnect latency (NVLink / PCIe / NoC) dominates execution time.  
+- Wire delay grows superlinearly with array size.  
+- Thermal jitter corrupts long-distance signal coherence.  
 - GPUs/TPUs stall waiting for data, not compute.
 
 **AI scale = MatMul → FLOPS → bandwidth → heat → jitter → collapse.**
@@ -80,6 +80,8 @@ float delta;
 float coupling;
 };
 
+perl
+코드 복사
 
 ## 4.2 Update Rule (Semi-Formal)
 
@@ -89,6 +91,8 @@ and `N(i)` its neighbors under fixed locality radius r.
 delta_i(t+1) = γ · Σ_j∈N(i) (phase_j(t) - phase_i(t))
 phase_i(t+1) = phase_i(t) + α·delta_i(t+1)
 
+diff
+코드 복사
 
 - α = phase propagation coefficient  
 - γ = local resonance strength  
@@ -96,6 +100,9 @@ phase_i(t+1) = phase_i(t) + α·delta_i(t+1)
 This discrete rule approximates a phase-field PDE:
 
 ∂φ/∂t = α·∇²φ + γ·R(φ)
+
+yaml
+코드 복사
 
 ---
 
@@ -116,6 +123,8 @@ rcircuit-phase-engine/
 ├── coherence_metric.py
 └── phase_state_snapshot.py
 
+yaml
+코드 복사
 
 ---
 
