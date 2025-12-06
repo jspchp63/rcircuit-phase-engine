@@ -1,182 +1,175 @@
-⚡ **If MatMul Is the Limit, GPU Is the End.  
-RCIRCUIT Begins Where FLOPS Die.**
-
-⭐⭐⭐ **RCIRCUIT — Phase Computing Engine (Minimal Public Release)**  
-Post-FLOPS Compute Architecture Based on Phase Propagation
-
-If you are a VC or deep-tech engineer, start with these 3 files:  
-1) /docs/Phase_Compute_Architecture.md  
-2) /src/phase_engine_core_v1.py  
-3) /docs/v1.0_integration_skeleton.md  
-These explain the paradigm shift.
+# ⚡ RCIRCUIT — Phase Computing Engine (Minimal Public Release)
+**Post-FLOPS Compute Architecture Based on Phase Propagation**  
+**“If MatMul Is the Limit, GPU Is the End.”**
 
 ---
 
-## ⭐ 1. High-Level Summary  
-AI scale today = **MatMul → FLOPS → Interconnect Physics**.  
-This stack collapses because physics collapses first.
-
-GPUs move electrons.  
+## **1. Executive Summary**
+AI scaling is no longer constrained by compute; it is constrained by **interconnect physics**:  
+**Heat, Power, Distance, Timing Jitter.**  
+GPUs move values.  
 **RCIRCUIT moves phase.**
 
-RCIRCUIT replaces value-transport compute with:  
-- Δ-signal transitions  
-- Local coherence formation  
-- Phase alignment dynamics  
-- Zero bulk data movement  
-
-📌 **No FLOPS scaling**  
-📌 **Only phase-state evolution**
+This repository provides the minimal public-safe version of a compute model that uses  
+**Δ-signal propagation + coherence evolution**, instead of tensor transport.
 
 ---
 
-## ⭐ 2. Why MatMul Dies  
-Dense MatMul = FLOPS = GPU monopoly.  
-Scaling MatMul ≠ scaling intelligence.  
-It only scales **data movement**, which triggers:
+## **2. Start Here (VC / DeepTech Engineers)**
+Review this architecture using the 3-key files:
+
+```
+/docs/Phase_Compute_Architecture.md
+/src/phase_engine_core_v1.py
+/docs/v1.0_integration_skeleton.md
+```
+
+These explain why **Phase > FLOPS**.
+
+---
+
+## **3. Why MatMul Dies (Physics Argument)**  
+Dense MatMul = FLOPS expansion = **data movement expansion**.  
+This fails because the physical walls fail first:
 
 - Heat saturation  
 - Power density wall  
 - Propagation delay  
-- Timing jitter  
+- Timing jitter collapse  
+- HBM bandwidth exhaustion  
 
 AI is no longer compute-bound.  
 **AI is interconnect-bound.**
 
 ---
 
-## ⭐ 3. Why Phase > FLOPS  
-Value transport is expensive.  
-Phase propagation is not.
+## **4. Why Phase > FLOPS**
+Value-transport compute wastes most energy on moving tensors.  
+Phase compute does not.
 
-Phase compute executes by evolving **state coherence**, not shuffling tensors.  
-This changes the compute primitive itself:
+RCIRCUIT replaces tensor movement with:
 
-FLOPS → phase-aligned wave transitions.  
-Bandwidth → Δ-signal locality.  
-Update rules → resonance dynamics.
+- **Δ-signal transitions**  
+- **Local coherence formation**  
+- **Phase alignment dynamics**  
+- **Zero bulk data movement**
+
+📌 No FLOPS scaling  
+📌 Only **phase-state evolution**
 
 ---
 
-## ⭐ 4. Minimal Public Architecture (v0.3–v0.4)
+## **5. Minimal Example (Pseudo-Python)**
+
+```python
+from rcircuit import PhaseEngine
+
+engine = PhaseEngine(size=128)
+engine.inject_signal(node=7, delta=0.12)
+
+for _ in range(10):
+    engine.step()
+    engine.measure()
+```
+
+---
+
+## **6. Minimal Public Architecture (v0.3–v0.4)**
 
 **Layer 0 — Physical Limits**  
-Thermal ceiling • propagation delay • jitter instability
+Propagation delay • thermal ceiling • jitter instability  
 
 **Layer 1 — RCIRCUIT Core**  
-Phase register • Δ-signal engine • local propagation loop
+Phase register • Δ-signal engine • local propagation loop  
 
 **Layer 2 — Phase Compute Layer**  
-Coherence map • stability metrics • noise isolation
+Coherence map • resonance score • noise isolation  
 
-⚠ Full architecture released only after safety/IP review.
+⚠ Full architecture released after safety/IP verification.
 
 ---
 
-## ⭐ 5. Repository Structure  
-(Professional tree format — renders clean on GitHub)
-
+## **7. Repository Structure**
 ```
 /docs
-├── Architecture_Guide_v1.md
-├── Interconnect_Crisis_Brief.md
-├── Phase_Compute_Architecture.md
-├── Phase_Computing_README_v1.0.md
-├── Phase_OS_Scheduler_v0.4_pseudocode.md
-├── Phase_OS_WhitePaper_v0.1.md
-├── Phase_Stability_Map_v0.3.md
-├── architecture_overview_v1.0.md
-├── v0.5_noise_interaction_map.md
-├── v0.9_phase_resonance_score.md
-├── v1.0_integration_skeleton.md
-├── v1.1_phase_compute_primitive.md
-├── v1.2_resonance_score_function.md
-├── v1.3_phase_coupling_model.md
-├── v1.4_local_coherence_map.md
-├── v1.5_resonance_field_accumulator.md
-├── v1.6_global_propagation_gate.md
-├── v1.7_phase_harmonization_layer.md
-├── v1.8_resonance_flow_graph.md
-└── v1.9_resonant_compute_pulse.md
+  Architecture_Guide_v1.md
+  Interconnect_Crisis_Brief.md
+  Phase_Compute_Architecture.md
+  Phase_OS_Scheduler_v0.4_pseudocode.md
+  Phase_Stability_Map_v0.3.md
+  v1.0_integration_skeleton.md
+  v1.2_resonance_score_function.md
+  v1.4_local_coherence_map.md
+  v1.9_resonant_compute_pulse.md
 
 /src
-├── phase_engine_core_v1.py
-├── phase_compute_api_v1.py
-├── phase_network_v1.py
-├── phase_node_v1.py
-├── phase_propagation_kernel_v1.py
-├── phase_update_loop_v1.py
-├── phase_coupling_v1.py
-├── phase_config_v1.py
-├── phase_harmonization_v1.py
-├── resonance_score_v1.py
-├── noise_model_v1.py
-├── coherence_metric_v1.py
-├── phase_state_snapshot_v1.py
-├── phase_visualizer_v1.py
-├── phase_analysis_v1.py
-├── experiment_runner_v1.py
-├── experiment_autorun_v1.py
-├── phase_experiment_pipeline_v1.py
-├── phase_validator_v1.py
-├── phase_benchmark_v1.py
-└── placeholder.md
+  phase_engine_core_v1.py
+  phase_compute_api_v1.py
+  phase_propagation_kernel_v1.py
+  phase_coupling_v1.py
+  phase_harmonization_v1.py
+  resonance_score_v1.py
+  noise_model_v1.py
+  experiment_runner_v1.py
+  placeholder.md
 
 /experiments
-└── (experiment scripts preserved)
+  (public-safe experiment scripts)
 ```
 
 ---
 
-## ⭐ 6. Intended Audience  
-This repo is for:  
+## **8. Intended Audience**
 - GPU / TPU / HPC engineers  
 - Interconnect & compute-physics researchers  
-- DeepTech investors & founders  
-- Anyone who feels **“phase > value”** intuitively  
+- AI infra VCs (post-FLOPS narrative)  
+- DeepTech founders exploring new compute primitives
 
 ---
 
-## ⭐ 7. System Context  
-RCIRCUIT is the compute engine of:
-
-**HROS — Human Resonance Operating System**  
-Active development at:  
-👉 https://github.com/jspchp63/rcircuit-phase-engine
-
----
-
-## ⭐ 8. Research Status  
+## **9. Research Status**
 This repo includes:
 
 - Conceptual architecture  
 - Δ-signal propagation experiments  
-- Local coherence & resonance metrics  
-- Early phase-state simulation tools  
-- Minimal executable engine prototype  
+- Coherence / resonance metrics  
+- Early simulation tools  
+- Minimal phase-engine prototype  
 
-RCIRCUIT = research proposal, not hardware.
+RCIRCUIT = **research proposal**, not hardware.
 
 ---
 
-## ⭐ 9. Limitations  
+## **10. Limitations**
 - Not fabrication-ready  
+- No silicon feasibility claims  
 - No performance model  
 - Abstractions subject to revision  
-- No silicon feasibility claim  
+- Requires partner & IP validation
 
 ---
 
-## ⭐ 10. Roadmap  
-- **v0.3** — Phase OS Scheduler  
-- **v0.5** — Coherence Kernel  
-- **v0.7** — Phase Simulation Layer  
-- **v1.0** — Integration Prototype  
-- **v1.2** — Interconnect Physics Appendix  
+## **11. System Context**
+RCIRCUIT is the compute engine of:
+
+**HROS — Human Resonance Operating System**
+
+Active development continues at:  
+👉 https://github.com/jspchp63/rcircuit-phase-engine
 
 ---
 
-## ⭐ 11. Contact  
-For collaboration or technical feedback:  
+## **12. Roadmap**
+- v0.3 — Phase OS Scheduler  
+- v0.5 — Coherence Kernel  
+- v0.7 — Phase Simulation Layer  
+- v1.0 — Integration Prototype  
+- v1.2 — Interconnect Physics Appendix  
+
+---
+
+## **13. Contact**
+For collaboration or technical review:  
 📧 **jspchp638@gmail.com**
+
 
