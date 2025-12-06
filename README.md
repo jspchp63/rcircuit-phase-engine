@@ -97,6 +97,7 @@ This discrete rule approximates a phase-field PDE:
 
 ---
 
+
 # 5. Directory Structure (Public)
 
 rcircuit-phase-engine/
