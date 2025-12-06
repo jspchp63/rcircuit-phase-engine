@@ -27,6 +27,7 @@ Local evolution → scalable
 ---
 
 ## 1. Why This Exists — Transport Collapse Physics
+
 MatMul scaling fails not from arithmetic limits,
 but from **movement limits**.
 
@@ -65,6 +66,7 @@ Phase evolves → cheap
 ---
 
 ## 3. Core Principle
+
 No tensors.  
 No global sync.  
 No long-distance propagation.
@@ -84,40 +86,23 @@ Compute becomes a **local physical process**.
 
 ### 4.1 RCIRCUIT Cell
 
+```c
 struct RC_Cell {
-float phase;
-float delta;
-float coupling;
+    float phase;
+    float delta;
+    float coupling;
 };
+4.2 Update Rule (Semi-Formal)
 
-scss
-코드 복사
-
-### 4.2 Update Rule (Semi-Formal)
-
-Let phaseᵢ be the state of cell i  
-and N(i) the neighbors under locality radius r.
-
-delta_i(t+1) = γ · Σ_j∈N(i)( phase_j(t) - phase_i(t) )
-phase_i(t+1) = phase_i(t) + α · delta_i(t+1)
-
-yaml
-코드 복사
-
-α = phase propagation coefficient  
-γ = resonance strength  
+Let phaseᵢ be the state of cell i
+and N(i) the neighbors under locality radius r.delta_i(t+1) = γ * Σ_j∈N(i)( phase_j(t) - phase_i(t) )
+phase_i(t+1) = phase_i(t) + α * delta_i(t+1)
+α = phase propagation coefficient
+γ = resonance strength
 
 This discretizes a phase-field PDE:
-
 ∂φ/∂t = α ∇²φ + γ R(φ)
-
-yaml
-코드 복사
-
----
-
-## 5. Directory Structure (Public)
-
+5. Directory Structure (Public)
 == docs ==
 Phase_Compute_Architecture.md
 v1.0_integration_skeleton.md
@@ -132,98 +117,102 @@ resonance_score.py
 coherence_metric.py
 phase_state_snapshot.py
 
-yaml
-코드 복사
+6. XOR Demo (Phase Logic)
 
----
+φ₁, φ₂ → Δφ → resonance-gate → XOR
 
-## 6. XOR Demo (Phase Logic)
-
-φ₁, φ₂ → Δφ → resonance-gate → XOR  
-
-No values transported.  
+No values transported.
 Only phase relationships.
 
----
-
-## 7. Why GPUs, TPUs, Cerebras Fail to Scale Further
+7. Why GPUs, TPUs, Cerebras Fail to Scale Further
 
 All modern accelerators share one constraint:
 
-**Compute is cheap.  
-Moving data is not.**
+Compute is cheap.
+Moving data is not.
 
-- GPU → SM stalls from global memory waits  
-- TPU → systolic boundaries choke on dataflow  
-- Cerebras → wafer fabric saturates  
-- Groq → deterministic pipeline still bandwidth-bound  
+GPU → SM stalls from global memory waits
 
-RCIRCUIT avoids this entire limit through:
+TPU → systolic boundaries choke on dataflow
 
-- local updates  
-- no global barriers  
-- fixed fan-out radius  
-- coherence without long-distance wiring  
+Cerebras → wafer fabric saturates
 
----
+Groq → deterministic pipeline still bandwidth-bound
 
-## 8. AI Impact (DeepTech Claim)
+RCIRCUIT avoids this limit through:
 
-| Metric         | MatMul AI        | RCIRCUIT             |
-|----------------|------------------|-----------------------|
-| Token latency  | transport-bound  | phase-local          |
-| Energy/op      | high             | 30–100× lower        |
-| Scaling        | saturates        | linear               |
-| Heat           | global           | localized            |
-| Failure mode   | jitter collapse  | local incoherence    |
+local updates
 
-Transport-compute → **Phase-evolution compute**
+no global barriers
 
----
+fixed fan-out radius
 
-## 9. Repository
-GitHub: https://github.com/jspchp63/rcircuit-phase-engine  
+coherence without long-distance wiring
+
+8. AI Impact (DeepTech Claim)
+Metric	MatMul AI	RCIRCUIT
+Token latency	transport-bound	phase-local
+Energy/op	high	30–100× lower
+Scaling	saturates	linear
+Heat	global	localized
+Failure mode	jitter collapse	local incoherence
+
+Transport-compute → Phase-evolution compute
+
+9. Repository
+
+GitHub: https://github.com/jspchp63/rcircuit-phase-engine
+
 YouTube: @2EmotionCompute
 
----
+10. Why This Matters Commercially
 
-## 10. Why This Matters Commercially
+AI cost curves are dominated by transport power, not math.
 
-AI cost curves are now dominated by **transport power**, not math.
+Reducing value movement reduces:
 
-Any compute model reducing value movement directly reduces:
+energy per token
 
-- energy per token  
-- heat load  
-- cooling cost  
-- interconnect congestion  
-- data center OPEX  
-- carbon footprint (ESG relevance)  
+heat load
 
-RCIRCUIT provides a research direction  
-toward **transport-independent compute** —  
+cooling cost
+
+interconnect congestion
+
+data center OPEX
+
+carbon footprint (ESG relevance)
+
+RCIRCUIT offers a research direction toward
+transport-independent compute —
 a major frontier for hyperscalers, defense, and low-power AI.
 
----
+11. Practical Use Cases (Research & Industry)
 
-## 11. Practical Use Cases (Research & Industry)
+RCIRCUIT can be used for:
 
-RCIRCUIT can be used today for:
+transport-dominated regime analysis
 
-- transport-dominated regime analysis  
-- scaling-limit prediction  
-- coherence / jitter failure simulation  
-- local-update compute experiments  
-- new-primitive research prototyping  
+scaling-limit prediction
 
-These tools help hardware, infra, and research teams  
-test architectures **before hardware exists**.
+coherence / jitter failure simulation
 
----
+local-update compute experiments
 
-## 12. Contact
+new-primitive research prototyping
+
+These tools help hardware, infra, and research teams
+test architectures before hardware exists.
+
+12. Contact
 
 For research collaboration or POC discussions:
 
-**Chulhee Park**  
+Chulhee Park
 📩 Email: jspchp638@gmail.com
+
+
+---
+
+
+
