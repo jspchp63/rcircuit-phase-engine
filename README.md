@@ -1,4 +1,36 @@
-# ⚡ RCIRCUIT — Phase Computing Engine
+⚡ RCIRCUIT — Phase Computing Engine
+AI’s real bottleneck is not algorithms.
+It’s electricity.
+
+현대 AI는 “값(value)을 끝없이 옮기는 구조” 위에서 굴러간다.
+텐서를 옮기고 → 곱하고 → 누적하고 → 다시 옮기는 과정이 반복된다.
+
+이 구조는 이제 물리적 한계에 부딪혔다:
+
+HBM bandwidth는 연산보다 먼저 포화되고
+
+전력(consumption)은 한계치를 넘고
+
+열(thermal load)은 누적되어 안정성을 떨어뜨리고
+
+장거리 신호는 jitter로 coherence가 깨지고
+
+GPU·TPU는 연산이 아니라 데이터 이동을 기다리며 멈춘다
+
+즉, 문제는 수학(MatMul)이 아니다.
+문제는 전기(Electricity)다.
+
+그래서 RCIRCUIT는 완전히 다른 계산 모델을 실험한다.
+
+값(value)을 옮기지 않고
+위상(phase)만 국소적으로 진동시키는 계산(phase evolution) 을 사용한다.
+
+Transport → energy-heavy
+
+Local phase evolution → energy-light
+
+이는 AI 계산에서 전력·열·HBM·인터커넥트 문제를
+근본적으로 줄이기 위한 transport-independent compute 연구 방향이다.
 ### Post-MatMul / Post-FLOPS Compute Direction
 
 **What if compute no longer depended on moving values?**
