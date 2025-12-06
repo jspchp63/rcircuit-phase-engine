@@ -1,72 +1,72 @@
-# ⚡ **If MatMul Is the Limit, GPU Is the End.  
-RCIRCUIT Begins Where FLOPS Die.**  
+⚡ If MatMul Is the Limit, GPU Is the End.
+RCIRCUIT Begins Where FLOPS Die.
 
-# ⭐⭐⭐ RCIRCUIT — Phase Computing Engine (Minimal Public Release)
-### Post-FLOPS Compute Architecture Based on Phase Propagation  
-### If you are a VC or deep-tech researcher, review these 3 files first:
-- `/docs/Phase_Compute_Architecture.md`
-- `/src/phase_engine_core_v1.py`
-- `/docs/v1.0_integration_skeleton.md`
+⭐⭐⭐ RCIRCUIT — Phase Computing Engine (Minimal Public Release)
+Post-FLOPS Compute Architecture Based on Phase Propagation
 
-These three explain the paradigm shift.
+If you are a VC or deep-tech researcher, start with these 3 files:
 
----
+/docs/Phase_Compute_Architecture.md
 
-# ⭐ High-Level Summary
+/src/phase_engine_core_v1.py
 
-**Dense MatMul = FLOPS = GPU Monopoly.**  
-Scaling FLOPS is scaling **data movement**, not intelligence.
+/docs/v1.0_integration_skeleton.md
+These explain the paradigm shift.
+
+⭐ High-Level Summary
+
+Dense MatMul = FLOPS = GPU monopoly.
+Scaling FLOPS only scales data movement — not intelligence.
 
 Modern AI systems fail because interconnect physics fail first:
 
-- **Heat** — thermal saturation  
-- **Power density** — the energy wall  
-- **Distance** — propagation delay  
-- **Timing jitter** — synchronization instability  
+Heat → thermal saturation
 
-GPUs move **electrons**.  
-RCIRCUIT moves **phase**.
+Power density → the energy wall
 
----
+Distance → propagation delay
 
-# 🚨 Why Phase > FLOPS
+Timing jitter → synchronization collapse
 
-AI is no longer compute-bound.  
-AI is **interconnect-bound**.
+GPUs move electrons.
+RCIRCUIT moves phase.
+
+🚨 Why Phase > FLOPS
+
+AI is no longer compute-bound.
+AI is interconnect-bound.
 
 RCIRCUIT replaces value-transport compute with:
 
-- **Δ-signal transitions**  
-- **Local coherence formation**  
-- **Phase alignment dynamics**  
-- **Zero bulk data movement**
+Δ-signal transitions
 
-📌 No FLOPS scaling  
-📌 Only phase-state evolution
+Local coherence formation
 
-This repo contains the minimal public-safe subset of the engine.
+Phase alignment dynamics
 
----
+Zero bulk data movement
 
-# 🧩 Minimal Public Architecture (v0.3–v0.4)
+No FLOPS scaling.
+Only phase-state evolution.
 
-### **Layer 0 — Physical Limits**  
-Propagation delay • thermal saturation • jitter instability  
+This repo contains the minimal public-safe subset.
 
-### **Layer 1 — RCIRCUIT Core**  
-Phase register • Δ-signal engine • local propagation loop  
+🧩 Minimal Public Architecture (v0.3–v0.4)
 
-### **Layer 2 — Phase Compute Layer**  
-Coherence map • stability metrics • noise isolation  
+Layer 0 — Physical Limits
+Propagation delay • thermal saturation • jitter instability
 
-⚠ Full version released only after safety, IP, and partner verification.
+Layer 1 — RCIRCUIT Core
+Phase register • Δ-signal engine • local propagation loop
 
----
+Layer 2 — Phase Compute Layer
+Coherence map • stability metrics • noise isolation
 
-# 📁 Repository Structure
-(Professional tree format — clean rendering on GitHub)
+⚠ Full architecture released only after safety/IP review.
 
-```
+📁 Repository Structure
+(Professional tree format)
+
 /docs
 ├── Architecture_Guide_v1.md
 ├── Interconnect_Crisis_Brief.md
@@ -114,91 +114,70 @@ Coherence map • stability metrics • noise isolation
 
 /experiments
 └── (all experiment scripts preserved)
-```
 
----
+👥 Intended Audience
 
-# 👥 Intended Audience
+GPU / TPU / HPC engineers
 
-This repo is built for:
+Compute-physics researchers
 
-- GPU / TPU / HPC engineers  
-- Interconnect & compute-physics researchers  
-- DeepTech founders exploring post-FLOPS compute  
-- Anyone for whom **“phase > value”** feels intuitive  
+DeepTech founders
 
----
+Anyone for whom “phase > value” is intuitive
 
-# 📌 Project Status
-
-This repository is a **public-safe minimal subset** of the Phase Computing project.
-
+📌 Project Status
+This repo is a minimal public-safe subset.
 Full engine release awaits:
 
-- Safety validation  
-- IP & legal review  
-- Partner verification  
+Safety validation
 
-📌 The compute bottleneck is **physics**, not software.  
-📌 Phase is the next architecture.
+IP review
 
----
+Partner verification
 
-# 🔗 System Context
+Compute bottleneck = physics.
+Phase = next architecture.
 
-RCIRCUIT is the compute engine of the broader:  
-### **HROS — Human Resonance Operating System**
+🔗 System Context
+RCIRCUIT is the compute engine of:
 
-Active development continues at:  
-👉 https://github.com/jspchp63/rcircuit-phase-engine
+HROS — Human Resonance Operating System
+Active development: https://github.com/jspchp63/rcircuit-phase-engine
 
----
+🔬 Research Status
+Includes:
 
-# 🔬 Research Status
+Conceptual architecture
 
-Current repo includes:
+Δ-signal propagation experiments
 
-- Conceptual architecture & formalism  
-- Δ-signal propagation experiments  
-- Local coherence & stability tools  
-- Early modeling & wave-based compute diagrams  
-- Minimal executable phase engine prototype  
+Coherence tools
 
-RCIRCUIT is a **research proposal**, not a hardware product.
+Wave-based compute diagrams
 
----
+Minimal prototype
 
-# ⚠ Limitations
+RCIRCUIT = research proposal, not hardware.
 
-- No silicon feasibility claim  
-- No performance model  
-- Abstractions subject to revision  
-- Not a fabrication-ready design  
+⚠ Limitations
 
----
+Not fabrication-ready
 
-# 🛣 Roadmap
+No performance model
 
-### **v0.3 — Phase OS Scheduler**  
-Propagation & update rules  
+Subject to revision
 
-### **v0.5 — Coherence Kernel**  
-Δ-signal update • resonance gating • coherence scoring  
+No silicon feasibility claim
 
-### **v0.7 — Phase Simulation Layer**  
-Noise • stability • propagation-under-load  
+🛣 Roadmap
+v0.3 — Phase OS Scheduler
+v0.5 — Coherence Kernel
+v0.7 — Phase Simulation Layer
+v1.0 — Integration Prototype
+v1.2 — Interconnect Physics Appendix
 
-### **v1.0 — Integration Prototype**  
-Engine + coherence maps + propagation rules  
-
-### **v1.2 — Interconnect Physics Appendix**  
-Heat • power • distance • timing  
-
----
-
-# 📧 Contact  
-For collaboration or technical feedback:  
-📧 **jspchp638@gmail.com**
+📧 Contact
+jspchp638@gmail.com
 
 
 
