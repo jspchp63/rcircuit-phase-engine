@@ -1,13 +1,13 @@
 # RCIRCUIT — Phase Computing Engine
 ### A Post-MatMul / Post-FLOPS Compute Primitive
 
-RCIRCUIT is not an accelerator.  
+RCIRCUIT is not an accelerator.
 RCIRCUIT is a new compute primitive.
 
-Modern AI collapses at interconnect physics.  
+Modern AI collapses at interconnect physics.
 MatMul dies because transport dies.
 
-RCIRCUIT computes by phase-state evolution, not tensor movement.  
+RCIRCUIT computes by phase-state evolution, not tensor movement.
 This removes the transport bottleneck and enables local-scaling compute.
 
 ---
@@ -16,26 +16,26 @@ This removes the transport bottleneck and enables local-scaling compute.
 
 MatMul scaling hits a hard wall due to transport, not arithmetic.
 
-- HBM bandwidth saturates before FLOPS do.  
-- Interconnect latency (NVLink / PCIe / NoC) dominates execution time.  
-- Wire delay grows superlinearly with array size.  
-- Thermal jitter corrupts long-distance signal coherence.  
+- HBM bandwidth saturates before FLOPS do.
+- Interconnect latency (NVLink / PCIe / NoC) dominates execution time.
+- Wire delay grows superlinearly with array size.
+- Thermal jitter corrupts long-distance signal coherence.
 - GPUs/TPUs stall waiting for data, not compute.
 
 **AI scale = MatMul → FLOPS → bandwidth → heat → jitter → collapse.**
 
-RCIRCUIT eliminates global data movement  
+RCIRCUIT eliminates global data movement
 and replaces it with purely local phase evolution.
 
 ---
 
 # 2. Compute Primitive Shift
 
-### MatMul = value transport  
+### MatMul = value transport
 Data must move → energy cost ↑, wire delay ↑, synchronization ↑.
 
-### RCIRCUIT = phase propagation  
-No values move.  
+### RCIRCUIT = phase propagation
+No values move.
 Only state updates propagate through local coupling.
 
 | Property       | MatMul           | RCIRCUIT          |
@@ -75,13 +75,10 @@ This transforms compute into a purely local physical process.
 
 ## 4.1 RCIRCUIT Cell
 struct RC_Cell {
-float phase;
-float delta;
-float coupling;
+    float phase;
+    float delta;
+    float coupling;
 };
-
-perl
-코드 복사
 
 ## 4.2 Update Rule (Semi-Formal)
 
@@ -91,18 +88,12 @@ and `N(i)` its neighbors under fixed locality radius r.
 delta_i(t+1) = γ · Σ_j∈N(i) (phase_j(t) - phase_i(t))
 phase_i(t+1) = phase_i(t) + α·delta_i(t+1)
 
-diff
-코드 복사
-
 - α = phase propagation coefficient  
 - γ = local resonance strength  
 
 This discrete rule approximates a phase-field PDE:
 
 ∂φ/∂t = α·∇²φ + γ·R(φ)
-
-yaml
-코드 복사
 
 ---
 
@@ -135,7 +126,7 @@ Compute Δφ
 Pass through resonance-gate  
 Output: phase-aligned / misaligned state → logical XOR
 
-No values transported.  
+No values transported.
 Only phase differences.
 
 ---
@@ -143,24 +134,23 @@ Only phase differences.
 # 7. Why GPUs, TPUs, Cerebras Fail to Scale Further
 
 ## 7.1 Global Transport = Hard Stop
-
 All modern accelerators share a fatal constraint:
 
 **Compute is cheap. Moving data is not.**
 
-- GPU → SM stalls due to global memory dependency  
-- TPU → systolic arrays choke on boundary conditions  
-- Cerebras → wafer-scale fabric saturates  
-- Groq → deterministic pipeline still depends on streaming bandwidth  
+- GPU → SM stalls due to global memory dependency
+- TPU → systolic arrays choke on boundary conditions
+- Cerebras → wafer-scale fabric saturates
+- Groq → deterministic pipeline still depends on streaming bandwidth
 
 ## 7.2 RCIRCUIT Avoids This Entire Category
 
 Because:
 
-- updates are local  
-- no global barrier  
-- constant fan-out radius  
-- coherence maintained without large-scale wiring  
+- updates are local
+- no global barrier
+- constant fan-out radius
+- coherence maintained without large-scale wiring
 
 **RCIRCUIT decouples compute from transport.**
 
@@ -191,5 +181,4 @@ YouTube: @2EmotionCompute
 # 10. Contact
 **Chulhee Park**  
 Email: jspchp638@gmail.com
-
 
