@@ -1,3 +1,12 @@
+📌 Start Here (For VC / Deep-Tech Researchers)
+
+1. START_HERE.md
+2. /docs/Phase_Compute_Architecture.md
+3. /src/phase_engine_core_v1.py
+4. /docs/v1.0_integration_skeleton.md
+
+These four files explain the paradigm shift from FLOPS → Phase Computing.
+
 ⚡ **If MatMul Is the Limit, GPU Is the End.**  
 **RCIRCUIT Begins Where FLOPS Die.**
 
