@@ -56,16 +56,16 @@ Phase evolves → cheap.**
 
 RCIRCUIT eliminates the three killers of modern AI scaling:
 
-- No tensors
-- No global sync
-- No long-distance propagation
+- No tensors  
+- No global sync  
+- No long-distance propagation  
 
 Only four primitives exist:
 
-- phase registers
-- Δ–signal transitions
-- local resonance coupling
-- coherence evolution
+- phase registers  
+- Δ–signal transitions  
+- local resonance coupling  
+- coherence evolution  
 
 This transforms compute into a purely local physical process.
 
@@ -80,8 +80,7 @@ float delta;
 float coupling;
 };
 
-perl
-코드 복사
+
 
 ## 4.2 Update Rule (Semi-Formal)
 
@@ -91,8 +90,7 @@ and `N(i)` its neighbors under fixed locality radius r.
 delta_i(t+1) = γ · Σ_j∈N(i) (phase_j(t) - phase_i(t))
 phase_i(t+1) = phase_i(t) + α·delta_i(t+1)
 
-diff
-코드 복사
+
 
 - α = phase propagation coefficient  
 - γ = local resonance strength  
@@ -101,30 +99,26 @@ This discrete rule approximates a phase-field PDE:
 
 ∂φ/∂t = α·∇²φ + γ·R(φ)
 
-yaml
-코드 복사
 
 ---
 
 # 5. Directory Structure (Public)
 
 rcircuit-phase-engine/
-├── docs/
-│ ├── Phase_Compute_Architecture.md
-│ ├── v1.0_integration_skeleton.md
-│ └── Phase_OS_Scheduler_v0.4.md
-│
-└── src/
-├── phase_engine_core_v1.py
-├── phase_node.py
-├── phase_coupling.py
-├── phase_propagation_kernel.py
-├── resonance_score.py
-├── coherence_metric.py
-└── phase_state_snapshot.py
+docs/
+Phase_Compute_Architecture.md
+v1.0_integration_skeleton.md
+Phase_OS_Scheduler_v0.4.md
 
-yaml
-코드 복사
+src/
+phase_engine_core_v1.py
+phase_node.py
+phase_coupling.py
+phase_propagation_kernel.py
+resonance_score.py
+coherence_metric.py
+phase_state_snapshot.py
+
 
 ---
 
@@ -156,10 +150,10 @@ All modern accelerators share a fatal constraint:
 
 Because:
 
-- updates are local
-- no global barrier
-- constant fan-out radius
-- coherence maintained without large-scale wiring
+- updates are local  
+- no global barrier  
+- constant fan-out radius  
+- coherence maintained without large-scale wiring  
 
 **RCIRCUIT decouples compute from transport.**
 
@@ -190,4 +184,3 @@ YouTube: @2EmotionCompute
 # 10. Contact
 **Chulhee Park**  
 Email: jspchp638@gmail.com
-
