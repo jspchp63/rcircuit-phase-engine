@@ -121,19 +121,19 @@ yaml
 
 ## 5. Directory Structure (Public)
 
-docs/
-├── Phase_Compute_Architecture.md
-├── v1.0_integration_skeleton.md
-└── Phase_OS_Scheduler_v0.4.md
+**docs/**
+- Phase_Compute_Architecture.md
+- v1.0_integration_skeleton.md
+- Phase_OS_Scheduler_v0.4.md
 
-src/
-├── phase_engine_core_v1.py
-├── phase_node.py
-├── phase_coupling.py
-├── phase_propagation_kernel.py
-├── resonance_score.py
-├── coherence_metric.py
-└── phase_state_snapshot.py
+**src/**
+- phase_engine_core_v1.py
+- phase_node.py
+- phase_coupling.py
+- phase_propagation_kernel.py
+- resonance_score.py
+- coherence_metric.py
+- phase_state_snapshot.py
 
 markdown
 코드 복사
