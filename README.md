@@ -119,108 +119,87 @@ yaml
 
 ---
 
-# 5. Directory Structure (Public)
+## 5. Directory Structure (Public)
 
 docs/
-Phase_Compute_Architecture.md
-v1.0_integration_skeleton.md
-Phase_OS_Scheduler_v0.4.md
+├── Phase_Compute_Architecture.md
+├── v1.0_integration_skeleton.md
+└── Phase_OS_Scheduler_v0.4.md
 
 src/
-phase_engine_core_v1.py
-phase_node.py
-phase_coupling.py
-phase_propagation_kernel.py
-resonance_score.py
-coherence_metric.py
-phase_state_snapshot.py
+├── phase_engine_core_v1.py
+├── phase_node.py
+├── phase_coupling.py
+├── phase_propagation_kernel.py
+├── resonance_score.py
+├── coherence_metric.py
+└── phase_state_snapshot.py
 
-yaml
+markdown
 코드 복사
 
----
-
-# 6. XOR Demo (Phase Logic)
+## 6. XOR Demo (Phase Logic)
 
 φ₁, φ₂ → Δφ → resonance-gate → XOR  
+값은 이동하지 않는다.  
+위상 관계만 계산된다.
 
-No values transported.  
-Only **phase relationships**.
+## 7. Why GPUs, TPUs, Cerebras Fail to Scale
 
----
+Compute is cheap.  
+Moving data is **not**.
 
-# 7. Why GPUs, TPUs, Cerebras Fail to Scale Further
-
-모든 현대 가속기의 치명적 공통점:
-
-**Compute is cheap.  
-Moving data is not.**
-
-- GPU → SM stalls from global memory waits  
+- GPU → SM stalls  
 - TPU → systolic boundary choke  
-- Cerebras → wafer fabric saturation  
-- Groq → bandwidth limitation  
+- Cerebras → wafer fabric saturates  
+- Groq → deterministic but bandwidth-bound  
 
-RCIRCUIT avoids this through:
+RCIRCUIT는 이 병목을 피한다:
 
 - local updates  
 - no global barriers  
-- fixed fan-out radius  
-- no long-distance wiring  
+- fixed fan-out  
+- no long wires  
 
----
-
-# 8. AI Impact (DeepTech Claim)
+## 8. AI Impact (DeepTech Claim)
 
 | Metric | MatMul AI | RCIRCUIT |
-|--------|------------|-----------|
+|-------|-----------|-----------|
 | Token latency | transport-bound | phase-local |
 | Energy/op | high | 30–100× lower |
 | Scaling | saturates | linear |
 | Heat | global | localized |
-| Failure mode | jitter collapse | local incoherence |
+| Failure | jitter collapse | local incoherence |
 
-Transport-compute → **Phase-evolution compute**
-
----
-
-# 9. Repository
+## 9. Repository
 
 GitHub: https://github.com/jspchp63/rcircuit-phase-engine  
 YouTube: @2EmotionCompute
 
----
+## 10. Why This Matters Commercially
 
-# 10. Why This Matters Commercially
+값 이동을 줄이면 모든 비용이 내려간다:
 
-AI 비용의 핵심은 **연산이 아니라 전력·전송·열**이다.
+- energy/token  
+- heat  
+- cooling cost  
+- interconnect congestion  
+- data center OPEX  
+- ESG impact  
 
-값 이동을 줄이면:
+RCIRCUIT는 transport-independent compute에 대한 연구 방향이다.
 
-- energy/token ↓  
-- heat ↓  
-- cooling cost ↓  
-- interconnect congestion ↓  
-- data center OPEX ↓  
-- ESG impact ↓  
-
-RCIRCUIT는 **transport-independent compute**를 향한 새로운 방향이다.
-
----
-
-# 11. Practical Use Cases
+## 11. Practical Use Cases
 
 - transport-dominated regime analysis  
 - scaling-limit prediction  
 - jitter/coherence failure simulation  
 - local-update compute experiments  
-- new-primitive research prototyping  
+- new-primitive prototyping  
 
----
+## 12. Contact
 
-# 12. Contact
-
-For research collaboration or POC discussions:
+For research collaboration or POC:
 
 **Chulhee Park**  
 📩 Email: **jspchp638@gmail.com**
