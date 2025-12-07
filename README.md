@@ -130,7 +130,7 @@ Approximates the phase-field PDE:
 text
 코드 복사
 ∂φ/∂t = α ∇²φ + γ R(φ)
-5. Directory Structure (Public)
+##5. Directory Structure (Public)
 text
 코드 복사
 docs/
@@ -147,7 +147,7 @@ src/
     coherence_metric.py
     phase_state_snapshot.py
     phase_xor_poc_v01.py
-6. POC #1 — Phase XOR Gate
+##6. POC #1 — Phase XOR Gate
 Logic emerging from phase, not data movement.
 
 This repo includes a runnable POC showing:
@@ -186,7 +186,7 @@ RCIRCUIT hypothesis:
 
 Computation does not require value transport.
 
-7. Why Modern Accelerators Cannot Scale Further
+##7. Why Modern Accelerators Cannot Scale Further
 All hit the same limit:
 
 GPU → SM stalls (global memory)
@@ -209,7 +209,7 @@ boundary congestion
 
 global sync
 
-8. AI Impact (DeepTech Claim)
+##8. AI Impact (DeepTech Claim)
 Metric	MatMul AI	RCIRCUIT
 Token latency	transport-bound	phase-local
 Energy/op	high	30–100× lower
@@ -219,14 +219,14 @@ Failure mode	jitter collapse	local incoherence only
 
 Transport-compute → Phase-evolution compute
 
-9. Repository
+##9. Repository
 GitHub
 https://github.com/jspchp63/rcircuit-phase-engine
 
 YouTube
 @2EmotionCompute
 
-10. Why This Matters (Commercial & Infra)
+##10. Why This Matters (Commercial & Infra)
 Reducing value movement reduces:
 
 energy per token
@@ -249,7 +249,7 @@ low-power AI
 
 energy-limited edge compute
 
-11. Practical Use Cases (Current & Near-Term)
+##11. Practical Use Cases (Current & Near-Term)
 RCIRCUIT is usable today for:
 
 transport-dominated regime analysis
@@ -262,7 +262,7 @@ local-update compute experiments
 
 new-primitive prototyping
 
-12. Contact
+##12. Contact
 For research collaboration or early-stage POC:
 
 Chulhee Park
