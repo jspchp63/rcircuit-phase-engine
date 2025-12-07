@@ -190,7 +190,28 @@ YouTube: @2EmotionCompute
 RCIRCUIT는 transport-independent compute에 대한 연구 방향이다.
 
 ## 11. Practical Use Cases
+### Proof of Run — Phase XOR Logic
 
+The phase-based XOR gate is implemented and running in this repo.
+
+No tensors.  
+No value movement.  
+Only phase differences (Δφ) driving logic.
+
+**Command**
+
+```bash
+python src/phase_xor_poc_v01.py
+Example output
+
+φ1 = -0.134 φ2 = -0.722 |Δφ| = 0.588 → XOR = 1
+φ1 = -0.406 φ2 = -0.491 |Δφ| = 0.085 → XOR = 0
+…
+
+This validates the core hypothesis:
+
+phase-state evolution can produce computational logic
+without global data transport.
 - transport-dominated regime analysis  
 - scaling-limit prediction  
 - jitter/coherence failure simulation  
