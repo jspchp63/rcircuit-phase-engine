@@ -3,6 +3,49 @@
 
 ---
 
+## **Intro — Why Phase Computing Matters**
+
+**Exploring compute where values never move.**
+
+Modern AI is collapsing under physics —  
+not math, not FLOPS, but **electricity and movement**.
+
+---
+
+## **The modern bottleneck: Tensor Transport**
+
+Today’s AI workloads are dominated by one thing:
+
+- move  
+- multiply  
+- accumulate  
+- move again  
+
+And physics pushes back:
+
+- HBM saturates before compute  
+- interconnect latency dominates  
+- wire delay explodes  
+- thermal jitter breaks coherence  
+- GPUs & TPUs stall waiting for data — not compute  
+
+**The real bottleneck = movement**  
+**The real cost = electricity**  
+**The real failure mode = physics**
+
+---
+
+## **RCIRCUIT: A New Compute Direction**
+
+RCIRCUIT explores a post-transport compute paradigm  
+where **no values move** —  
+only **local phase-state evolution computes.**
+
+- Transport → **expensive**  
+- Local phase evolution → **scalable**  
+
+---
+
 ## **1. Why This Exists — Transport Collapse Physics**
 
 As models grow:
@@ -243,3 +286,4 @@ For research collaboration or early-stage POC:
 
 **Chulhee Park**  
 📩 Email: **jspchp638@gmail.com**
+hp638@gmail.com**
