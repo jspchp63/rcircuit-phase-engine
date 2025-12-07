@@ -3,9 +3,12 @@ Post-MatMul / Post-FLOPS Compute Direction
 
 Exploring compute where values never move.
 
-Modern AI is collapsing under physics — not math, not FLOPS, but electricity and movement.
+Modern AI is collapsing under physics —
+not math, not FLOPS, but electricity and movement.
 
-Tensor transport dominates everything:
+The modern bottleneck: Tensor Transport
+
+Today’s AI workloads are dominated by one thing:
 
 move
 
@@ -25,17 +28,23 @@ wire delay explodes
 
 thermal jitter breaks coherence
 
-GPUs & TPUs stall waiting for data, not compute
+GPUs & TPUs stall waiting for data — not compute
 
-The bottleneck = movement
-The cost = electricity
-The failure mode = physics
+The real bottleneck = movement
 
-RCIRCUIT explores a compute direction where no values move,
+The real cost = electricity
+The real failure mode = physics
+
+RCIRCUIT: A New Compute Direction
+
+RCIRCUIT explores a post-transport compute paradigm
+where no values move —
 only local phase-state evolution computes.
 
 Transport → expensive
+
 Local phase evolution → scalable
+
 
 1. Why This Exists — Transport Collapse Physics
 
