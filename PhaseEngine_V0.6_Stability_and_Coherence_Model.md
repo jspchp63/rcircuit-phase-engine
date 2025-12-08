@@ -3,6 +3,7 @@ RCIRCUIT Phase Engine v0.6 — Stability & Coherence Model
 =========================================================
 
 Purpose
+
 This document explains why RCIRCUIT does not collapse during computation.
 It provides mathematical structure, local error behavior, coherence formation, and a minimal safe kernel mapping.
 
