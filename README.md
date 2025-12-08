@@ -241,7 +241,42 @@ RCIRCUIT is usable today for:
 - new-primitive prototyping  
 
 ---
+## RCIRCUIT v0.6 — Phase Engine Upgrade Release
+This release adds the minimal experimental set required for researchers to
+evaluate RCIRCUIT as a transport-free compute primitive.
 
+### ✔ New in v0.6
+1. **Phase AND Gate (PoC #2)**
+   - Implemented in `src/phase_and_poc.py`
+   - Demonstrates logical conjunction emerging from phase thresholds
+   - No value movement, no global sync
+
+2. **Experiment 05 — Coupling Sweep**
+   - File: `docs/experiments/experiment_05_coupling_sweep.txt`
+   - Studies how γ (coupling strength) controls stability vs. resonance amplification
+   - Useful for PDE model calibration
+
+3. **v1.9 — Phase Evolution Map (Text Edition)**
+   - File: `docs/v1.9_phase_evolution_map.txt`
+   - Describes stable/unstable phase trajectories without requiring visualization assets
+   - Provides a map for identifying logical regions in phase-space
+
+4. **README Structural Update**
+   - “Experiments” section now includes experiments 01–05
+   - “PoC Directory” updated with AND gate
+
+### ✔ Compatibility
+- Backwards-compatible with v0.5
+- No breaking changes to `phase_engine_core_v1.py`
+
+### ✔ Next Roadmap
+- v0.7: NAND universal gate draft
+- v0.8: Coherence-driven scheduler baseline
+- v0.9: PDE-backed stability model
+- v1.0: Formal whitepaper + Phase OS integration
+
+RCIRCUIT remains the first public framework proposing
+**transport-free compute via local phase evolution.**
 ## 📣 Call for Experimental Collaboration — RCIRCUIT Phase Computing
 
 RCIRCUIT has reached the point where further progress requires 
