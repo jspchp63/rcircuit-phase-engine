@@ -1,3 +1,16 @@
+## 🔥 Phase Engine v0.5 — Experimental Release
+
+RCIRCUIT now includes:
+- Local phase-update kernel (v0.5)
+- Coupling & coherence computation
+- Drift & resonance modeling
+- 8 experimental validation files under docs/experiments
+
+Purpose:
+Validate transport-free compute behavior via coherence, drift, and threshold gate scans.
+
+See: docs/experiments/
+
 # RCIRCUIT — Phase Computing Engine
 ### Transport-Free Compute Model for Post-MatMul AI  
 **Compute_E = (PhaseAmplitude × CouplingStrength) / PropagationTime**
