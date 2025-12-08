@@ -142,24 +142,51 @@ phase_i(t+1) = phase_i(t) + α · delta_i(t+1)
 
 ---
 
-# **5. Directory Structure (Public)**
+5. Directory Structure (Expanded)
+This repository contains the full RCIRCUIT research stack:
+models, PoCs, PDE formulations, phase engines, and OS abstractions.
 
-```
-docs/
-    Phase_Compute_Architecture.md
-    v1.0_integration_skeleton.md
-    Phase_OS_Scheduler_v0.4.md
+📁 docs/
+    ├── RCIRCUIT_whitepaper_V2.0.md
+    ├── RCIRCUIT_ComputeE_Technical_Overview_v1.0.txt
+    ├── Phase_OS_WhitePaper_v0.2_FigureEdition.md
+    ├── Phase_Compute_Architecture.md
+    ├── v1.3_phase_coupling_model.md
+    ├── v1.4_local_coherence_map.md
+    ├── v1.5_resonance_field_accumulator.md
+    ├── v1.8_resonance_flow_graph.md
+    ├── experiments/
+    │     ├── experiment_01_phase_xor.txt
+    │     ├── experiment_02_local_coherence_sim.txt
+    │     ├── experiment_03_resonance_drift_test.txt
+    │     ├── experiment_04_threshold_gate_scan.txt
+    └── README_docs_index.md
 
-src/
-    phase_engine_core_v1.py
-    phase_node.py
-    phase_coupling.py
-    phase_propagation_kernel.py
-    resonance_score.py
-    coherence_metric.py
-    phase_state_snapshot.py
-    phase_xor_poc_v01.py
-```
+📁 src/
+    ├── phase_engine_core_v1.py
+    ├── phase_node.py
+    ├── phase_coupling.py
+    ├── phase_propagation_kernel.py
+    ├── coherence_metric.py
+    ├── resonance_score.py
+    ├── phase_state_snapshot.py
+    ├── phase_xor_poc_v01.py
+    ├── phase_and_poc.py
+    └── utils/
+           ├── grid_init.py
+           ├── noise_injector.py
+           └── coupling_visualizer.py
+
+📁 assets/ (planned)
+    ├── animations/
+    ├── coherence_maps/
+    └── phase_evolution_videos/
+
+🔗 Purpose:
+- docs/ → theory, whitepapers, laws, PDE models, experiments
+- src/ → executable phase engine & logic PoCs
+- assets/ → visualization layer (for future demos)
+
 
 ---
 
