@@ -1,0 +1,13 @@
+Experiment 07 — Resonance Threshold Scan (Compute_E Check)
+
+Goal:
+Test how Δ-phase interactions transition across threshold levels.
+
+Procedure:
+• Vary coupling strength γ from 0.05 to 0.5
+• Compute Δφ and detect activation
+• Record activation boundary
+
+Expected output:
+• Threshold boundary curve
+• Shows Compute_E proportionality trend
