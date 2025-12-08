@@ -1,0 +1,18 @@
+Experiment 05 — Phase Field Visualization (v0.5)
+
+Goal:
+Observe how local-only updates evolve global phase patterns without any transport.
+
+Procedure:
+1. Initialize PhaseEngine(size=60, alpha=0.12, gamma=0.20)
+2. Run for 300 steps
+3. Save snapshots every 20 steps
+4. Plot phase fields as heatmaps
+
+Expected Outcome:
+• coherence zones will emerge
+• no value transport occurs
+• phase evolution organizes spatial structures
+
+Code:
+python visualize_phase_field.py
