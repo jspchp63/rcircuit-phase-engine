@@ -2,60 +2,56 @@ RCIRCUIT v2.1 — Whitepaper (Extended Technical Edition)
 Phase Evolution as a Transport-Free Compute Paradigm
 
 Author: Chulhee Park
-Version: 2.1 (Extended with Compute_E Law, Phase OS Integration, and Scaling Clarification)
+Version: 2.1
 
 Abstract
 
-Modern AI systems are collapsing under the physical limits imposed not by arithmetic,
-but by transport.
+Modern AI systems are collapsing under physical limits not from arithmetic,
+but from transport.
 
-FLOPS continue scaling; physics does not.
 HBM saturation, wire delay, interconnect congestion, and thermal jitter now dominate compute behavior.
 
-RCIRCUIT proposes a transport-free compute model: values never move.
-Only local phase-state evolution performs computation.
+RCIRCUIT proposes a transport-free compute model: values never move —
+only local phase-state evolution performs computation.
 
-This whitepaper v2.1 extends the v2.0 edition with:
+This v2.1 edition adds:
 
-Compute_E Law — physical-style expression of phase compute capacity
+Compute_E law
 
-Phase OS Integration — the world’s first OS for transport-free compute
+Phase OS integration
 
-Improved Scaling Derivation
+Improved scaling model
 
-POC clarity
+Extended PoC clarity
 
-Roadmap for v3.0 universality
+Roadmap toward universality
 
-1. Introduction — The Collapse of Transport-Based Compute
+1. Introduction — Transport Collapse
 
-The real bottleneck of modern accelerators is not MatMul,
-but movement:
+Modern accelerators fail due to movement, not math.
 
-global memory stalls
+Transport dominates:
 
 HBM bandwidth ceilings
+
+global memory stalls
 
 wire delay
 
 thermal jitter
 
-global synchronization overhead
+synchronization overhead
 
-Transport scales superlinearly (O(N²)) as models grow.
-Computation scales linearly (O(N)).
+Transport scales O(N²); compute scales O(N).
+This asymmetry kills scalability.
 
-This mismatch collapses scalability.
-
-The next compute paradigm must shift from:
+RCIRCUIT shifts computation from:
 
 moving values → evolving states
 
-RCIRCUIT is a post-transport architecture built on this principle.
+2. Limitations of MatMul Compute
 
-2. Compute Limitations of MatMul-Centric Architectures
-
-A tensor operation requires:
+A single tensor op requires:
 
 fetch
 
@@ -65,32 +61,29 @@ accumulate
 
 refetch
 
-reshape
-
 redistribute
 
-Every step = movement.
+Every step = movement, which costs:
 
-Transport is 30–200× more expensive than ALU operations.
+energy
 
-This produces:
+bandwidth
 
-energy spikes
+time
 
-global bottlenecks
+heat
 
-coherence collapse
+coherence
 
-thermal runaway
+Transport is 30–200× more expensive than ALU compute.
 
-Modern AI workloads are transport-bound.
+Thus modern AI is transport-bound, not compute-bound.
 
-3. RCIRCUIT Overview — Computation Without Movement
+3. RCIRCUIT Overview
 
-RCIRCUIT eliminates all global transport.
-Computation emerges from short-range, local interactions.
+RCIRCUIT eliminates global transport.
 
-Key principles:
+Key principles
 
 no tensors
 
@@ -100,7 +93,7 @@ no long-distance propagation
 
 no synchronization
 
-Primitive components:
+Primitive components
 
 phase registers
 
@@ -110,11 +103,10 @@ local resonance coupling
 
 coherence evolution
 
-Information is not moved.
-Information evolves.
+Computation emerges from local state evolution, not movement.
 
-4. Minimal RCIRCUIT Architecture
-4.1 Cell Definition
+4. Minimal Architecture
+4.1 RCIRCUIT Cell
 struct RC_Cell {
     float phase;
     float delta;
@@ -128,16 +120,13 @@ phase_i(t+1) = phase_i(t) + α · delta_i(t+1)
 
 Where:
 
-α = propagation coefficient
+α = propagation rate
 
-γ = resonance strength
+γ = coupling strength
 
 N(i) = local neighborhood
 
 4.3 PDE Interpretation
-
-A discretized form of:
-
 ∂
 𝜙
 ∂
@@ -160,12 +149,9 @@ A discretized form of:
 =α∇
 2
 ϕ+γR(ϕ)
+5. New in v2.1 — Compute_E Law
 
-This makes RCIRCUIT compatible with physical simulation frameworks.
-
-5. New in v2.1 — Compute_E Law Integration
-
-A single expression captures RCIRCUIT’s compute capacity:
+The physical-style compute capacity:
 
 Compute_E
 =
@@ -183,18 +169,16 @@ Propagation Time
 	​
 
 
-Meaning:
+Where:
 
 Phase Amplitude → energy differential
 
 Coupling Strength → interaction strength
 
-Propagation Time → locality-driven latency
+Propagation Time → latency of local update
 
-This is not aesthetics —
-it is a legitimate energy-density proxy for phase-based compute.
-
-Every term corresponds to known PDE/network-dynamics quantities.
+This maps directly to PDE/network dynamics —
+not aesthetics, actual physics.
 
 6. Benchmark Model
 6.1 Transport Cost Comparison
@@ -203,12 +187,13 @@ Memory Move (HBM)	100	0
 Multiply	1	0.4
 Local Phase Step	—	0.1
 
-Transport dominates by two orders of magnitude.
-
+Transport dominates compute by two orders of magnitude.
 RCIRCUIT avoids transport entirely.
 
 6.2 Scaling Law
+
 MatMul systems:
+
 𝑇
 (
 𝑁
@@ -219,17 +204,17 @@ MatMul systems:
 𝑁
 2
 )
- transport
 +
 𝑂
 (
 𝑁
 )
- compute
 T(N)=O(N
 2
-) transport+O(N) compute
+)+O(N)
+
 RCIRCUIT:
+
 𝑇
 (
 𝑁
@@ -239,15 +224,12 @@ RCIRCUIT:
 (
 𝑁
 )
- local updates
-T(N)=O(N) local updates
+T(N)=O(N)
 
-Transport collapse begins near N ≈ 10⁸ parameters.
+Transport collapse begins near N ≈ 10^8 parameters.
 
 7. Logical Expressiveness
-
-Current PoC demonstrates XOR from phase differential:
-
+XOR Gate
 Δ
 𝜙
 =
@@ -268,13 +250,13 @@ Current PoC demonstrates XOR from phase differential:
 
 ∣
 
-Gate rule:
+Rule:
 
 XOR = 1 if Δφ > θ
 
 XOR = 0 otherwise
 
-Universality Roadmap
+Roadmap to Universality
 
 XOR ✔
 
@@ -282,12 +264,12 @@ NOT (phase inversion) — planned
 
 AND (threshold coupling) — planned
 
-NAND (XOR + inversion) → universality
+NAND (XOR + inversion) — planned
 
-A universal gate set is achievable.
+NAND = computational universality.
 
-8. Coherence & Stability Model
-8.1 Local Drift
+8. Coherence & Stability
+8.1 Drift
 𝜙
 𝑖
 (
@@ -324,7 +306,7 @@ i
 𝑟
 C(r)=e
 −λr
-8.3 Localized Error Bound
+8.3 Error Localization
 𝐸
 (
 𝑡
@@ -335,33 +317,35 @@ C(r)=e
 local noise
 E(t)≤k⋅local noise
 
-Transport-based compute spreads errors globally.
+Transport-based compute spreads errors globally;
 RCIRCUIT localizes them.
 
-9. Phase OS Integration (New in v2.1)
+9. Phase OS Integration
 
-RCIRCUIT requires an OS that schedules phase evolution, not value transport.
+Transport-free compute requires a transport-free OS.
 
-Phase OS provides:
+Phase OS schedules:
 
-coherence-driven task scheduling
+coherence thresholds
 
 resonance windows
 
 phase-target execution
 
-transport-free compute orchestration
+local update priority
 
-Phase OS is the first OS model compatible with post-transport architectures.
+stability-driven compute events
 
-10. Experimental POC
+Phase OS = the first OS designed for state evolution instead of value movement.
+
+10. Experimental PoC
 
 Run:
 
 python src/phase_xor_poc_v01.py
 
 
-Output sample:
+Output:
 
 φ1 = -0.134, φ2 = -0.722 → XOR = 1
 φ1 = -0.406, φ2 = -0.491 → XOR = 0
@@ -369,38 +353,34 @@ Output sample:
 
 Demonstrates:
 
-logic without movement
+logic without transport
 
-coherence-driven computation
-
-feasibility of phase-evolution compute
+computation from phase relationships
 
 11. Roadmap to v3.0
 
-full universal gate set
+universal gate implementation
 
-2D/3D lattice phase engine
+2D/3D lattice engine
 
 coherence visualization demo
 
-scaling benchmarks
+extended scaling benchmarks
 
 prototype Phase OS scheduler
 
 12. Conclusion
 
-Transport is collapsing under physics.
-Moving values is too expensive.
+Transport is collapsing under physical limits.
+Movement is too expensive.
 
-RCIRCUIT offers:
+RCIRCUIT provides:
 
-a compute model not bound by transport
+a transport-free compute model
 
-a physically coherent scaling law
+coherent scaling law
 
-a pathway to post-MatMul architectures
-
-The principle is simple:
+a path to post-MatMul architectures
 
 Stop moving values.
 Start evolving states.
@@ -409,4 +389,3 @@ Start evolving states.
 
 Author: Chulhee Park
 📩 Email: jspchp638@gmail.com
-
