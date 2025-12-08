@@ -1,11 +1,10 @@
-RCIRCUIT — Phase Computing Engine
-                 Compute_E = (Phase Amplitude × Coupling Strength) / Propagation Time
-
 # ⚡ RCIRCUIT — Phase Computing Engine  
-### Post-MatMul / Post-FLOPS Compute Direction
 
+### Transport-Free Compute Model for Post-MatMul AI  
+**Compute_E = (PhaseAmplitude × CouplingStrength) / PropagationTime**  
+A paradigm where values never move — only local phase evolution computes.  
+This repository contains the law, engine, PDE model, and PoC for transport-free computation.
 ---
-
 ## **Intro — Why Phase Computing Matters**
 
 **Exploring compute where values never move.**
