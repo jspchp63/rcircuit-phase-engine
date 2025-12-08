@@ -112,21 +112,15 @@ float delta;
 float coupling;
 };
 
-shell
-코드 복사
 
 ### 6.2 Update Rule
 delta_i(t+1) = γ Σ_j∈N(i)( phase_j - phase_i )
 phase_i(t+1) = phase_i(t) + α · delta_i(t+1)
 
-shell
-코드 복사
 
 ### 6.3 PDE Approximation
 ∂φ/∂t = α ∇²φ + γ R(φ)
 
-yaml
-코드 복사
 
 ---
 
@@ -176,21 +170,14 @@ Logic emerging from **phase**, not data movement.
 Δφ = |φ₁ - φ₂|
 XOR = 1 if Δφ > θ
 
-makefile
-코드 복사
-
 Run:
 python src/phase_xor_poc_v01.py
 
-makefile
-코드 복사
 
 Example:
 φ1=-0.134, φ2=-0.722 → XOR=1
 φ1=-0.406, φ2=-0.491 → XOR=0
 
-yaml
-코드 복사
 
 ---
 
