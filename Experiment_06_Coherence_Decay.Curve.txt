@@ -1,0 +1,13 @@
+Experiment 06 — Coherence Decay Curve
+
+Goal:
+Measure how coherence C decays with radius r in a local-update compute engine.
+
+Procedure:
+1. Initialize engine
+2. Introduce a local impulse at center
+3. Measure correlation with distance r
+4. Fit exponential decay: C(r) = exp(-λr)
+
+Deliverable:
+Graph: coherence vs distance
