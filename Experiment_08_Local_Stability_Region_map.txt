@@ -1,0 +1,13 @@
+Experiment 08 — Local Stability Region Map
+
+Goal:
+Map stable vs unstable update regions in (alpha, gamma) parameter space.
+
+Procedure:
+• Sweep alpha ∈ [0.05, 0.25]
+• Sweep gamma ∈ [0.05, 0.40]
+• Run engine for 200 steps
+• Detect divergence or stable local coherence
+
+Deliverable:
+• 2D heatmap showing stability region
