@@ -1,0 +1,15 @@
+v1.9 — Phase Evolution Map (Text Edition)
+
+State Regions:
+1. Low-drift region (stable)
+2. Linear-propagation region (useful for logic)
+3. Resonant-amplification region (XOR, AND activity)
+4. Coherence-collapse region (unstable)
+
+A phase trajectory φ(t) transitions through these regions depending on:
+- α (propagation)
+- γ (coupling)
+- noise ε
+
+This map provides a guide for identifying where computation reliably emerges
+without visualization assets.
