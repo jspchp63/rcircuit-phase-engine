@@ -242,9 +242,38 @@ RCIRCUIT is usable today for:
 
 ---
 
-## 12. Contact
-**Chulhee Park**  
-📩 Email: jspchp638@gmail.com
+## 📣 Call for Experimental Collaboration — RCIRCUIT Phase Computing
+
+RCIRCUIT has reached the point where further progress requires 
+**team-based experimental validation.**
+
+Already completed:
+- Transport-free compute model
+- Compute_E law formulation
+- PDE-based phase evolution framework
+- Phase Engine v0.5 implementation
+- 8 experimental prototypes
+- XOR PoC (logic without value movement)
+
+Needed next:
+- Large-scale phase-field stability tests
+- Resonance coherence measurement
+- Gate composition (XOR → NAND)
+- Scaling validation vs transport-dominated models
+
+Why external teams:
+Phase-based compute is a frontier-class problem requiring HPC clusters, 
+PDE specialists, numerical experts, and architecture researchers.
+
+Who should contact:
+- GPU/TPU architects
+- PDE / numerical simulation researchers
+- AI hardware labs
+- PhD students, postdocs, deep-tech teams
+
+Contact:
+
+📩 jspchp638@gmail.com
 
 ---
 
