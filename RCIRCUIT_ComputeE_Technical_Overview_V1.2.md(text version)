@@ -1,0 +1,151 @@
+# RCIRCUIT — Phase Computing Engine  
+## Technical Overview v1.2 (GitHub Text Version)
+
+### Compute_E Law  
+**Compute_E = (PhaseAmplitude × CouplingStrength) / PropagationTime**
+
+A local compute-efficiency law for transport-free computation systems.
+
+---
+
+# 1. Motivation — AI is Collapsing Under Transport Physics
+
+Modern AI scaling fails due to **data movement**, not arithmetic.
+
+Transport bottlenecks:
+- HBM bandwidth saturation  
+- Interconnect latency dominating compute  
+- Wire delay explosion  
+- Thermal jitter destroying coherence  
+
+**GPUs stall waiting for data, not math.**
+
+Transport = the real cost, the real bottleneck, the real failure mode.
+
+RCIRCUIT proposes an architecture where:
+**No values move. Only phase evolves.**
+
+---
+
+# 2. Compute Model — Local Phase Evolution
+
+Instead of moving tensors globally, RCIRCUIT computes using **local phase updates** only.
+
+### Core primitives:
+- Phase registers (φ)  
+- Delta transitions (Δ)  
+- Local coupling strength (γ)  
+- Coherence evolution  
+
+### Update Rule (Local-Only)
+delta_i(t+1) = γ Σ_j (φ_j - φ_i)
+φ_i(t+1) = φ_i(t) + α · delta_i(t+1)
+
+makefile
+코드 복사
+
+Where:  
+α = phase propagation coefficient  
+γ = resonance coupling strength  
+
+### PDE Approximation
+∂φ/∂t = α ∇²φ + γ R(φ)
+
+yaml
+코드 복사
+
+This maps phase-compute into a continuous physics-based computation model.
+
+---
+
+# 3. Compute_E Model
+
+Compute_E quantifies the effective compute-per-time step in a transport-free local system:
+
+Compute_E = (PhaseAmplitude × CouplingStrength) / PropagationTime
+
+yaml
+코드 복사
+
+Interpretation:
+- Higher phase amplitude → stronger influence  
+- Higher coupling strength → faster local consensus  
+- Lower propagation time → more efficient compute  
+
+Compute_E serves as a "transport-free FLOPS" metric.
+
+---
+
+# 4. POC — Phase XOR Gate (Logic Without Movement)
+
+A working XOR was implemented in Python using only phase differences.
+
+### XOR Rule
+Δφ = |φ1 - φ2|
+XOR = 1 if Δφ > threshold else 0
+
+yaml
+코드 복사
+
+Properties:
+- No tensor movement  
+- No global memory access  
+- No long-distance propagation  
+- Purely local resonance interactions  
+
+This demonstrates the feasibility of **transport-free logic gates**.
+
+---
+
+# 5. Scaling Law — RCIRCUIT vs MatMul
+
+### MatMul scaling:
+T(N) = O(N²) transport + O(N) compute
+
+shell
+코드 복사
+
+### RCIRCUIT scaling:
+T(N) = O(N) local updates
+
+scss
+코드 복사
+
+Transport collapse occurs around:
+N ≈ 10⁸ parameters
+
+yaml
+코드 복사
+
+RCIRCUIT bypasses this collapse by eliminating transport entirely.
+
+---
+
+# 6. Why This Matters (Infra & Practical Impact)
+
+Transport-free compute means:
+- Lower energy per operation  
+- Lower datacenter cooling loads  
+- Reduced interconnect burden  
+- Localized heat footprint  
+- Scalable compute for large N  
+
+Application domains:
+- Hyperscalers  
+- Defense & real-time systems  
+- Low-power inference  
+- Edge compute under energy constraints  
+
+---
+
+# 7. Repository  
+GitHub: https://github.com/jspchp63/rcircuit-phase-engine  
+YouTube: @2EmotionCompute  
+
+---
+
+# 8. Contact  
+For research collaboration or early-stage POC work:
+
+**Chulhee Park**  
+📩 Email: jspchp638@gmail.com
