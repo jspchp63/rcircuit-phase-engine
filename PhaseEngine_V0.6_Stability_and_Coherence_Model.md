@@ -1,5 +1,5 @@
 =========================================================
-RCIRCUIT Phase Engine v0.6 — Stability & Coherence Model (Final Safe Version)
+RCIRCUIT Phase Engine v0.6 — Stability & Coherence Model 
 =========================================================
 
 Purpose
