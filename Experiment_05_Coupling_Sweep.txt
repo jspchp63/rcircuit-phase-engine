@@ -1,0 +1,22 @@
+Experiment 05 — Coupling Sweep (γ Scan)
+Goal:
+Evaluate how coupling strength γ affects stability, drift, and resonance amplification.
+
+Procedure:
+1. Initialize a 20×20 or 50×50 grid
+2. Sweep γ across [0.05, 0.1, 0.2, 0.4, 0.8]
+3. Run 100–300 phase update steps
+4. Measure:
+   - local drift
+   - resonance overshoot
+   - coherence half-life
+   - transition events
+
+Expected Behavior:
+- Low γ → under-coupled, stable but inactive
+- Optimal γ → distinct logical transitions form
+- High γ → oscillation or chaotic divergence
+
+Interpretation:
+Coupling sweep defines the "usable window" of RCIRCUIT,
+similar to finding a stable operating voltage in analog circuits.
