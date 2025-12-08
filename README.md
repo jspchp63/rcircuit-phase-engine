@@ -1,3 +1,6 @@
+RCIRCUIT — Phase Computing Engine
+                 Compute_E = (Phase Amplitude × Coupling Strength) / Propagation Time
+
 # ⚡ RCIRCUIT — Phase Computing Engine  
 ### Post-MatMul / Post-FLOPS Compute Direction
 
