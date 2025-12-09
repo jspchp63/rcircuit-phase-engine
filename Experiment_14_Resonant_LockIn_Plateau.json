@@ -1,0 +1,20 @@
+{
+  "experiment_id": "exp14_resonant_lockin_plateau",
+  "description": "Identification and measurement of the resonant lock-in plateau where phase becomes frequency-locked.",
+  "frequency_sweep_hz": {
+    "start": 2.0,
+    "end": 5.0,
+    "step": 0.05
+  },
+  "steps_per_frequency": 1000,
+
+  "results": {
+    "lockin_band_start_hz": 3.20,
+    "lockin_band_end_hz": 3.52,
+    "lockin_plateau_width_hz": 0.32,
+    "coherence_inside_band": 0.94,
+    "coherence_outside_band": 0.57,
+    "notes": "Lock-in occurs when external frequency aligns with internal oscillator's natural resonance."
+  },
+
+  "notes": "Lock-in plateau represents a stable regime where phase drift is suppressed and oscillators follow input frequency."
