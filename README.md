@@ -76,7 +76,10 @@ PDE Form
 text
 코드 복사
 ∂φ/∂t = α ∇²φ + γ R(φ)
+
+---
 7. What RCIRCUIT Removes
+
 ❌ tensor transport
 ❌ global sync
 ❌ long-distance propagation
@@ -89,7 +92,7 @@ Replaced by:
 ✅ coherence evolution
 
 Computation becomes local physics, not global transport.
-
+---
 8. Experiment Suite (1–20)
 Included (1–10): Core validation
 
@@ -103,46 +106,47 @@ threshold logic
 
 noise interaction
 
-Deferred (11–20): Large-grid PDE experiments
-
-text
-코드 복사
-01_phase_xor.txt
-02_local_coherence_sim.txt
-03_resonance_drift_test.txt
-04_threshold_gate_scan.txt
-05_coupling_sweep.txt
-06_coherence_decay.txt
-07_phase_spread (internal)
-08_phase_lock_fail (internal)
-09_transport_zero_test (internal)
-10_noise_resonance_interaction.txt
-11–20_*.json (advanced set)
+Deferred (11–20): Advanced PDE / large-grid experiments
+01_phase_xor.txt  
+02_local_coherence_sim.txt  
+03_resonance_drift_test.txt  
+04_threshold_gate_scan.txt  
+05_coupling_sweep.txt  
+06_coherence_decay.txt  
+07_phase_spread (internal)  
+08_phase_lock_fail (internal)  
+09_transport_zero_test (internal)  
+10_noise_resonance_interaction.txt  
+11–20_*.json (advanced set)  
+---
 9. Phase XOR Gate (PoC)
-text
-코드 복사
-Δφ = |φ₁ – φ₂|
+
+Phase logic emerging without value movement
+
+Δφ = |φ₁ – φ₂|  
 XOR = 1 if Δφ > θ
+
+
 Run:
 
-bash
-코드 복사
 python src/phase_xor_poc_v01.py
+---
 10. Scaling & Cost Model
 Transport Cost
 Operation	MatMul	RCIRCUIT
-Move	100	0
+Move (HBM)	100	0
 Multiply	1	0.4
 Local update	—	0.1
-
 Scaling
-MatMul: O(N²)
 
-RCIRCUIT: O(N)
+MatMul: O(N²) transport + compute
 
-Transport collapse at N ≈ 10⁸.
+RCIRCUIT: O(N) local updates
 
+Transport collapse begins at N ≈ 10⁸.
+---
 11. Commercial Impact
+
 Eliminates:
 
 energy per token
@@ -157,24 +161,35 @@ hyperscale AI
 
 low-power inference
 
-edge compute
-
+edge compute with zero transport
+---
 12. Collaboration Call
-Next needs:
+
+Next research needs:
 
 phase-field stability tests
 
-resonance coherence maps
+resonance coherence mapping
 
 XOR → NAND gate formation
 
-PDE scalability experiments
+PDE-backed scaling experiments
 
+Who should collaborate:
+
+GPU/TPU architects
+
+PDE / numerical simulation researchers
+
+AI hardware labs
+
+PhD students / postdocs
+---
 Contact:
 📩 jspchp638@gmail.com
 
+END
+
 Compute where values never move.
 Local physics is compute.
-
-
 
