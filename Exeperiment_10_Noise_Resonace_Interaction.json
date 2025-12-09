@@ -1,0 +1,18 @@
+{
+  "experiment_id": "exp10_noise_resonance_interaction",
+  "description": "Interaction between injected noise and the natural resonance band.",
+  "noise_sigma": 0.10,
+  "resonant_frequency_hz": 3.4,
+  "steps": 1500,
+  "initial_phase_deg": 0.0,
+
+  "results": {
+    "resonance_band_effect": "partial_noise_cancellation",
+    "effective_noise_reduction_ratio": 0.28,
+    "coherence_score_before": 0.61,
+    "coherence_score_after": 0.74,
+    "notes": "Coherence improves when noise overlaps with resonance band due to stabilizing effects."
+  },
+
+  "notes": "Demonstrates that noise inside the resonance band can stabilize phase evolution instead of degrading it."
+}
