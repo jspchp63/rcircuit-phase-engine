@@ -1,0 +1,25 @@
+{
+  "experiment_id": "exp17_multinode_coherence",
+  "description": "Coherence propagation across a 6-node coupled oscillator chain.",
+  
+  "network": {
+    "nodes": 6,
+    "topology": "linear_chain",
+    "coupling_strength": 0.14
+  },
+
+  "simulation": {
+    "steps": 1800,
+    "noise_sigma": 0.04
+  },
+
+  "results": {
+    "coherence_node1": 0.91,
+    "coherence_node6": 0.73,
+    "coherence_gradient": "monotonic_dropoff",
+    "propagation_delay_ms": 47,
+    "notes": "Coherence weakens along the chain, forming a spatial gradient characteristic of partial coupling regimes."
+  },
+
+  "notes": "Demonstrates spatial coherence gradients and propagation delays inherent in multi-node resonant structures."
+}
