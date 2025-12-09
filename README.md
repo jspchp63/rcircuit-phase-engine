@@ -1,3 +1,5 @@
+[🎥 Watch the Phase Engine Intro](Transport_Free_Compute.mp4)
+
 ## 🔥 Phase Engine v0.5 — Experimental Release
 
 RCIRCUIT now includes:
