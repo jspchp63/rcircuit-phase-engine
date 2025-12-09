@@ -193,6 +193,8 @@ Example:
 
 
 ---
+### Noise–Coherence Curve (Phase Engine)
+![Noise vs Coherence](noise_coherence_plot.png)
 
 ## 9. Scaling & Cost Models (v1.5)
 
