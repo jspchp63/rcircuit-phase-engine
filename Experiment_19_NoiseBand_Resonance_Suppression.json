@@ -1,0 +1,25 @@
+{
+  "experiment_id": "exp19_noiseband_resonance_suppression",
+  "description": "Testing how band-limited noise interacts with and suppresses resonance amplitudes.",
+  
+  "noise_band_hz": {
+    "low": 2.8,
+    "high": 3.6
+  },
+
+  "simulation": {
+    "steps": 2000,
+    "noise_power": 0.18
+  },
+
+  "results": {
+    "resonance_peak_before": 1.00,
+    "resonance_peak_after": 0.67,
+    "suppression_ratio": 0.33,
+    "coherence_before": 0.82,
+    "coherence_after": 0.59,
+    "notes": "Band-limited noise overlaps with natural resonance frequency, reducing amplitude and coherence."
+  },
+
+  "notes": "This experiment quantifies resonance suppression when noise energy concentrates around the resonance band."
+}
