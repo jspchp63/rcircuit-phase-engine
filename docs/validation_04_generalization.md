@@ -91,7 +91,7 @@ Noise-band rebound rule은:
 - 시스템 구조가 달라도,  
 - Random Seed가 달라도  
 
-**사라지지 않는 고유한 계산 규칙**임이 확인되었다.
+**사라지지 않는 고유한 계산 규칙**임이 확인.
 
 즉,
 
@@ -107,14 +107,14 @@ Noise-band rebound rule은:
 
 ## ⭐ (1) 모델의 “보편성(Universality)” 확보  
 동역학 모델이 진짜가 되려면  
-Generalization이 필수다.
+Generalization이 필수.
 
 ---
 
 ## ⭐ (2) 논문 1편이 아니라 **2편 분량**  
 - Rule Discovery  
 - Rule Generalization  
-이건 AI/Physics 모델 논문의 두 축이다.  
+이건 AI/Physics 모델 논문의 두 축.  
 
 ---
 
