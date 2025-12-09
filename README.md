@@ -1,3 +1,4 @@
+![Phase Engine Intro](phase_intro.gif)
 🎥 [Watch the Phase Engine Intro](https://github.com/jspchp63/rcircuit-phase-engine/blob/main/final_video%20(78).mp4)
 
 
