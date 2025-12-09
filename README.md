@@ -1,158 +1,151 @@
-Phase Engine — Transport-Free Compute (RCIRCUIT)
+# Phase Engine — Transport-Free Compute (RCIRCUIT)
 
-🎥 Watch the Phase Engine Intro
+[🎥 **Watch the Phase Engine Intro**](final_video%20(78).mp4)
 
-Phase Engine v0.5 — Experimental Release
+---
+
+## Noise–Coherence Curve (Phase Engine)
+
+![Noise vs Coherence](noise_coherence_plot.png)
+
+---
+
+# 🔥 Phase Engine v0.5 — Experimental Release
 
 RCIRCUIT now includes:
 
-Local phase-update kernel (v0.5)
+- Local phase-update kernel (v0.5)
+- Coupling & coherence computation
+- Drift & resonance modeling
+- 8 experimental validation files under docs/experiments
 
-Coupling & coherence computation
-
-Drift & resonance modeling
-
-8 experimental validation files under docs/experiments
-
-Purpose:
+Purpose:  
 Validate transport-free compute behavior via coherence, drift, and threshold gate scans.
 
-See: docs/experiments/
+See: `docs/experiments/`
 
-RCIRCUIT — Phase Computing Engine
-Transport-Free Compute Model for Post-MatMul AI
+---
 
-Compute_E = (PhaseAmplitude × CouplingStrength) / PropagationTime
+# RCIRCUIT — Phase Computing Engine
+### Transport-Free Compute Model for Post-MatMul AI  
+**Compute_E = (PhaseAmplitude × CouplingStrength) / PropagationTime**
 
-A compute paradigm where values never move —
-only local phase evolution performs computation.
+A compute paradigm where **values never move** —  
+only **local phase evolution** performs computation.
 
-1. Why Phase Computing Matters
+---
 
+## 1. Why Phase Computing Matters
 Modern AI is collapsing under physics — not math.
 
-The Modern Bottleneck: Tensor Transport
+### The Modern Bottleneck: Tensor Transport
+AI workloads today are dominated by movement:
 
-move
-
-multiply
-
-accumulate
-
-move again
+- move  
+- multiply  
+- accumulate  
+- move again  
 
 Physics pushes back:
 
-HBM saturates
+- HBM saturates  
+- interconnect latency dominates  
+- wire delay explodes  
+- thermal jitter breaks coherence  
+- GPUs stall waiting for data  
 
-interconnect latency dominates
+**The real bottleneck = movement**  
+**The real cost = electricity**  
+**The real failure mode = physics**
 
-wire delay explodes
+---
 
-thermal jitter breaks coherence
-
-GPUs stall waiting for data, not compute
-
-The real bottleneck = movement
-The real cost = electricity
-The real failure mode = physics
-
-2. RCIRCUIT: A New Compute Direction
-
-A compute model where no values move —
+## 2. RCIRCUIT: A New Compute Direction
+A compute model where **no values move** —  
 only local phase-state evolution computes.
 
-Transport → expensive
+Transport → expensive  
 Local phase evolution → scalable
 
-3. Why This Exists — Transport Collapse Physics
+---
 
+## 3. Transport Collapse Physics
 As models scale:
 
-memory traffic dominates latency
+- memory traffic dominates latency  
+- sync cost becomes nonlinear  
+- thermal noise accumulates  
+- power becomes the fundamental limit  
 
-sync cost becomes nonlinear
+MatMul fails due to **transport**, not arithmetic.
 
-thermal noise accumulates
+RCIRCUIT replaces global transport with **O(N)** local-only phase updates.
 
-power becomes the fundamental limit
+---
 
-MatMul fails due to transport limits, not arithmetic.
+## 4. Compute Primitive Shift
 
-RCIRCUIT replaces global transport with O(N) local-only phase updates.
+### MatMul AI (traditional)
+- global movement  
+- energy-heavy  
+- long wires  
+- global sync  
+- thermal accumulation  
 
-4. Compute Primitive Shift
-MatMul (traditional)
+### RCIRCUIT
+- no value movement  
+- only local updates  
+- coherence preserved  
+- scaling bound by locality  
 
-value transport
+| Property | MatMul AI | RCIRCUIT |
+|---------|-----------|----------|
+| Compute unit | tensor multiply | phase evolution |
+| Movement | global | local |
+| Scaling limit | bandwidth | locality |
+| Sync | global | none |
+| Heat | accumulated | localized |
+| Complexity | O(N²) transport | O(N) updates |
 
-energy-heavy
+---
 
-long wires
+## 5. Core RCIRCUIT Principle
+Eliminates:
 
-global sync
+- tensors  
+- global sync  
+- long-distance propagation  
 
-thermal accumulation
+Uses only four primitives:
 
-RCIRCUIT
+1. phase registers  
+2. Δ-signal transitions  
+3. local resonance coupling  
+4. coherence evolution  
 
-no value movement
+Computation becomes **local physics**, not global transport.
 
-only local updates
+---
 
-coherence preserved locally
+## 6. Formal Minimal Architecture
 
-scaling bound by locality
-
-Comparison Table
-Property	MatMul AI	RCIRCUIT
-Compute unit	tensor multiply	phase evolution
-Movement	global	local
-Scaling limit	bandwidth	locality
-Sync	global	none
-Heat	accumulated	localized
-Complexity	O(N²) transport	O(N) updates
-5. Core RCIRCUIT Principle
-
-RCIRCUIT eliminates:
-
-tensors
-
-global sync
-
-long-distance propagation
-
-It uses four primitives:
-
-phase registers
-
-Δ-signal transitions
-
-local resonance coupling
-
-coherence evolution
-
-Computation becomes a local physical process, not a global transport process.
-
-6. Formal Minimal Architecture
-6.1 RCIRCUIT Cell
-struct RC_Cell { 
-    float phase; 
-    float delta; 
-    float coupling; 
+### 6.1 RCIRCUIT Cell
+```c
+struct RC_Cell {
+    float phase;
+    float delta;
+    float coupling;
 };
-
 6.2 Update Rule
+mathematica
+코드 복사
 delta_i(t+1) = γ Σ_j∈N(i)( phase_j - phase_i )
 phase_i(t+1) = phase_i(t) + α · delta_i(t+1)
-
 6.3 PDE Approximation
-
 ∂φ/∂t = α ∇²φ + γ R(φ)
 
 7. Directory Structure (Expanded)
 📁 docs/
-
 RCIRCUIT_whitepaper_V2.0.md
 
 RCIRCUIT_ComputeE_Technical_Overview_v1.0.txt
@@ -180,7 +173,6 @@ experiment_03_resonance_drift_test.txt
 experiment_04_threshold_gate_scan.txt
 
 📁 src/
-
 phase_engine_core_v1.py
 
 phase_node.py
@@ -199,54 +191,49 @@ phase_xor_poc_v01.py
 
 phase_and_poc.py
 
-utils/
-
+📁 utils/
 grid_init.py
 
 noise_injector.py
 
 coupling_visualizer.py
 
-8. PoC #1 — Phase XOR Gate
-
-Logic emerging from phase, not data movement.
-
+8. POC #1 — Phase XOR Gate
 Δφ = |φ₁ - φ₂|
 XOR = 1 if Δφ > θ
 
 Run:
 
+bash
+코드 복사
 python src/phase_xor_poc_v01.py
-
-Example
+Example:
 
 φ1 = -0.134, φ2 = -0.722 → XOR = 1
 
 φ1 = -0.406, φ2 = -0.491 → XOR = 0
 
-📊 Noise–Coherence Curve (Phase Engine)
-(도표 1 — 완전 복원된 버전 / GitHub 렌더링 100% 성공)
-
 9. Scaling & Cost Models (v1.5)
 Transport Cost Model
-Operation	MatMul Cost	RCIRCUIT
+Operation	MatMul	RCIRCUIT
 Move (HBM)	100	0
 Multiply	1	0.4
 Local Phase Step	—	0.1
-Scaling
 
-MatMul: T(N) = O(N²) transport + O(N) compute
-RCIRCUIT: T(N) = O(N) local updates
+MatMul:
+T(N) = O(N²) transport + O(N) compute
+
+RCIRCUIT:
+T(N) = O(N) local updates
 
 Transport collapse begins at N ≈ 10⁸.
 
 10. Commercial & Infra Impact
-
-Eliminating value movement reduces:
+Reduces:
 
 energy per token
 
-datacenter cooling
+cooling cost
 
 interconnect burden
 
@@ -254,7 +241,7 @@ rack-level OPEX
 
 Enables:
 
-hyperscale AI under power limits
+hyperscale AI
 
 defense-grade compute
 
@@ -263,43 +250,42 @@ low-power inference
 edge compute with no transport cost
 
 11. Practical Use Cases
-
 RCIRCUIT is usable today for:
 
 transport-dominated regime analysis
 
-scaling-limit prediction
+scaling prediction
 
 coherence-failure simulation
 
 local-update compute experiments
 
-new-primitive prototyping
+new primitive prototyping
 
-📣 Call for Experimental Collaboration
+📣 Collaboration Call (Phase Computing)
+Needed next:
 
-RCIRCUIT now requires team-scale validation:
+phase-field stability tests
 
-Need:
+resonance coherence measurement
+
+gate composition (XOR → NAND)
+
+scaling validation vs transport limits
+
+Who should contact:
 
 GPU/TPU architects
 
-PDE / numerical simulation researchers
+PDE/numerical researchers
 
-AI hardware labs
+hardware labs
 
-PhD students, postdocs
-
-Already completed:
-
-transport-free compute model
-
-PDE formulation
-
-20 validation experiments
-
-XOR & AND gates
+PhD/postdocs
 
 📩 Contact: jspchp638@gmail.com
+
+yaml
+코드 복사
 
 🔥 End of README
