@@ -1,0 +1,18 @@
+{
+  "experiment_id": "exp11_coherence_recovery",
+  "description": "Coherence recovery behavior after a controlled perturbation event.",
+  "perturbation_strength": 0.25,
+  "perturbation_duration_ms": 25,
+  "steps": 1800,
+
+  "results": {
+    "initial_coherence": 0.58,
+    "coherence_drop": 0.41,
+    "coherence_recovery_time_ms": 140,
+    "coherence_after_recovery": 0.89,
+    "recovery_dynamics": "exponential_relaxation",
+    "notes": "System recovers coherence rapidly by settling into the nearest stable attractor."
+  },
+
+  "notes": "This experiment demonstrates resilience of the phase field after disruption. Recovery time is a measurable stability metric."
+}
