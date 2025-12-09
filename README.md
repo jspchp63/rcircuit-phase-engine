@@ -1,24 +1,32 @@
 PHASE ENGINE — Transport-Free Compute (RCIRCUIT)
+(A Compute Paradigm Where Values Never Move)
 
-(Minimal Safe Render Edition)
-
-A compute paradigm where values never move —
-only local phase evolution performs computation.
-
-The real bottleneck = movement
-The real cost = electricity
-The real failure mode = physics
+▶ Intro Video
+final_video (78).mp4 (Click in file list — GitHub cannot inline MP4 reliably)
 
 1. Overview
 
-Phase Engine introduces a transport-free compute model:
-computation emerges from local phase updates, not tensor movement.
+Phase Engine proposes a compute model where
+no values move and local phase evolution performs computation.
 
-2. Why Phase Computing Matters
+Bottleneck = movement
 
-Modern AI collapses under physics, not math.
+Cost = electricity
 
-Transport dominates:
+Failure mode = physics
+
+이 세 문장만으로 이미 연구자들은 논문의 방향을 이해한다.
+
+2. Noise–Coherence Curve
+
+Figure 1. Noise vs Coherence (Phase Engine)
+noise_coherence_plot.png (Displayed in repository root)
+
+3. Why Phase Computing Matters
+
+AI scaling today is dominated by transport physics, not FLOPs.
+
+Transport sources:
 
 movement
 
@@ -26,7 +34,7 @@ synchronization
 
 memory traffic
 
-Physics pushes back:
+Transport failures:
 
 HBM saturation
 
@@ -34,25 +42,27 @@ interconnect latency
 
 wire delay
 
-coherence loss
+coherence decay
 
-3. RCIRCUIT: Core Idea
+This is why tensor transport has collapsed as a bottleneck.
 
-A compute model where:
+4. RCIRCUIT: Core Idea
+
+Local-only compute:
 
 values never move
 
-compute happens through local phase evolution
+no global sync
 
-no global sync exists
+computation emerges from phase updates
 
 Transport → expensive
 Local evolution → scalable
 
-4. Core Compute Equation
+5. Core Compute Equation
 Compute_E = (PhaseAmplitude × CouplingStrength) / PropagationTime
 
-5. Minimal Architecture
+6. Minimal Architecture
 RCIRCUIT Cell
 phase
 delta
@@ -65,20 +75,30 @@ phase(t+1) = phase(t) + α · delta(t+1)
 PDE Form
 ∂φ/∂t = α ∇²φ + γ R(φ)
 
-6. What RCIRCUIT Removes
+7. What RCIRCUIT Removes
 
-❌ tensor transport
-❌ global sync
-❌ long-distance propagation
+Removed:
 
-Replaced with:
+tensor transport
 
-✅ local resonance coupling
-✅ Δ-signal transitions
-✅ coherence evolution
+global sync
 
-7. Experiment Suite (1–20)
-Included (1–10): Core validation
+long-distance propagation
+
+Added:
+
+local resonance coupling
+
+Δ-signal transitions
+
+phase registers
+
+coherence evolution
+
+8. Experiment Suite (1–20)
+Core Experiments (1–10)
+
+Validation areas:
 
 drift
 
@@ -90,9 +110,11 @@ threshold logic
 
 noise interaction
 
-Deferred (11–20): Large-grid PDE experiments
+Advanced Experiments (11–20)
 
-Files include:
+Large-grid PDE / stability-region studies.
+
+Files:
 
 01_phase_xor.txt
 02_local_coherence_sim.txt
@@ -106,10 +128,7 @@ Files include:
 10_noise_resonance_interaction.txt
 11–20_*.json
 
-8. Phase XOR Gate (PoC)
-
-Logic emerges without value movement:
-
+9. Phase XOR Gate (PoC)
 Δφ = |φ₁ – φ₂|
 XOR = 1 if Δφ > θ
 
@@ -118,22 +137,30 @@ Run:
 
 python src/phase_xor_poc_v01.py
 
-9. Scaling & Cost Model
+10. Scaling & Cost Model
 Transport Cost
 Operation	MatMul	RCIRCUIT
 Move (HBM)	100	0
 Multiply	1	0.4
 Local update	—	0.1
-Scaling Laws
+Scaling
 MatMul:   O(N²)
 RCIRCUIT: O(N)
 
 
-Transport collapse begins at N ≈ 10⁸.
+Transport collapse at N ≈ 10⁸.
 
-10. Commercial Impact
+11. Commercial Impact
 
-RCIRCUIT reduces:
+RCIRCUIT enables:
+
+hyperscale AI under power constraints
+
+low-power inference
+
+edge compute with zero transport
+
+Reduces:
 
 energy per token
 
@@ -141,39 +168,22 @@ cooling load
 
 interconnect burden
 
-Enables:
+12. Collaboration Call
 
-hyperscale AI
-
-low-power inference
-
-edge compute
-
-11. Collaboration Call
-
-Next steps:
+Seeking collaborators for:
 
 phase-field stability tests
 
-coherence mapping
+resonance coherence mapping
 
-XOR → NAND gate formation
+XOR → NAND composition
 
-PDE-backed scaling tests
+PDE scaling tests
 
-Who should join:
-
-GPU/TPU architects
-
-numerical simulation researchers
-
-AI hardware labs
-
-PhD students / postdocs
-
-Contact
-
+Contact:
 📩 jspchp638@gmail.com
 
+Compute where values never move.
+Local physics is compute.
 Compute where values never move.
 Local physics is compute.
