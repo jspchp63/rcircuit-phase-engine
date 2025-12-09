@@ -1,0 +1,19 @@
+{
+  "experiment_id": "exp12_high_noise_phase_collapse",
+  "description": "Phase collapse and coherence breakdown under high-noise input conditions.",
+  "noise_sigma": 0.22,
+  "steps": 2000,
+  "initial_phase_deg": 0.0,
+
+  "results": {
+    "mean_drift_deg": 34.7,
+    "max_drift_deg": 79.4,
+    "coherence_score_before": 0.62,
+    "coherence_score_after": 0.18,
+    "collapse_detected": true,
+    "collapse_step_index": 611,
+    "notes": "Noise magnitude exceeds coherence stability threshold, triggering collapse."
+  },
+
+  "notes": "This experiment quantifies the point at which noise-driven perturbations overpower the resonant stabilizing forces."
+}
