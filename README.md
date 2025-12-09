@@ -1,5 +1,8 @@
-![Phase Engine Intro](phase_intro.gif)
- Phase Engine v0.5 — Experimental Release
+![Phase Engine](phase_intro.gif)
+
+[🎥 Watch the Phase Engine Intro](final_video%20(78).mp4)
+
+# Phase Engine v0.5 — Experimental Release
 
 RCIRCUIT now includes:
 - Local phase-update kernel (v0.5)
