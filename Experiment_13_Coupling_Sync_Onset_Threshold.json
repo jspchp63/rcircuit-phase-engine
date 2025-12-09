@@ -1,0 +1,20 @@
+{
+  "experiment_id": "exp13_coupling_sync_onset",
+  "description": "Determination of the minimum coupling strength required for spontaneous phase synchronization.",
+  "coupling_strength_sweep": {
+    "min": 0.00,
+    "max": 0.30,
+    "step": 0.01
+  },
+  "steps_per_trial": 1200,
+
+  "results": {
+    "sync_onset_threshold": 0.17,
+    "sync_confidence": 0.93,
+    "coherence_before": 0.42,
+    "coherence_after": 0.88,
+    "notes": "Below 0.17, oscillators drift independently; above 0.17, spontaneous synchronization observed."
+  },
+
+  "notes": "Coupling threshold defines the boundary between independent oscillation and global coherence emergence."
+}
