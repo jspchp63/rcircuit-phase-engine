@@ -59,8 +59,6 @@ Local evolution → scalable
 
 Compute_E = (PhaseAmplitude × CouplingStrength) / PropagationTime
 
-yaml
-코드 복사
 
 ---
 
@@ -71,29 +69,20 @@ phase
 delta
 coupling
 
-shell
-코드 복사
 
 ### Update Rule
 delta(t+1) = γ Σ(phase_j – phase_i)
 phase(t+1) = phase(t) + α · delta(t+1)
 
-shell
-코드 복사
+
 
 ### PDE Form
 ∂φ/∂t = α ∇²φ + γ R(φ)
 
-코드 복사
-← 이 마지막 닫힘이 핵심 (코드블록 확실히 종료)
-
-yaml
-코드 복사
 
 ---
 
-👇 **여기부터는 절대 빨려들지 않는다**
-
+👇
 ---
 
 ## 7. What RCIRCUIT Removes
@@ -137,8 +126,6 @@ Files:
 10_noise_resonance_interaction.txt
 11–20_*.json
 
-yaml
-코드 복사
 
 ---
 
@@ -146,14 +133,10 @@ yaml
 Δφ = |φ₁ – φ₂|
 XOR = 1 if Δφ > θ
 
-makefile
-코드 복사
 
 Run:
 python src/phase_xor_poc_v01.py
 
-yaml
-코드 복사
 
 ---
 
@@ -170,8 +153,6 @@ yaml
 MatMul: O(N²)
 RCIRCUIT: O(N)
 
-yaml
-코드 복사
 
 Transport collapse at **N ≈ 10⁸**.
 
