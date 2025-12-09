@@ -1,22 +1,20 @@
 PHASE ENGINE — Transport-Free Compute (RCIRCUIT)
 
-🎥 Phase Engine Intro
-final_video (78).mp4
-
-## 1. Overview
+(Minimal Safe Render Edition)
 
 A compute paradigm where values never move —
 only local phase evolution performs computation.
 
 The real bottleneck = movement
-
 The real cost = electricity
-
 The real failure mode = physics
 
-## 2. Noise–Coherence Curve
+1. Overview
 
-## 3. Why Phase Computing Matters
+Phase Engine introduces a transport-free compute model:
+computation emerges from local phase updates, not tensor movement.
+
+2. Why Phase Computing Matters
 
 Modern AI collapses under physics, not math.
 
@@ -38,29 +36,26 @@ wire delay
 
 coherence loss
 
-## 4. RCIRCUIT: The Core Idea
+3. RCIRCUIT: Core Idea
 
 A compute model where:
 
 values never move
 
-compute happens via local phase evolution
+compute happens through local phase evolution
 
-no global sync
+no global sync exists
 
 Transport → expensive
 Local evolution → scalable
 
-## 5. Core Compute Equation
+4. Core Compute Equation
 Compute_E = (PhaseAmplitude × CouplingStrength) / PropagationTime
 
-## 6. Minimal Architecture
+5. Minimal Architecture
 RCIRCUIT Cell
-
 phase
-
 delta
-
 coupling
 
 Update Rule
@@ -70,25 +65,19 @@ phase(t+1) = phase(t) + α · delta(t+1)
 PDE Form
 ∂φ/∂t = α ∇²φ + γ R(φ)
 
-🔷 이제부터 모든 문제가 사라지는 분리 지점 🔷
-
-
-
-## 7. What RCIRCUIT Removes
+6. What RCIRCUIT Removes
 
 ❌ tensor transport
 ❌ global sync
 ❌ long-distance propagation
 
-Replaced by:
+Replaced with:
+
 ✅ local resonance coupling
 ✅ Δ-signal transitions
-✅ phase registers
 ✅ coherence evolution
 
-Computation becomes local physics, not global transport.
-
-## 8. Experiment Suite (1–20)
+7. Experiment Suite (1–20)
 Included (1–10): Core validation
 
 drift
@@ -101,22 +90,25 @@ threshold logic
 
 noise interaction
 
-Deferred (11–20): Advanced experiments
-01_phase_xor.txt  
-02_local_coherence_sim.txt  
-03_resonance_drift_test.txt  
-04_threshold_gate_scan.txt  
-05_coupling_sweep.txt  
-06_coherence_decay.txt  
-07_phase_spread (internal)  
-08_phase_lock_fail (internal)  
-09_transport_zero_test (internal)  
-10_noise_resonance_interaction.txt  
-11–20_*.json  
+Deferred (11–20): Large-grid PDE experiments
 
-## 9. Phase XOR Gate (PoC)
+Files include:
 
-Phase logic emerging without value movement.
+01_phase_xor.txt
+02_local_coherence_sim.txt
+03_resonance_drift_test.txt
+04_threshold_gate_scan.txt
+05_coupling_sweep.txt
+06_coherence_decay.txt
+07_phase_spread (internal)
+08_phase_lock_fail (internal)
+09_transport_zero_test (internal)
+10_noise_resonance_interaction.txt
+11–20_*.json
+
+8. Phase XOR Gate (PoC)
+
+Logic emerges without value movement:
 
 Δφ = |φ₁ – φ₂|
 XOR = 1 if Δφ > θ
@@ -126,23 +118,22 @@ Run:
 
 python src/phase_xor_poc_v01.py
 
-## 10. Scaling & Cost Model
+9. Scaling & Cost Model
 Transport Cost
 Operation	MatMul	RCIRCUIT
 Move (HBM)	100	0
 Multiply	1	0.4
 Local update	—	0.1
-Asymptotic Scaling
-
-MatMul: O(N²)
-
+Scaling Laws
+MatMul:   O(N²)
 RCIRCUIT: O(N)
+
 
 Transport collapse begins at N ≈ 10⁸.
 
-## 11. Commercial Impact
+10. Commercial Impact
 
-Eliminates:
+RCIRCUIT reduces:
 
 energy per token
 
@@ -158,31 +149,31 @@ low-power inference
 
 edge compute
 
-## 12. Collaboration Call
+11. Collaboration Call
 
-Next research needs:
+Next steps:
 
 phase-field stability tests
 
-resonance coherence maps
+coherence mapping
 
 XOR → NAND gate formation
 
-PDE scaling experiments
+PDE-backed scaling tests
 
-Who should collaborate:
+Who should join:
 
 GPU/TPU architects
 
-PDE / numerical researchers
+numerical simulation researchers
 
-hardware labs
+AI hardware labs
 
-PhD / postdocs
+PhD students / postdocs
 
-Contact: 📩 jspchp638@gmail.com
+Contact
 
-## END
+📩 jspchp638@gmail.com
 
 Compute where values never move.
 Local physics is compute.
