@@ -1,0 +1,27 @@
+{
+  "experiment_id": "exp20_phasefield_global_stability_map",
+  "description": "Global stability map of the phase field across wide coupling and noise domains.",
+  
+  "parameter_space": {
+    "coupling_strength_range": [0.00, 0.30],
+    "noise_sigma_range": [0.00, 0.25],
+    "grid_resolution": [31, 26]
+  },
+
+  "simulation": {
+    "steps_per_point": 1200,
+    "initial_phase_distribution": "uniform_random"
+  },
+
+  "results": {
+    "stable_region_ratio": 0.41,
+    "metastable_region_ratio": 0.36,
+    "collapse_region_ratio": 0.23,
+    "global_max_coherence": 0.95,
+    "global_min_coherence": 0.12,
+    "stability_map_character": "piecewise_continuous",
+    "notes": "Stability sharply transitions at coupling≈0.16 and noise≈0.11."
+  },
+
+  "notes": "This global scan reveals system-wide stability landscapes and critical boundaries of coherence."
+}
