@@ -1,6 +1,6 @@
 ---
 
-# PHASE ENGINE — Transport-Free Compute (RCIRCUIT)
+# PHASE ENGINE — Transport-Free Compute (R CIRCUIT)
 
 [🎥 **Phase Engine Intro**](final_video%20(78).mp4)
 
