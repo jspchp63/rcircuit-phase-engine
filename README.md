@@ -1,4 +1,4 @@
-[🎥 Watch the Phase Engine Intro](Transport_Free_Compute.mp4)
+[🎥 Watch the Phase Engine Intro]
 
 ## 🔥 Phase Engine v0.5 — Experimental Release
 
