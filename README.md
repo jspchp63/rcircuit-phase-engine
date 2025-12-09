@@ -1,4 +1,5 @@
-[🎥 Watch the Phase Engine Intro](final_video(78).mp4)
+🎥 [Watch the Phase Engine Intro](https://github.com/jspchp63/rcircuit-phase-engine/blob/main/final_video%20(78).mp4)
+
 
 
 ## 🔥 Phase Engine v0.5 — Experimental Release
