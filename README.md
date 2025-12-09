@@ -19,8 +19,7 @@ RCIRCUIT now includes:
 - Drift & resonance modeling
 - 8 experimental validation files under docs/experiments
 
-Purpose:  
-Validate transport-free compute behavior via coherence, drift, and threshold gate scans.
+Purpose: Validate transport-free compute behavior via coherence, drift, and threshold gate scans.
 
 See: `docs/experiments/`
 
@@ -85,7 +84,7 @@ RCIRCUIT replaces global transport with **O(N)** local-only phase updates.
 
 ## 4. Compute Primitive Shift
 
-### MatMul AI (traditional)
+### MatMul AI
 - global movement  
 - energy-heavy  
 - long wires  
@@ -136,14 +135,15 @@ struct RC_Cell {
     float delta;
     float coupling;
 };
-6.2 Update Rule
+6.2 Update Rule (discrete)
 mathematica
 코드 복사
 delta_i(t+1) = γ Σ_j∈N(i)( phase_j - phase_i )
 phase_i(t+1) = phase_i(t) + α · delta_i(t+1)
 6.3 PDE Approximation
+powershell
+코드 복사
 ∂φ/∂t = α ∇²φ + γ R(φ)
-
 7. Directory Structure (Expanded)
 📁 docs/
 RCIRCUIT_whitepaper_V2.0.md
@@ -199,7 +199,9 @@ noise_injector.py
 coupling_visualizer.py
 
 8. POC #1 — Phase XOR Gate
-Δφ = |φ₁ - φ₂|
+Logic emerging from phase, not data movement.
+
+Δφ = |φ₁ − φ₂|
 XOR = 1 if Δφ > θ
 
 Run:
@@ -209,9 +211,9 @@ bash
 python src/phase_xor_poc_v01.py
 Example:
 
-φ1 = -0.134, φ2 = -0.722 → XOR = 1
+φ1 = −0.134, φ2 = −0.722 → XOR = 1
 
-φ1 = -0.406, φ2 = -0.491 → XOR = 0
+φ1 = −0.406, φ2 = −0.491 → XOR = 0
 
 9. Scaling & Cost Models (v1.5)
 Transport Cost Model
@@ -221,19 +223,23 @@ Multiply	1	0.4
 Local Phase Step	—	0.1
 
 MatMul:
+
+mathematica
+코드 복사
 T(N) = O(N²) transport + O(N) compute
-
 RCIRCUIT:
-T(N) = O(N) local updates
 
+mathematica
+코드 복사
+T(N) = O(N) local updates
 Transport collapse begins at N ≈ 10⁸.
 
 10. Commercial & Infra Impact
-Reduces:
+Eliminating value movement reduces:
 
 energy per token
 
-cooling cost
+datacenter cooling
 
 interconnect burden
 
@@ -247,7 +253,7 @@ defense-grade compute
 
 low-power inference
 
-edge compute with no transport cost
+edge compute with zero transport cost
 
 11. Practical Use Cases
 RCIRCUIT is usable today for:
@@ -263,7 +269,7 @@ local-update compute experiments
 new primitive prototyping
 
 📣 Collaboration Call (Phase Computing)
-Needed next:
+Next research needs:
 
 phase-field stability tests
 
@@ -279,13 +285,15 @@ GPU/TPU architects
 
 PDE/numerical researchers
 
-hardware labs
+AI hardware labs
 
-PhD/postdocs
+PhD students, postdocs
 
 📩 Contact: jspchp638@gmail.com
 
 yaml
 코드 복사
 
-🔥 End of README
+---
+
+
