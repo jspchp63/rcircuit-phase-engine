@@ -1,0 +1,21 @@
+{
+  "experiment_id": "exp16_longhorizon_stability",
+  "description": "Long-horizon coherence stability evaluation across 10,000 simulation steps.",
+  
+  "simulation": {
+    "steps": 10000,
+    "noise_sigma": 0.03,
+    "initial_phase_deg": 0.0
+  },
+
+  "results": {
+    "coherence_score_mean": 0.93,
+    "coherence_score_min": 0.88,
+    "coherence_score_max": 0.96,
+    "drift_accumulation_deg": 4.7,
+    "stability_class": "high_stability",
+    "notes": "System maintains stable coherence through entire run with minimal drift loading."
+  },
+
+  "notes": "10k-step test validates stability over extended temporal horizons and confirms low drift accumulation."
+}
