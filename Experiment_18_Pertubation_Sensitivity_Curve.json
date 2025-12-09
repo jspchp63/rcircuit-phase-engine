@@ -1,0 +1,24 @@
+{
+  "experiment_id": "exp18_perturbation_sensitivity",
+  "description": "Sensitivity curve measuring system stability as perturbation strength increases.",
+  
+  "perturbation_sweep": {
+    "min": 0.00,
+    "max": 1.00,
+    "step": 0.05
+  },
+
+  "simulation": {
+    "steps_per_level": 900,
+    "base_coherence": 0.91
+  },
+
+  "results": {
+    "instability_threshold": 0.42,
+    "coherence_at_threshold": 0.55,
+    "collapse_at": 0.63,
+    "curve_shape": "nonlinear_convex",
+    "notes": "Small perturbations tolerated; instability rises sharply after threshold."
+  },
+
+  "notes": "Defines the system’s tolerance band and reveals nonlinear sensitivity to strong perturbations."
