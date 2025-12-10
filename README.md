@@ -1,98 +1,84 @@
+# PHASE COMPUTING ENGINE — Transport-Free Compute | RCIRCUIT
+
+### Compute where values never move.  
+### Local physics *is* compute.
+
 ---
 
-# PHASE COMPUTING ENGINE — Transport-Free Compute | R CIRCUIT
-
-[🎥 **Phase Engine Intro**](final_video%20(78).mp4)
+## 🎥 Phase Engine Intro  
+(Insert GIF or mp4 preview)
 
 ---
 
-## 1. Overview
-
-A compute paradigm where **values never move** —  
+# 1. Overview
+A new compute paradigm where **values never move** —  
 only **local phase evolution** performs computation.
 
-The real bottleneck = movement  
-The real cost = electricity  
-The real failure mode = physics  
-
----
-
-## 2. Noise–Coherence Curve
-
-![Noise vs Coherence](noise_coherence_plot.png)
-
----
-
-## 3. Why Phase Computing Matters
-
-Modern AI collapses under **physics**, not math.
-
-Transport dominates:
+This architecture removes the real bottlenecks:
 
 - movement  
 - synchronization  
 - memory traffic  
+- interconnect physics  
 
-Physics pushes back:
+Modern AI collapses under **physics**, not math.  
+Phase Computing eliminates the collapse point.
+
+---
+
+# 2. Why Phase Computing Matters
+Current AI scaling dies from:
 
 - HBM saturation  
-- interconnect latency  
 - wire delay  
+- interconnect latency  
 - coherence loss  
+- power limits  
+
+RCIRCUIT replaces tensor transport with **local resonance**:
+
+transport → eliminated
+global sync → removed
+long-distance propagation → unnecessary
+
+yaml
+코드 복사
+
+Local evolution = scalable compute.
 
 ---
 
-## 4. RCIRCUIT: The Core Idea
+# 3. RCIRCUIT — Core Idea
+A compute cell has:
 
-A compute model where:
+- phase  
+- delta  
+- coupling  
 
-- values never move  
-- compute happens through local phase evolution  
-- no global sync exists  
+**Update rule:**
 
-Transport → expensive  
-Local evolution → scalable  
+delta(t+1) = γ Σ(phase_j – phase_i)
+phase(t+1) = phase(t) + α·delta(t+1)
 
----
+yaml
+코드 복사
 
-## 5. Core Compute Equation
+**PDE Form:**
+
+∂φ/∂t = α ∇²φ + γ R(φ)
+
+**Core Compute Equation**
 
 Compute_E = (PhaseAmplitude × CouplingStrength) / PropagationTime
 
-
 ---
 
-## 6. Minimal Architecture
-
-### RCIRCUIT Cell
-phase
-delta
-coupling
-
-
-### Update Rule
-delta(t+1) = γ Σ(phase_j – phase_i)
-phase(t+1) = phase(t) + α · delta(t+1)
-
-
-
-### PDE Form
-∂φ/∂t = α ∇²φ + γ R(φ)
-
-
----
-
-👇
----
-
-## 7. What RCIRCUIT Removes
-
+# 4. What RCIRCUIT Removes
 ❌ tensor transport  
 ❌ global sync  
 ❌ long-distance propagation  
 
-Replaced by:
-
+Replaced with:  
 ✅ local resonance coupling  
 ✅ Δ-signal transitions  
 ✅ phase registers  
@@ -100,95 +86,111 @@ Replaced by:
 
 ---
 
-## 8. Experiment Suite (1–20)
+# 5. Validation Suite (Experiments 1–20)
+The Phase Computing Engine provides a **full experimental verification suite**.
 
 ### Core Experiments (1–10)
-- drift  
-- coherence  
-- resonance  
-- threshold logic  
+- phase diffusion  
+- coupling sweep  
+- coherence decay  
+- resonance threshold  
+- Δ-logic  
 - noise interaction  
 
 ### Advanced Experiments (11–20)
-- large-grid PDE  
-- stability mapping  
+- stability maps  
+- long-horizon evolution  
+- perturbation recovery  
+- global coherence collapse  
+- multi-node propagation  
 
-Files:
-01_phase_xor.txt
-02_local_coherence_sim.txt
-03_resonance_drift_test.txt
-04_threshold_gate_scan.txt
-05_coupling_sweep.txt
-06_coherence_decay.txt
-07_phase_spread (internal)
-08_phase_lock_fail (internal)
-09_transport_zero_test (internal)
-10_noise_resonance_interaction.txt
-11–20_*.json
+Run all experiments:
 
+python simulate_all_experiments.py
+
+yaml
+코드 복사
+
+Individual docs available in `/docs` and `/experiments`.
 
 ---
 
-## 9. Phase XOR Gate (PoC)
+# 6. Phase XOR Gate (PoC)
+Information emerges from **phase difference**:
+
 Δφ = |φ₁ – φ₂|
+
 XOR = 1 if Δφ > θ
 
-
 Run:
+
 python src/phase_xor_poc_v01.py
 
+yaml
+코드 복사
+
+This demonstrates bit-level logic without transport.
 
 ---
 
-## 10. Scaling & Cost Model
+# 7. Scaling & Cost Model
+Transport Cost — RCIRCUIT eliminates the bottleneck.
 
-### Transport Cost
-| Operation | MatMul | RCIRCUIT |
-|----------|--------|----------|
-| Move | 100 | 0 |
-| Multiply | 1 | 0.4 |
-| Local update | — | 0.1 |
+| Operation     | MatMul | RCIRCUIT |
+|---------------|--------|----------|
+| Move          | 100    | 0        |
+| Multiply      | 1      | 0.4      |
+| Local update  | —      | 0.1      |
 
-### Scaling
-MatMul: O(N²)
-RCIRCUIT: O(N)
+Scaling:
+- MatMul: O(N²)  
+- RCIRCUIT: O(N)
 
-
-Transport collapse at **N ≈ 10⁸**.
+Transport collapses at N ≈ 10⁸.  
+RCIRCUIT continues scaling beyond this point.
 
 ---
 
-## 11. Commercial Impact
+# 8. Phase OS — System Architecture
+Phase OS provides:
 
-Eliminates:
+- local phase scheduling  
+- coherence monitoring  
+- resonance-based compute cycles  
+- transport-free memory semantics  
 
-- energy per token  
-- cooling load  
-- interconnect burden  
+This document defines the **operating system layer** of transport-free compute.
 
-Enables:
+See `Phase_OS_Whitepaper_v0.4` (coming update).
+
+---
+
+# 9. Commercial Impact
+RCIRCUIT enables:
 
 - hyperscale AI  
-- low-power inference  
-- edge compute  
+- ultra-efficient inference  
+- edge compute with near-zero transport  
+- new accelerator architectures  
+
+Removes:
+
+- interconnect burden  
+- energy per token  
+- cooling overhead  
 
 ---
 
-## 12. Collaboration Call
+# 10. Collaboration Call
+We are seeking collaborators in:
 
-Seeking collaborators:
-
-- PDE researchers  
+- PDE research  
 - hardware labs  
-- GPU/TPU architects  
-- PhD/postdocs  
+- compute architecture  
+- GPU/TPU accelerator design  
+- PhD/postdoc researchers  
 
-Contact:  
-📩 **jspchp638@gmail.com**
-
----
+📩 Contact: **jspchp638@gmail.com**
 
 Compute where values never move.  
-Local physics *is* compute.
-
----
+Local physics = compute.
