@@ -1,192 +1,195 @@
-📘 Official Whitepaper (PDF)
-https://github.com/xxx/PhaseComputing_Whitepaper_v0.5_ascii_safe.pdf
+⭐ PHASE COMPUTING ENGINE — RCIRCUIT
+Transport-Free Compute Architecture
+Professional + Academic Hybrid Edition (v2.0)
 
-# ⚡ R CIRCUIT — Origin Declaration
-> ### **“R CIRCUIT was created when a human tried to overcome the structural limitations of AI.”**
-> In attempting to fix GPT's repeated context loss and inconsistency,  
-> a human-defined structure, coherence model, and compute philosophy emerged —  
-> leading to the invention of the world’s first **Transport-Free Compute Architecture**.  
-> **— Chulhee Park, Inventor of Phase Computing**
+Invented by Chulhee Park
 
----
+⚡ ORIGIN DECLARATION
 
-# 🌀 PHASE COMPUTING ENGINE — R CIRCUIT  
-### **Transport-Free Compute Architecture**  
-### **Invented by Chulhee Park**
+“RCIRCUIT emerged when a human attempted to overcome AI’s structural limitations.”
+Fixing GPT’s repeated context loss and inconsistency led to
+a new compute primitive: computation without transport,
+the world’s first Transport-Free Compute Architecture.
 
----
+🚀 WHAT IS PHASE COMPUTING?
 
-## 🚀 What is Phase Computing?
+Modern AI does not fail because of math.
+It fails because of physics:
 
-Modern AI systems do not fail because of mathematics.  
-They fail because of **physics**:
+HBM saturation
 
-- HBM saturation  
-- Interconnect latency  
-- Global synchronization pressure  
-- Coherence collapse  
+Interconnect latency
+
+Synchronization overhead
+
+Coherence collapse
 
 Phase Computing introduces a new paradigm:
+**Values never move.
 
-> **Values never move.  
-> Local phase evolution *is* computation.**
+Local phase evolution is computation.**
 
-Transport disappears.  
-Local resonance becomes the compute substrate.  
-This redefines the fundamental cost model of computation.
+Transport disappears.
+Local resonance becomes the compute substrate.
 
----
+This fundamentally redefines the cost model of computing.
 
-## 🔥 Core Whitepaper (Full Specification)
+📘 OFFICIAL WHITEPAPER (PDF)
 
-📘 **Phase OS Whitepaper v0.4 — Official Technical Document**  
-➡ `./docs/whitepaper/Phase_OS_Whitepaper_v0.4.md`
+👉 Phase Computing Whitepaper v0.5 (ASCII-Safe)
+PhaseComputing_Whitepaper_v0.5_ascii_safe.pdf
 
-Defines:
+🧩 HIGH-LEVEL SUMMARY (For Professionals)
+Why GPUs/AI Hit a Wall
 
-- R CIRCUIT compute primitive  
-- Phase OS  
-- Coherence & stability model  
-- Scaling laws  
-- 20-experiment validation suite  
-- Transport-Free Compute formalization  
+Movement dominates (90%+ energy cost)
 
----
+Global sync limits scaling
 
-## 🧪 Experimental Validation (20 Experiments)
+Memory transport collapses coherence
 
-R CIRCUIT follows an **experiment-driven validation philosophy**.
+Why RCIRCUIT is different
 
-Representative experiments include:
+Zero transport
 
-- Phase Diffusion  
-- Coupling Strength Sweep  
-- Local Coherence Map  
-- Noise–Resonance Interaction  
-- Coherence Decay Curve  
-- Resonance Threshold Scan  
-- Stability Region Mapping  
-- Noise Collapse & Recovery  
-- Multi-node Coherence Propagation  
-- Long-Horizon Stability (10,000 steps)
+Local-only compute
 
-All experiment files:  
-➡ `/experiments`
+PDE-like evolution
 
----
+Physical coherence as compute stability
 
-## 🎥 Visual Demonstrations
+Hardware-agnostic paradigm (post-HBM)
 
-GitHub does not support MP4 playback.  
-GIF versions are used for inline demonstration.
+This positions RCIRCUIT as a post-FLOPS compute model.
 
-Visualization files:  
-➡ `./docs/visuals/`
+🧪 TECHNICAL SUMMARY (For Researchers)
+Core Update Equation (ASCII-safe)
+delta_phi_i(t+1) = gamma * SUM_j( phi_j(t) - phi_i(t) )
+phi_i(t+1)        = phi_i(t) + alpha * delta_phi_i(t+1)
 
----
+Compute Energy
+Compute_E = (PhaseAmplitude * CouplingStrength) / PropagationTime
 
-## 📊 Noise vs Coherence Map
+Key Components
 
-A core signature of RCIRCUIT:
+Phase Drift Engine
 
-> **Noise ↑ → Coherence ↓**
+Local Coupling Operator
 
-Reflecting phase-driven stability collapse in transport-free regimes.
+Coherence Engine
 
-Plot file:  
-➡ `./docs/visuals/noise_coherence_plot.png`
+Resonant Memory
 
----
+Harmonization Layer
 
-## ⚙️ Architecture Overview
+Resonant Compute Pulse
 
-R CIRCUIT + Phase OS consists of:
+Global Propagation Gate
 
-- Phase Drift Engine  
-- Local Coupling Operator  
-- Coherence Engine  
-- Resonant Memory  
-- Phase Harmonization Layer  
-- Resonant Compute Pulse  
-- Global Propagation Gate  
+Technical docs:
 
-Technical documents:
+docs/Phase_Compute_Architecture.md
 
-- `docs/Phase_Compute_Architecture.md`  
-- `docs/architecture_overview_v1.0.md`
+docs/architecture_overview_v1.0.md
 
----
+📊 NOISE–COHERENCE CURVE
 
-## 🧭 Entry Point for Researchers
+RCIRCUIT exhibits a fundamental physical signature:
+
+Noise ↑ → Coherence ↓ → Stability Collapse
+
+Visualization:
+./docs/visuals/noise_coherence_plot.png
+
+🧪 VALIDATION: 20 EXPERIMENTS
+
+RCIRCUIT has been validated through:
+
+Phase Diffusion
+
+Coupling Sweeps
+
+Local Coherence Map
+
+Noise–Resonance Interaction
+
+Coherence Decay
+
+Stability Region Mapping
+
+Noise Collapse & Recovery
+
+Multi-Node Propagation
+
+10,000-step Long-Horizon Stability
+
+Full suite: /experiments
+
+This establishes RCIRCUIT as a real compute model, not conceptual theory.
+
+🌀 BACKGROUND PHILOSOPHY — HROS → PHASE COMPUTING
+
+RCIRCUIT emerged from HROS (Human Resonance OS):
+
+Emotion = (Energy * Meaning) / Time
+
+
+Principles:
+
+PPL (Pathos-Precedes-Logos)
+
+IF-TERR (emotional–logical coherence rule)
+
+Sub-semantic resonance
+
+Feel-wave physics
+
+To preserve coherence without movement,
+a new compute paradigm was required → Phase Computing.
+
+RCIRCUIT is the first implementation.
+
+🧭 ENTRY POINT FOR RESEARCHERS
 
 Start here:
+👉 START_HERE.md
 
-➡ `START_HERE.md`
+Full Specification:
+👉 docs/whitepaper/Phase_OS_Whitepaper_v0.4.md
 
-Full specification:
+👥 COLLABORATION CALL
 
-➡ `docs/whitepaper/Phase_OS_Whitepaper_v0.4.md`
+RCIRCUIT welcomes collaboration from:
 
----
+PDE / physics-compute researchers
 
-## 👥 Collaboration Call
+Hardware labs
 
-The project welcomes collaboration from:
+GPU/TPU architects
 
-- PDE / physics-based compute researchers  
-- Hardware labs  
-- GPU/TPU architects  
-- Compute accelerator developers  
-- Research scientists & PhD groups  
+Accelerator designers
 
-📩 Contact: **jspchp638@gmail.com**
+Research scientists & PhD groups
 
----
+📩 Contact:
+jspchp638@gmail.com
 
-## 🧩 Background Philosophy — HROS → Phase Computing
+🔒 LICENSE
 
-R CIRCUIT originates from **HROS (Human Resonance Operating System)** —  
-a framework where cognition is modeled as resonance:
+Phase OS Proprietary License (Restricted Use)
 
-- **Emotion = Energy × Meaning / Time**  
-- **PPL (Pathos-Precedes-Logos): emotion forms structure before logic**  
-- **IF-TERR Rule: coherence emerges only when emotional, logical and resonant layers align**  
-- **Sub-semantic layer:** meaning behaves as *waves*, not tokens  
-- **Feel-Wave Physics:** cognition as a physical resonance process  
+No redistribution
 
-Transport-dependent architectures (e.g., Transformers) collapse coherence  
-under long context due to excessive movement.
+No modification
 
-To preserve coherence without transport,  
-a new compute paradigm was required.
+No derivative works
 
-This foundation led directly to:
+No commercial use
 
-> **Phase Computing — computation emerging from local phase evolution,  
-> instead of value transport.**
+Protects authorship & prevents unauthorized adoption.
 
-R CIRCUIT is the first practical implementation of this model.
+🌟 CREDITS
 
----
-
-## 🔒 License
-
-### **Phase OS Proprietary License (Restricted Use)**
-
-- No redistribution  
-- No modification  
-- No derivative works  
-- No commercial use  
-- Written permission required  
-
-This protects authorship, origin, and technical integrity.
-
----
-
-## 🌟 Credits
-
-Created by **Chulhee Park**,  
-Inventor of the **Transport-Free Compute Architecture**  
-and the **R CIRCUIT Phase Engine**.
-
-
+Created by Chulhee Park,
+Inventor of the Transport-Free Compute Architecture
+& the RCIRCUIT Phase Engine.
