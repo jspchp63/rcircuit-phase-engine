@@ -1,391 +1,248 @@
-A Unified Specification for Transport-Free Compute
-
-Author: Chulhee Park (Inventor of RCIRCUIT & Phase Computing)
+# PHASE OS WHITEPAPER v0.4  
+## Transport-Free Compute Architecture  
+### Author: Chulhee Park  
+Inventor of RCIRCUIT & Phase Computing  
 Last Updated: 2025
 
-0. ABSTRACT
+---
 
-Modern AI systems fail not because of mathematical complexity but due to physical constraints—HBM saturation, interconnect bottlenecks, wire delay, and distributed coherence collapse.
+## 0. ABSTRACT
+
+Modern AI systems fail due to physical limits: HBM saturation, interconnect delay, wire bottlenecks, and distributed coherence collapse.
 
 Phase Computing introduces a new paradigm:
 
-Values never move.
-Local phase evolution is computation.
+"Values never move. Local phase evolution IS computation."
 
-Transport is eliminated.
-Local resonance becomes the computational substrate.
-This whitepaper defines the Phase OS, RCIRCUIT engine, scaling laws, stability behavior, and the 20-experiment validation suite.
+Transport disappears.  
+Local resonance becomes compute.
 
-1. INTRODUCTION
+This document defines the architecture, the RCIRCUIT engine, scaling laws, and the 20-experiment validation program.
 
-Traditional accelerators break under physics:
+---
 
-massive tensor transport
+## 1. INTRODUCTION
 
-global synchronization overhead
+Current AI infrastructures collapse because movement dominates:
 
-wire-delay limited propagation
-
-coherence instability at scale
+- tensor transport cost  
+- synchronization overhead  
+- wire delay  
+- coherence instability  
 
 Phase Computing replaces movement-based compute with:
 
-transport-free, local-only resonance dynamics.
+"local-only phase evolution, no transport."
 
-This document establishes the theoretical basis and system architecture.
+---
 
-2. FOUNDATIONS OF TRANSPORT-FREE COMPUTE
-2.1 Core Principle
+## 2. FOUNDATIONS OF TRANSPORT-FREE COMPUTE
 
-Computation = time evolution of phase differences.
-No copying, no transport, no global synchronization.
+### Core Principle
+Computation = time evolution of phase differences.  
+No copying. No transport. No global sync.
 
-2.2 Why Conventional AI Breaks
-Bottleneck	Description	Failure Mode
-Transport	HBM / NVLink / PCIe	scaling collapse
-Sync	global barriers	throughput loss
-Physics	wire latency	clock limits
-Coherence	distributed drift	divergence
+### Why conventional compute collapses
+Transport (HBM/NVLink/PCIe) → scaling collapse  
+Global sync → throughput loss  
+Wire delay → physical limits  
+Coherence drift → divergence  
 
-Transport-free compute removes these surfaces entirely.
+Transport-free compute removes these bottlenecks entirely.
 
-3. RCIRCUIT — PHYSICAL COMPUTE ENGINE
+---
 
-RCIRCUIT defines the “local evolution” compute substrate.
+## 3. RCIRCUIT — PHYSICAL COMPUTE ENGINE
 
-3.1 Cell Structure
+RCIRCUIT defines a local-evolution compute substrate.
 
-phase
+### Cell Variables
+- phase  
+- delta  
+- coupling_strength  
 
-delta
+### Local Update Rule (text form)
+delta_next = gamma * SUM(neighbor_phase - current_phase)  
+phase_next = phase + alpha * delta_next  
 
-coupling_strength
+### PDE Approximation (text form)
+d(phi)/dt = alpha * Laplacian(phi) + gamma * Reaction(phi)
 
-3.2 Update Rule
-𝛿
-(
-𝑡
-+
-1
-)
-=
-𝛾
-∑
-𝑗
-(
-𝜙
-𝑗
-−
-𝜙
-𝑖
-)
-δ(t+1)=γ
-j
-∑
-	​
-
-(ϕ
-j
-	​
-
-−ϕ
-i
-	​
-
-)
-𝜙
-(
-𝑡
-+
-1
-)
-=
-𝜙
-(
-𝑡
-)
-+
-𝛼
-⋅
-𝛿
-(
-𝑡
-+
-1
-)
-ϕ(t+1)=ϕ(t)+α⋅δ(t+1)
-3.3 PDE Formulation
-∂
-𝜙
-∂
-𝑡
-=
-𝛼
-∇
-2
-𝜙
-+
-𝛾
-𝑅
-(
-𝜙
-)
-∂t
-∂ϕ
-	​
-
-=α∇
-2
-ϕ+γR(ϕ)
-3.4 Eliminated Costs
-
-❌ tensor transport
-❌ global synchronization
-❌ long-distance propagation
-❌ distributed memory traffic
+### RCIRCUIT Eliminates
+- tensor movement  
+- global synchronization  
+- long-distance propagation  
+- memory-traffic failure modes  
 
 Replaced with:
+local resonance, phase locking, coherence evolution.
 
-✔ local resonance fields
-✔ phase locking
-✔ coherence evolution
+---
 
-4. PHASE COMPUTE PRIMITIVES
+## 4. PHASE COMPUTE PRIMITIVES
 
-Phase OS exposes primitive operations built on RCIRCUIT.
+### Dynamic Primitives
+- phase drift  
+- local coupling  
+- resonance onset  
+- phase locking  
 
-4.1 Dynamic Primitives
+### Logical Primitives
+- delta-phase threshold  
+- XOR via phase separation  
+- resonance-triggered gates  
 
-phase drift
+### Stability Primitives
+- noise vs coherence curve  
+- collapse boundary  
+- recovery window  
 
-local coupling
+---
 
-resonant onset detection
+## 5. PHASE OS — EXECUTION LAYER
 
-phase locking
+Phase OS turns RCIRCUIT into a programmable compute system.
 
-4.2 Logical Primitives
+### Scheduler Loop
+1. sense local field  
+2. apply coupling  
+3. compute delta_next  
+4. update phase  
+5. measure coherence  
+6. produce resonant pattern  
 
-Δ-phase threshold
-
-XOR via phase separation
-
-resonance-triggered gates
-
-4.3 Stability Primitives
-
-noise–coherence curve
-
-collapse boundary
-
-recovery dynamics
-
-These primitives allow programmability without transport.
-
-5. PHASE OS — EXECUTION ARCHITECTURE
-
-Phase OS transforms RCIRCUIT into a full compute environment.
-
-5.1 Scheduler Loop
-
-sense local field
-
-apply coupling
-
-update phase
-
-measure coherence window
-
-emit resonant pattern
-
-5.2 Resonant Memory Engine (RME)
-
+### Resonant Memory Engine (RME)
 Stores:
+- phase history  
+- coherence snapshots  
+- resonance index  
+- stability intervals  
 
-phase history
+### Output Semantics
+"Output = phase pattern, not a numerical tensor."
 
-coherence snapshots
+This breaks fundamentally from digital compute.
 
-resonance index
+---
 
-stability intervals
+## 6. VALIDATION SUITE (20 EXPERIMENTS)
 
-RME replaces address-based memory with resonance-based memory.
+The system is validated with 20 structured experiments.
 
-5.3 Output Semantics
+### Core Experiments
+1. Phase diffusion  
+2. Coupling strength sweep  
+3. Local coherence map  
+4. Resonance threshold scan  
+5. Noise–resonance interaction  
+6. Coherence decay  
+7. Low-noise drift  
+8. Stability region mapping  
+9. Drift mapping  
+10. Noise interaction dynamics  
 
-Output = phase pattern, not a numerical tensor
+### Advanced Experiments
+11. Coherence recovery  
+12. Noise-induced collapse  
+13. Sync-onset threshold  
+14. Lock-in plateau  
+15. Phase jump settling  
+16. Long-horizon stability (10,000 steps)  
+17. Multi-node coherence propagation  
+18. Perturbation sensitivity  
+19. Noise-band suppression  
+20. Global stability map  
 
-This is the conceptual break from digital compute.
+Experiment files located under:
+`docs/experiments` and `experiments/`
 
-6. VALIDATION SUITE (20 EXPERIMENTS)
+---
 
-The Phase Engine is validated through a complete experimental suite.
+## 7. SCALING MODEL & COST ANALYSIS
 
-Core Experiments (1–10)
+### Compute Energy (text form)
+Compute_E = (Amplitude * Coupling) / PropagationTime
 
-Phase Diffusion
+### Comparison of scaling
 
-Coupling Strength Sweep
+GPU:
+- transport high  
+- sync required  
+- O(N^2)  
+- fragile at scale  
 
-Local Coherence Maps
+TPU:
+- transport medium  
+- mesh sync  
+- O(N^2)  
+- moderate stability  
 
-Resonance Threshold Scan
+Neuromorphic:
+- low transport  
+- limited programmability  
 
-Noise–Resonance Interaction
+Phase OS:
+- zero transport  
+- no sync  
+- O(N)  
+- high stability  
 
-Low-Noise Drift
+---
 
-Phase Field Visualization
+## 8. COMMERCIAL & SCIENTIFIC APPLICATIONS
 
-Coherence Decay Curve
+- hyperscale AI compute  
+- low-power inference  
+- edge compute  
+- PDE and physics simulation  
+- robotics  
+- neuromorphic compute replacement  
 
-Advanced Experiments (11–20)
-
-Long-Horizon Stability (10,000 steps)
-
-Noise-Induced Collapse
-
-Perturbation Recovery
-
-Multi-Node Coherence Propagation
-
-Noise Band Resonance Suppression
-
-Global Stability Map
-
-All experiment files located under:
-
-/docs/experiments
-/experiments
-
-7. SCALING MODEL & COST ANALYSIS
-7.1 Compute Equation
-𝐶
-𝑜
-𝑚
-𝑝
-𝑢
-𝑡
-𝑒
-𝐸
-=
-𝐴
-𝑚
-𝑝
-𝑙
-𝑖
-𝑡
-𝑢
-𝑑
-𝑒
-×
-𝐶
-𝑜
-𝑢
-𝑝
-𝑙
-𝑖
-𝑛
-𝑔
-𝑃
-𝑟
-𝑜
-𝑝
-𝑎
-𝑔
-𝑎
-𝑡
-𝑖
-𝑜
-𝑛
-𝑇
-𝑖
-𝑚
-𝑒
-Compute
-E
-	​
-
-=
-PropagationTime
-Amplitude×Coupling
-	​
-
-7.2 Scaling Comparison
-Compute Model	Transport	Sync	Scaling	Stability
-GPU	high	required	O(N²)	fragile
-TPU	medium	mesh-level	O(N²)	moderate
-Neuromorphic	low	none	limited	niche
-Phase OS	zero	none	O(N)	stable
-
-Transport collapses at scale.
-Phase OS does not.
-
-8. COMMERCIAL & SCIENTIFIC IMPLICATIONS
-
-hyperscale AI training
-
-ultra-low-power inference
-
-edge compute
-
-real-time PDE solving
-
-robotics & physical systems
-
-neuromorphic compute replacement
-
-This is not optimization —
+Phase OS is not optimization —  
 it is a paradigm replacement.
 
-9. COLLABORATION CALL
+---
 
-We welcome collaborations from:
+## 9. COLLABORATION CALL
 
-PDE researchers
+We invite collaboration from:
 
-GPU/TPU architects
+- PDE researchers  
+- hardware labs  
+- GPU/TPU architects  
+- compute accelerator developers  
+- research scientists & PhD candidates  
 
-hardware labs
+Contact: **jspchp638@gmail.com**
 
-compute accelerator teams
+---
 
-research scientists & PhD students
+## 10. ORIGIN & AUTHORSHIP
 
-📩 Email: jspchp638@gmail.com
+Phase Computing, RCIRCUIT, the theoretical formulation,  
+and the experimental validation suite were created by:
 
-10. ORIGIN & ATTRIBUTION
+**Chulhee Park**  
+Creator of RCIRCUIT  
+Inventor of Transport-Free Compute Architecture  
 
-The conceptual foundation, equations, architectural formulation,
-and experimental validation of Phase Computing were created by:
+This establishes authorship and conceptual origin.
 
-Chulhee Park
-Creator of RCIRCUIT
-Inventor of Transport-Free Compute Architecture
+---
 
-This establishes authorship and original contribution.
+## 11. LICENSE (PROPRIETARY / RESTRICTED)
 
-11. LICENSE
-Phase OS Proprietary License (Restricted Use)
+Phase OS Proprietary License:
+- No redistribution  
+- No modification  
+- No derivative works  
+- No commercial use  
+- No replication  
+- Explicit written permission required  
 
-No redistribution
+Purpose:  
+Protect authorship, originality, and prevent unauthorized duplication.
 
-No modification
-
-No commercial use
-
-No derivative works
-
-No replication in research or industry
-
-Requires explicit written permission from the author
-
-This license protects originality, authorship, and prevents unauthorized duplication.
+---
 
 END OF DOCUMENT
-
-
-실험·엔진·OS 모두 통합
-
-다음 단계 선택:
