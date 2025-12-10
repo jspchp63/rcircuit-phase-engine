@@ -1,4 +1,4 @@
-# PHASE COMPUTING ENGINE — RCIRCUIT  
+# PHASE COMPUTING ENGINE — R CIRCUIT  
 ### Transport-Free Compute Architecture  
 ### by Chulhee Park  
 Inventor of RCIRCUIT & Phase Computing
@@ -29,9 +29,8 @@ Local resonance becomes the compute substrate.
 
 📘 **Phase OS Whitepaper v0.4 (Official Document)**  
 👉 https://github.com/**YOUR_REPO_PATH**/docs/Phase_OS_Whitepaper_v0.4.md  
-*(GitHub 자동 렌더링 / 수식 깨짐 없음 / 연구소급 문서)*
+*(GitHub 자동 렌더링 / 수식 깨짐 없음)*
 
-또는 내부 경로:
 
 ./docs/Phase_OS_Whitepaper_v0.4.md
 
