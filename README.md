@@ -147,6 +147,32 @@ Seeking collaborators in:
 - Hardware labs  
 - Compute accelerator design  
 - Research scientists & PhD groups  
+---
+
+## 📢 arXiv Endorsement Request (eess.SP)
+
+I am preparing the arXiv submission of the Phase Computing Engine  
+(R CIRCUIT — Transport-Free Compute Architecture).
+
+To complete submission in **eess.SP (Signal Processing)**,  
+an **arXiv endorsement** is required.
+
+If you have submitted to any of the following categories within the last 5 years:
+
+- eess.SP (Signal Processing)  
+- eess.SY (Systems and Control)  
+- cs.SC (Symbolic Computation)  
+- cs.AR (Hardware Architecture)  
+- cs.DS (Data Structures and Algorithms)  
+- cs.NE (Neural and Evolutionary Computing)  
+- cs.LG (Machine Learning)  
+
+…your endorsement would be greatly appreciated.
+
+**Endorsement code:** `J7TZQ9`  
+**Email:** `jspchp638@gmail.com`
+
+Thank you for supporting independent research in compute architecture.
 
 📩 Contact → **jspchp638@gmail.com**
 
