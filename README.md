@@ -1,4 +1,13 @@
-# PHASE COMPUTING ENGINE — RCIRCUIT  
+# ⚡ RCIRCUIT — Origin Declaration
+> ### **“RCIRCUIT was created when a human tried to overcome the structural limitations of AI.”**
+> In attempting to fix GPT's repeated context loss and inconsistency,  
+> a human-defined structure, coherence model, and compute philosophy emerged —  
+> leading to the invention of the world’s first **Transport-Free Compute Architecture**.  
+> **— Chulhee Park, Inventor of Phase Computing**
+
+---
+
+# 🌀 PHASE COMPUTING ENGINE — RCIRCUIT  
 ### **Transport-Free Compute Architecture**  
 ### **Invented by Chulhee Park**
 
@@ -6,43 +15,47 @@
 
 ## 🚀 What is Phase Computing?
 
-Modern AI systems no longer fail because of math —  
-they fail because of **physics constraints**:
+Modern AI systems do not fail because of mathematics.  
+They fail because of **physics**:
 
 - HBM saturation  
 - Interconnect latency  
 - Global synchronization pressure  
 - Coherence collapse  
 
-Phase Computing introduces a new compute paradigm:
+Phase Computing introduces a new paradigm:
 
 > **Values never move.  
 > Local phase evolution *is* computation.**
 
-No tensor transport.  
-No global sync.  
+Transport disappears.  
 Local resonance becomes the compute substrate.
 
+This redefines the fundamental cost model of computation.
+
 ---
 
-## 🔥 Core Whitepaper (Full Specification)
+# 🔥 Core Whitepaper (Full Specification)
 
 📘 **Phase OS Whitepaper v0.4 — Official Technical Document**  
-`./docs/whitepaper/Phase_OS_Whitepaper_v0.4.md`
+➡ `./docs/whitepaper/Phase_OS_Whitepaper_v0.4.md`
 
-Defines:
+The whitepaper defines:
 
-- RCIRCUIT compute model  
+- RCIRCUIT compute primitive  
 - Phase OS  
-- Scaling laws  
 - Coherence & stability model  
+- Scaling law  
 - 20-experiment validation suite  
+- Transport-Free Compute formalization  
 
 ---
 
-## 🧪 Validation: 20 Experiments
+# 🧪 Experimental Validation (20 Experiments)
 
-The RCIRCUIT Phase Engine is validated through:
+RCIRCUIT follows an **experiment-driven validation philosophy**.
+
+Representative experiments include:
 
 - Phase Diffusion  
 - Coupling Strength Sweep  
@@ -50,100 +63,105 @@ The RCIRCUIT Phase Engine is validated through:
 - Noise–Resonance Interaction  
 - Coherence Decay Curve  
 - Resonance Threshold Scan  
-- Stability Region Map  
-- Noise Collapse / Recovery  
+- Stability Region Mapping  
+- Noise Collapse & Recovery  
 - Multi-node Coherence Propagation  
 - Long-Horizon Stability (10,000 steps)
 
-All experiment files:
-
-/experiments
+All experiment files:  
+➡ `/experiments`
 
 ---
 
-## 🎥 Visual Demo (GIF)
+# 🎥 Visual Demonstrations
 
 GitHub does not support MP4 playback.  
-Therefore the official demo is provided as a GIF.
+GIF versions are used for inline rendering.
 
-![Phase Engine Demo](./docs/visuals/phase_engine_demo.gif)
-
-Additional visualizations:
-
-/docs/visuals
+Visualization files:  
+➡ `./docs/visuals/`
 
 ---
 
-## 📊 Example Plot: Noise vs Coherence
+# 📊 Noise vs Coherence Map
 
-This plot shows how coherence collapses as noise increases —  
-a fundamental signature of phase-compute physical systems.
+A core physical signature of RCIRCUIT is the relationship:
 
-![Noise vs Coherence](./docs/visuals/noise_coherence_plot.png)
+> **Noise ↑ → Coherence ↓**
 
----
+This reflects phase-driven stability collapse in transport-free compute regimes.
 
-## ⚙️ Architecture Overview
-
-Core components:
-
-- Phase drift  
-- Local coupling  
-- Coherence engine  
-- Resonant memory  
-- Phase harmonization layer  
-- Resonant compute pulse  
-- Global propagation gate  
-
-Detailed documents:
-
-docs/Phase_Compute_Architecture.md
-docs/architecture_overview_v1.0.md
+Plot file:  
+➡ `./docs/visuals/noise_coherence_plot.png`
 
 ---
 
-## 🧭 Entry Point for Researchers
+# ⚙️ Architecture Overview
+
+RCIRCUIT + Phase OS consists of:
+
+- Phase Drift Engine  
+- Local Coupling Operator  
+- Coherence Engine  
+- Resonant Memory  
+- Phase Harmonization Layer  
+- Resonant Compute Pulse  
+- Global Propagation Gate  
+
+Technical documents:
+
+- `docs/Phase_Compute_Architecture.md`  
+- `docs/architecture_overview_v1.0.md`
+
+---
+
+# 🧭 Entry Point for Researchers
 
 Start here:
 
-START_HERE.md
+➡ `START_HERE.md`
 
-Full specification:
+Full specification whitepaper:
 
-docs/whitepaper/Phase_OS_Whitepaper_v0.4.md
+➡ `docs/whitepaper/Phase_OS_Whitepaper_v0.4.md`
 
 ---
 
-## 👥 Collaboration Call
+# 👥 Collaboration Call
 
-Seeking collaboration with:
+The project welcomes collaboration from:
 
-- PDE researchers  
+- PDE / physics-based compute researchers  
 - Hardware labs  
 - GPU/TPU architects  
-- Compute accelerator developers  
+- Compute accelerator designers  
 - Research scientists & PhD groups  
 
 📩 Contact: **jspchp638@gmail.com**
 
 ---
 
-## 🔒 License
+# 🔒 License
 
-### **Phase OS Proprietary License (Restricted Use)**  
+This project is under the:
+
+### **Phase OS Proprietary License (Restricted Use)**
+
+Restrictions include:
 
 - No redistribution  
 - No modification  
 - No derivative works  
 - No commercial use  
-- Explicit written permission required  
+- Written permission required  
 
-This license protects origin, authorship, and prevents unauthorized use.
+This protects authorship, origin, and technical integrity.
 
 ---
 
-## 🌟 Credits
+# 🌟 Credits
 
 Created by **Chulhee Park**,  
 Inventor of the **Transport-Free Compute Architecture**  
-and the **RCIRCUIT Phase Engine**
+and the **RCIRCUIT Phase Engine**.
+
