@@ -1,4 +1,4 @@
-# PHASE COMPUTING ENGINE — RCIRCUIT  
+# PHASE COMPUTING ENGINE — R CIRCUIT  
 ### Transport-Free Compute Architecture  
 ### by Chulhee Park
 
@@ -140,7 +140,7 @@ Looking for:
 ---
 
 ## 🧾 License
-MIT License.
+TBD
 
 ---
 
