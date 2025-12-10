@@ -42,7 +42,7 @@ This redefines the fundamental cost model of computation.
 
 The whitepaper defines:
 
-- RCIRCUIT compute primitive  
+- R CIRCUIT compute primitive  
 - Phase OS  
 - Coherence & stability model  
 - Scaling law  
