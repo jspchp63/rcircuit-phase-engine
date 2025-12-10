@@ -1,79 +1,67 @@
-# PHASE COMPUTING ENGINE — R CIRCUIT  
+# PHASE COMPUTING ENGINE — RCIRCUIT  
 ### Transport-Free Compute Architecture  
-### by Chulhee Park
+### by Chulhee Park  
+Inventor of RCIRCUIT & Phase Computing
 
 ---
 
 ## 🚀 What is Phase Computing?
 
-Modern AI does not fail because of math —  
+Modern AI fails not because of math —  
 **it fails because of physics.**
 
 - HBM saturation  
-- interconnect latency  
-- global sync barriers  
-- coherence breakdown  
+- interconnect delay  
+- global synchronization  
+- coherence collapse  
 
-**Phase Computing introduces a new paradigm:**
+Phase Computing introduces a new paradigm:
 
 > **Values never move.  
-> Only local phase evolution performs computation.**
+> Local phase evolution IS computation.**
 
 Transport disappears.  
 Local resonance becomes the compute substrate.
 
 ---
 
-## 🌐 RCIRCUIT — The Core Engine
+## 🔥 Core Whitepaper (Full Specification)
 
-RCIRCUIT implements local-only compute:
+📘 **Phase OS Whitepaper v0.4 (Official Document)**  
+👉 https://github.com/**YOUR_REPO_PATH**/docs/Phase_OS_Whitepaper_v0.4.md  
+*(GitHub 자동 렌더링 / 수식 깨짐 없음 / 연구소급 문서)*
 
-- no tensor movement  
-- no global synchronization  
-- no long-distance propagation  
-- O(N) scaling  
-- physically stable evolution  
+또는 내부 경로:
 
-Update rule:
+./docs/Phase_OS_Whitepaper_v0.4.md
 
-\[
-\delta(t+1)=\gamma\sum(\phi_j-\phi_i)
-\]
-\[
-\phi(t+1)=\phi(t)+\alpha\delta(t+1)
-\]
+markdown
+코드 복사
 
-This architecture is the foundation of **transport-free compute**.
+이 문서는 RCIRCUIT, Phase OS, Scaling Law, Stability Model,  
+20개 실험 프로그램을 모두 통합한 정식 명세서입니다.
 
 ---
 
-## 📘 Whitepaper (Core Document)
+## 🧪 Validation (20 Experiments)
 
-🔗 **[Phase OS Whitepaper v0.4](./docs/Phase_OS_Whitepaper_v0.4.md)**  
-→ This is the *formal specification* of the paradigm.
-
-백서는 RCIRCUIT, Phase OS, Scaling Model, Stability Curve,  
-20개 검증 실험을 하나로 통합한 기술·철학적 중심 문서입니다.
-
----
-
-## 🧪 Verification Suite (20 Experiments)
-
-The engine is validated through 20 experiments:
+RCIRCUIT Phase Engine은 다음 실험들로 검증됩니다:
 
 - Phase Diffusion  
-- Coupling Sweep  
-- Noise–Coherence Curve  
-- Resonance Threshold Map  
-- Local Stability Regions  
-- Multi-node Propagation  
-- Noise-Induced Collapse  
-- Long-Horizon Stability  
+- Coupling Strength Sweep  
+- Local Coherence Map  
+- Noise–Resonance Interaction  
+- Coherence Decay Curve  
+- Resonance Threshold Scan  
+- Stability Region Map  
+- Noise Collapse / Recovery  
+- Multi-node Coherence Propagation  
+- Long-Horizon Stability (10k steps)
 
-Full documentation available under:
+전체 실험 파일:
 
 /experiments
-/docs
+/docs/experiments
 
 yaml
 코드 복사
@@ -82,13 +70,13 @@ yaml
 
 ## 🎥 Visual Demo (GIF)
 
-> GitHub does not render MP4 inline.  
-> Only GIF is supported.
+GitHub는 MP4 재생을 지원하지 않습니다.  
+따라서 **GIF 버전만 표시됩니다.**
 
-**Phase Engine Visualization:**  
-![Phase Demo](./docs/visuals/phase_engine_demo.gif)
+![Phase Engine Demo](./docs/visuals/phase_engine_demo.gif)
 
-More visuals:  
+추가 시각자료는:
+
 /docs/visuals
 
 yaml
@@ -98,70 +86,82 @@ yaml
 
 ## ⚙️ Architecture Overview
 
-Key layers:
+RCIRCUIT + Phase OS 구성 요소:
 
-- Phase Drift Layer  
-- Coupling Field  
-- Coherence Engine  
-- Resonant Memory (RME)  
-- Phase Harmonization Layer  
-- Resonant Compute Pulse  
-- Global Propagation Gate  
+- phase drift  
+- local coupling  
+- coherence engine  
+- resonant memory  
+- phase harmonization  
+- resonant compute pulse  
+- global propagation gate  
 
-Detailed architecture:  
-docs/architecture_overview_v1.0.md
+자세한 기술 문서:
+
 docs/Phase_Compute_Architecture.md
+docs/architecture_overview_v1.0.md
 
 yaml
 코드 복사
 
 ---
 
-## 📊 Example Plot — Noise vs Coherence
+## 📊 Example Plot: Noise vs Coherence
 
 ![Noise vs Coherence](./docs/visuals/noise_coherence_plot.png)
 
-This curve shows the collapse point where coherence → 0.
+이 그래프는 노이즈 증가에 따라 coherence가 어떻게 붕괴되는지를 보여줍니다.
 
 ---
 
 ## 👥 Collaboration Call
 
-Looking for:
+현재 다음 분야의 연구자, 엔지니어와 협력 가능합니다:
 
 - PDE researchers  
 - hardware labs  
 - GPU/TPU architects  
 - compute accelerator developers  
-- research scientists & PhD students  
+- research scientists & PhD groups  
 
-📩 **Contact: jspchp638@gmail.com**
-
----
-
-## 🧾 License
-TBD
+📩 Contact: **jspchp638@gmail.com**
 
 ---
 
-## 🧭 Start Here
+## 🧭 Entry Point
 
-The best entry point is:
+프로젝트 시작 지점:
 
 START_HERE.md
+
+코드 복사
+
+백서 전체 사양:
+
+docs/Phase_OS_Whitepaper_v0.4.md
 
 yaml
 코드 복사
 
-Followed by the whitepaper and experiment suite.
+---
+
+## 🔒 License
+
+This project is under:
+
+**Phase OS Proprietary License (Restricted Use)**  
+- No redistribution  
+- No modification  
+- No derivative works  
+- No commercial use  
+- Explicit permission required  
+
+This protects origin, authorship, and prevents unauthorized use.
 
 ---
 
-## 🌟 Origin & Credits
+## 🌟 Credits
 
-Created by **Chulhee Park**  
-Transport-Free Compute Architecture & RCIRCUIT Inventor.
-
-
-Compute where values never move.  
-Local physics = compute.
+Created by **Chulhee Park**,  
+Inventor of the Transport-Free Compute Architecture  
+and RCIRCUIT Phase Engine.
