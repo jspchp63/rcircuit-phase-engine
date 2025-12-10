@@ -1,5 +1,5 @@
-# ⚡ RCIRCUIT — Origin Declaration
-> ### **“RCIRCUIT was created when a human tried to overcome the structural limitations of AI.”**
+# ⚡ R CIRCUIT — Origin Declaration
+> ### **“R CIRCUIT was created when a human tried to overcome the structural limitations of AI.”**
 > In attempting to fix GPT's repeated context loss and inconsistency,  
 > a human-defined structure, coherence model, and compute philosophy emerged —  
 > leading to the invention of the world’s first **Transport-Free Compute Architecture**.  
@@ -7,7 +7,7 @@
 
 ---
 
-# 🌀 PHASE COMPUTING ENGINE — RCIRCUIT  
+# 🌀 PHASE COMPUTING ENGINE — R CIRCUIT  
 ### **Transport-Free Compute Architecture**  
 ### **Invented by Chulhee Park**
 
@@ -53,7 +53,7 @@ The whitepaper defines:
 
 # 🧪 Experimental Validation (20 Experiments)
 
-RCIRCUIT follows an **experiment-driven validation philosophy**.
+R CIRCUIT follows an **experiment-driven validation philosophy**.
 
 Representative experiments include:
 
@@ -98,7 +98,7 @@ Plot file:
 
 # ⚙️ Architecture Overview
 
-RCIRCUIT + Phase OS consists of:
+R CIRCUIT + Phase OS consists of:
 
 - Phase Drift Engine  
 - Local Coupling Operator  
@@ -163,5 +163,5 @@ This protects authorship, origin, and technical integrity.
 
 Created by **Chulhee Park**,  
 Inventor of the **Transport-Free Compute Architecture**  
-and the **RCIRCUIT Phase Engine**.
+and the **R CIRCUIT Phase Engine**.
 
