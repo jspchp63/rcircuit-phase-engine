@@ -1,4 +1,124 @@
-# 📘 RCIRCUIT — Phase Computing Engine  
+🌀 Phase Computing Architecture (R CIRCUIT)
+A Transport-Free Compute Model Based on Local Phase Evolution
+
+Official Research Announcement — v1
+Creator: Chulhee Park
+
+🚀 Overview
+
+Modern AI systems are hitting a physical wall.
+
+HBM bandwidth saturation
+
+Interconnect delays
+
+Global synchronization overhead
+
+Coherence collapse
+
+Phase Computing introduces a fundamentally new model:
+
+Values never move.
+Local phase evolution is computation.
+
+Transport disappears.
+Local resonance becomes the compute substrate.
+
+RCIRCUIT is the first practical engine demonstrating this model.
+
+A 20-experiment validation suite confirms:
+
+phase diffusion
+
+resonance thresholds
+
+stability maps
+
+coherence under noise
+
+long-horizon compute dynamics
+
+Whitepaper DOI + GitHub repo are now publicly available for research review.
+
+📘 Whitepaper (v0.5, DOI-Certified)
+
+“Phase Computing Engine (R CIRCUIT): A Transport-Free Compute Architecture”
+Zenodo DOI: https://doi.org/10.5281/zenodo.17884901
+
+This document outlines:
+
+the RCIRCUIT compute primitive
+
+Phase OS
+
+coherence/stability frameworks
+
+compute scaling laws
+
+validation experiments
+
+🧪 Code & Experiments (GitHub)
+
+Full minimal engine + 20 experiments:
+
+🔗 GitHub: https://github.com/jspchp63/rcircuit-phase-engine
+
+Includes:
+
+2D phase compute simulator
+
+resonance logic gates
+
+stability region mapping
+
+noise-coherence interaction
+
+phase drift & harmonization
+
+resonant compute pulse model
+
+🎥 Demo
+
+Transport-free compute animation (GIF):
+docs/visuals/phase_engine_demo.gif
+
+Noise–coherence collapse plot:
+docs/visuals/noise_coherence_plot.png
+
+👥 Invitation to Collaborate
+
+We welcome feedback and collaboration from:
+
+PDE researchers
+
+physics-driven compute labs
+
+GPU/TPU architects
+
+compute accelerator designers
+
+hardware simulation groups
+
+research scientists & PhD teams
+
+If your group is exploring post-FLOPS or transport-free compute models,
+this project may be of interest.
+
+📩 Contact: jspchp638@gmail.com
+
+🔒 License
+
+This work is released under a restricted research license.
+Attribution required.
+No redistribution, modification, or commercial use without permission.
+
+🌟 Creator
+
+Chulhee Park
+Inventor of the Transport-Free Compute Architecture (Phase Computing)
+Developer of the RCIRCUIT Phase Engine
+
+ 📘 RCIRCUIT — Phase Computing Engine  
 ### **Transport-Free Compute Architecture**  
 **Invented by Chulhee Park**
 
