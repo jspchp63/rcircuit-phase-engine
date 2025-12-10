@@ -1,4 +1,4 @@
-# PHASE COMPUTING ENGINE — Transport-Free Compute | RCIRCUIT
+# PHASE COMPUTING ENGINE — Transport-Free Compute | R CIRCUIT
 
 ### Compute where values never move.  
 ### Local physics *is* compute.
@@ -6,7 +6,7 @@
 ---
 
 ## 🎥 Phase Engine Intro  
-(Insert GIF or mp4 preview)
+
 
 ---
 
