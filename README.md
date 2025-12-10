@@ -7,7 +7,7 @@
 
 ---
 
-# 🌀 PHASE COMPUTING ENGINE — RCIRCUIT  
+# 🌀 PHASE COMPUTING ENGINE — R CIRCUIT  
 ### **Transport-Free Compute Architecture**  
 ### **Invented by Chulhee Park**
 
