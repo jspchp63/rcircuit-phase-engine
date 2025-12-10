@@ -1,3 +1,6 @@
+📘 Official Whitepaper (PDF)
+https://github.com/xxx/PhaseComputing_Whitepaper_v0.5_ascii_safe.pdf
+
 # ⚡ R CIRCUIT — Origin Declaration
 > ### **“R CIRCUIT was created when a human tried to overcome the structural limitations of AI.”**
 > In attempting to fix GPT's repeated context loss and inconsistency,  
