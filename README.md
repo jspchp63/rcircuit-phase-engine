@@ -50,8 +50,6 @@ GitHub copy:
 ✓ Multi-node Coherence Propagation
 ✓ Long-Horizon Stability (10k steps)
 
-yaml
-코드 복사
 
 Full dataset: `/experiments`
 
