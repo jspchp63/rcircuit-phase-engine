@@ -1,3 +1,7 @@
+```markdown
+📘 RCIRCUIT Update: Architecture Documentation Release (v0.6)
+Zenodo (latest version): https://doi.org/10.5281/zenodo.17884900
+```
 # RCIRCUIT — Phase Computing Engine
 ### A Transport-Free Compute Architecture
 Invented by Chulhee Park
