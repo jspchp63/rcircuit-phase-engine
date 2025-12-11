@@ -1,90 +1,112 @@
-# ⚡ RCIRCUIT — Phase Computing Engine  
-### Transport-Free Compute Architecture  
-**Invented by Chulhee Park**
+RCIRCUIT — Phase Computing Engine
+A Transport-Free Compute Architecture
 
-RCIRCUIT began from one question:  
-*“If movement creates collapse, what happens when computation stops moving?”*
+Invented by Chulhee Park
 
-The result is a compute primitive where  
-**local phase evolution = computation**  
-(no transport, no global pressure, no coherence collapse)
+Concept
 
----
+Modern AI systems fail due to transport cost, not computation itself:
 
-## 🧩 Why Phase Computing?
-Modern accelerators break for physical reasons:
+HBM bandwidth saturation
 
-- bandwidth walls  
-- interconnect latency  
-- synchronization pressure  
-- coherence instability  
+Interconnect latency
 
-Phase Computing removes transport entirely.  
-When values stop moving, scaling laws behave differently.
+Synchronization pressure
 
----
+Coherence collapse
 
-## 📘 Whitepaper (DOI)
-ASCII-PDF: https://doi.org/10.5281/zenodo.17884901  
-Repo copy: `/docs/whitepaper`
+RCIRCUIT introduces a new compute primitive:
+Local Phase Evolution = Computation
+No values move. Transport disappears.
 
----
+Architecture Overview
 
-## 🧪 Experiment Set (20)
-- phase diffusion  
-- coupling sweeps  
-- coherent regions  
-- resonance thresholds  
-- long-horizon stability  
+Phase Drift Engine
 
-Experiments: `/experiments`
+Local Coupling Operator
 
----
+Coherence Engine
 
-## ⚙ Architecture Layers
-- Phase Drift Engine  
-- Local Coupling Operator  
-- Coherence Engine  
-- Resonant Memory  
-- Harmonization Layer  
-- Propagation Gate  
+Resonant Memory
 
-Docs: `/docs`
+Harmonization Layer
 
----
+Compute Pulse Generator
 
-## 🌐 Early Community Activity (7 days, no marketing)
-- 1,063 clones  
-- 558 unique cloners  
-- 1,847 views  
+Propagation Gate
 
-The signal reflects early exploration by researchers working on compute primitives.
+Documentation:
+docs/Phase_Compute_Architecture.md
+docs/architecture_overview_v1.0.md
 
----
+Experimental Validation (20 Tests)
 
-## 🤝 Collaboration
-Open to discussions with labs exploring:
+RCIRCUIT is validated through:
 
-- PDE / nonlinear systems  
-- GPU/TPU architecture  
-- compute acceleration  
-- hardware prototypes  
-- theoretical compute models  
+Phase diffusion
 
-Contact: **jspchp638@gmail.com**
+Coherence decay curves
 
----
+Coupling sweep
 
-## 🧭 Research Status
-An arXiv submission is in progress under  
-**cs.AR / cs.DS** (compute architecture & formal models).  
-Secondary relevance to **eess.SP** exists for phase-signal physics.
+Noise–resonance behavior
 
-Researchers in these areas who want to connect may reach out privately.
+Stability region scan
 
----
+Long-horizon stability (10k steps)
 
-## 🔒 License
-Phase OS Proprietary License  
-(No redistribution, no modification, no derivatives, no commercial use)
+Multi-node coherence propagation
 
+Noise collapse & recovery
+
+Resonance thresholding
+
+Experiments: /experiments
+Plot: docs/visuals/noise_coherence_plot.png
+
+Whitepaper (DOI)
+
+Phase Computing Engine (RCIRCUIT)
+https://doi.org/10.5281/zenodo.17884901
+
+Research Context
+
+RCIRCUIT sits at the intersection of:
+
+PDE-based compute
+
+Phase dynamics
+
+Coherence physics
+
+ML system bottleneck avoidance
+
+Not an optimization of existing architectures —
+a new compute primitive.
+
+Collaboration
+
+Open to collaboration with:
+
+GPU/TPU architecture teams
+
+PDE & physics-based compute groups
+
+HPC researchers
+
+Hardware labs
+
+Theoretical compute labs
+
+Contact: jspchp638@gmail.com
+
+License
+
+Phase OS Proprietary License
+No redistribution · No modification · No derivatives · No commercial use
+
+Author
+
+Chulhee Park
+Inventor of Transport-Free Compute
+South Korea / USA
