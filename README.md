@@ -174,6 +174,14 @@ If you have submitted to any of the following categories within the last 5 years
 
 Thank you for supporting independent research in compute architecture.
 
+## 📈 7-Day Community Activity (Organic)
+
+Clones: 1,041  
+Unique Cloners: 549  
+Total Views: 1,805  
+
+_No ads. No marketing. Pure research interest._
+
 📩 Contact → **jspchp638@gmail.com**
 
 ---
