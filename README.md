@@ -98,6 +98,8 @@ Hardware labs
 
 Theoretical compute labs
 
+<br>
+
 Contact: jspchp638@gmail.com
 
 License
@@ -110,3 +112,5 @@ Author
 Chulhee Park
 Inventor of Transport-Free Compute
 South Korea / USA
+
+✅ 완료
