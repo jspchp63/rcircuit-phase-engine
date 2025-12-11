@@ -1,12 +1,3 @@
-# 📢 arXiv Endorsement 요청 (eess.SP)  
-**arXiv endorsement needed for Phase Computing submission.**
-
-- Category: **eess.SP (Signal Processing)**  
-- Endorsement Code: **J7TZQ9**  
-- Email: **jspchp638@gmail.com**  
-
-도움을 주신다면 정말 감사드립니다.
-
 ---
 
 # ⚡ RCIRCUIT — Phase Computing Engine  
@@ -138,7 +129,14 @@ Total Views: 1,805
 Email: **jspchp638@gmail.com**
 
 ---
+# 📢 arXiv Endorsement  
+**arXiv endorsement needed for Phase Computing submission.**
 
+- Category: **eess.SP (Signal Processing)**  
+- Endorsement Code: **J7TZQ9**  
+- Email: **jspchp638@gmail.com**  
+
+도움을 주신다면 정말 감사드립니다.
 ## 🔒 LICENSE
 **Phase OS Proprietary License**  
 No redistribution | No modification | No derivatives | No commercial use  
