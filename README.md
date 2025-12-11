@@ -77,9 +77,6 @@ docs/architecture_overview_v1.0.md
 ## 🌀 BACKGROUND PHILOSOPHY — HROS → Phase Computing
 Emotion = (Energy × Meaning) / Time
 
-yaml
-코드 복사
-
 Inherited principles:
 - Pathos-Precedes-Logos (PPL)  
 - IF-TERR Coherence Law  
