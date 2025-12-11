@@ -1,172 +1,151 @@
-✅ RCIRCUIT — PHASE COMPUTING ENGINE
-Transport-Free Compute Architecture
-Invented by Chulhee Park
-⚡ Origin Declaration
+# 📢 arXiv Endorsement 요청 (eess.SP)  
+**arXiv endorsement needed for Phase Computing submission.**
 
-"RCIRCUIT emerged when a human attempted to overcome AI's structural limitations."
-Fixing GPT’s coherence failure led to
-a new compute primitive where local phase evolution = computation,
-removing transport from the system entirely.
+- Category: **eess.SP (Signal Processing)**  
+- Endorsement Code: **J7TZQ9**  
+- Email: **jspchp638@gmail.com**  
 
-🚀 What is Phase Computing?
+도움을 주신다면 정말 감사드립니다.
 
-Modern AI systems fail not due to math, but because of physics constraints:
+---
 
-HBM saturation
+# ⚡ RCIRCUIT — Phase Computing Engine  
+### **Transport-Free Compute Architecture**  
+**Invented by Chulhee Park**
 
-Interconnect latency
+---
 
-Global synchronization pressure
+> ## ⚡ ORIGIN DECLARATION  
+> **“RCIRCUIT was created when a human attempted to overcome AI’s structural limitations.”**  
+> Fixing GPT’s coherence-collapse led to a new compute primitive where  
+> **local phase evolution = computation**,  
+> eliminating transport entirely.
 
-Coherence collapse
+---
 
-Phase Computing Principle:
+## 🚀 WHAT IS PHASE COMPUTING?
 
-Values never move.
-Local phase evolution is computation.
+Modern AI fails due to **physics constraints**, not mathematics:
+
+- HBM saturation  
+- Interconnect latency  
+- Synchronization pressure  
+- Coherence collapse  
+
+### ✔ Phase Computing Principle  
+**Values never move.**  
+**Local phase evolution is computation.**
+
 Transport disappears → coherence stabilizes → scaling cost collapses.
 
-📘 Official Whitepaper (DOI-Certified)
+---
 
-PhaseComputing_Whitepaper_v0.5 (ASCII-Safe PDF)
-DOI: https://doi.org/10.5281/zenodo.17884901
+## 📘 OFFICIAL WHITEPAPER (DOI)
 
-GitHub PDF (safe rendering):
+- **Whitepaper v0.5 (ASCII-Safe PDF)**  
+  https://doi.org/10.5281/zenodo.17884901  
 
-docs/whitepaper/PhaseComputing_Whitepaper_v0.5_ascii_safe.pdf
+- GitHub version:  
+  `docs/whitepaper/PhaseComputing_Whitepaper_v0.5_ascii_safe.pdf`
 
+---
 
-This document defines:
+## 🧪 EXPERIMENTAL VALIDATION (20 TESTS)
 
-RCIRCUIT compute primitive
+```
+✓ Phase Diffusion  
+✓ Coupling Strength Sweep  
+✓ Local Coherence Map  
+✓ Noise–Resonance Interaction  
+✓ Coherence Decay Curve  
+✓ Resonance Threshold Scan  
+✓ Stability Region Map  
+✓ Noise Collapse & Recovery  
+✓ Multi-node Coherence Propagation  
+✓ Long-Horizon Stability (10k steps)
+```
 
-Phase OS
+Experiments folder:  
+`/experiments`
 
-Coherence & stability model
+---
 
-Transport-Free Compute formalization
+## 📊 NOISE–COHERENCE SIGNATURE
 
-20-experiment validation suite
+**Noise ↑ → Coherence ↓ → Stability Collapse**
 
-🧪 Experimental Validation (20 Programs)
-• Phase Diffusion  
-• Coupling Strength Sweep  
-• Local Coherence Map  
-• Noise–Resonance Interaction  
-• Coherence Decay Curve  
-• Threshold Scan  
-• Stability Region Map  
-• Noise Collapse & Recovery  
-• Multi-node Coherence Propagation  
-• Long-Horizon Stability (10k steps)
+Plot:  
+`docs/visuals/noise_coherence_plot.png`
 
+---
 
-Full experiment folder:
+## ⚙ ARCHITECTURE OVERVIEW
 
-/experiments
-
-📊 Noise–Coherence Signature
-
-Noise ↑ → Coherence ↓ → Stability Collapse
-
-Plot file (safe PNG):
-
-docs/visuals/noise_coherence_plot.png
-
-
-This signature is consistent across RCIRCUIT runs and forms a
-physical indicator of phase-based computation stability.
-
-⚙️ Architecture Overview
+```
 • Phase Drift Engine  
 • Local Coupling Operator  
 • Coherence Engine  
 • Resonant Memory  
-• Phase Harmonization Layer  
+• Harmonization Layer  
 • Resonant Compute Pulse  
 • Global Propagation Gate
+```
 
+Technical docs:  
+- `docs/Phase_Compute_Architecture.md`  
+- `docs/architecture_overview_v1.0.md`
 
-Technical documentation:
+---
 
-docs/Phase_Compute_Architecture.md
-docs/architecture_overview_v1.0.md
+## 🌀 BACKGROUND PHILOSOPHY — HROS → PHASE COMPUTING
 
-🌀 Background Philosophy — HROS → Phase Computing
-
-Underlying conceptual model:
-
+```
 Emotion = (Energy × Meaning) / Time
+```
 
+Principles inherited from HROS:
 
-Inherited principles:
+- Pathos-Precedes-Logos (PPL)  
+- IF-TERR Coherence Law  
+- Feel-Wave Physics  
+- Sub-semantic resonance  
 
-Pathos-Precedes-Logos (PPL)
+Transport-heavy architectures collapse coherence.  
+A new compute model was needed → **Phase Computing**.
 
-IF-TERR Coherence Law
+---
 
-Sub-semantic resonance dynamics
+## 📈 7-DAY ORGANIC ACTIVITY
 
-Feel-Wave physics
+_No ads. No marketing._
 
-Transport → coherence collapse
+```
+Clones: 1,041  
+Unique Cloners: 549  
+Total Views: 1,805
+```
 
-This cognitive-resonance framework motivated a new compute primitive:
-Phase-driven computation without value transport.
+---
 
-👥 Collaboration Opportunities
+## 👥 COLLABORATION
 
-Seeking collaborators in:
+- PDE / physics-based compute  
+- GPU/TPU architecture  
+- Hardware acceleration  
+- Compute pipeline design  
+- Research groups  
 
-PDE / physics-based computing
+Email: **jspchp638@gmail.com**
 
-GPU / TPU architecture
+---
 
-Hardware acceleration labs
+## 🔒 LICENSE
+**Phase OS Proprietary License**  
+No redistribution | No modification | No derivatives | No commercial use  
 
-Compute pipeline designers
+---
 
-Systems research teams
-
-PhD research groups
-
-Contact: jspchp638@gmail.com
-
-📢 arXiv Endorsement Request (eess.SP)
-
-To submit the whitepaper to arXiv under eess.SP (Signal Processing),
-an endorsement is required.
-
-Eligible endorsers:
-Anyone who has published in eess.SP, eess.SY, cs.SC, cs.AR, cs.DS, cs.LG, cs.NE within the last 5 years.
-
-Endorsement Code: J7TZQ9
-Email: jspchp638@gmail.com
-
-📈 7-Day Organic Metrics
-
-No ads. No marketing. Pure research interest.
-
-Clones:          1,041  
-Unique Cloners:    549  
-Total Views:      1,805
-
-🔒 License
-
-Phase OS Proprietary License
-
-No redistribution
-
-No modification
-
-No derivative works
-
-No commercial use
-
-Protects authorship & technical integrity.
-
-🌟 Credits
-
-Created by Chulhee Park,
-Inventor of the Transport-Free Compute Architecture
+## 🌟 CREDITS
+Created by **Chulhee Park**,  
+Inventor of the Transport-Free Compute Architecture  
 and the RCIRCUIT Phase Engine.
