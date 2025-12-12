@@ -118,7 +118,10 @@ We welcome collaboration from:
 
 📩 Contact: **jspchp638@gmail.com**
 
----
+---This is an active architecture experiment.
+If you’re evaluating, you’re welcome.
+If not, this repo is not for you.
+
 
 ## 🔒 License
 **Phase OS Proprietary License**  
