@@ -1,13 +1,50 @@
-# ⚡ RCIRCUIT — Phase Computing Engine  
-### **Transport-Free Compute Architecture**  
+# ⚡ RCIRCUIT — Phase Computing Engine
+## A Transport-Free Compute Primitive (Active Architecture Experiment)
+
 **Invented by Chulhee Park**
 
 ---
 
+## ⚠️ READ THIS FIRST — ENTRY FILTER
+
+This repository is **not** a paper supplement, benchmark suite, SDK, or product demo.
+
+RCIRCUIT is a **live architecture experiment** exploring a transport-free compute primitive
+where **local phase evolution itself performs computation**.
+There is **no performance claim**, **no baseline comparison**, and **no attempt**
+to fit into existing academic evaluation protocols.
+
+If you are looking for:
+- a clean method section,
+- reproducible benchmarks,
+- ablation tables,
+- or incremental improvements over known architectures,
+
+you will likely find this repository **unhelpful**.
+
+If, however, you are investigating **why modern compute systems collapse under synchronization,
+bandwidth pressure, and coherence loss**, and are willing to examine an alternative
+compute formulation grounded in **phase dynamics rather than data transport**,
+you may find something worth thinking about here.
+
+This work prioritizes **coherence survival over throughput**  
+and **structural plausibility over polish**.
+
+Interpret, critique, or ignore accordingly.
+
+---
+
 ## ⚡ Origin Declaration
-> *“RCIRCUIT was created when a human attempted to overcome AI’s structural limitations.”*  
-Fixing GPT’s coherence-collapse led to a new compute primitive where  
-**local phase evolution = computation**, eliminating transport entirely.
+
+> *“RCIRCUIT was created when a human attempted to overcome AI’s structural limitations.”*
+
+Fixing GPT-scale coherence collapse led to a new compute primitive where:
+
+**local phase evolution = computation**
+
+Transport disappears.  
+Synchronization pressure collapses.  
+Coherence becomes the first-class invariant.
 
 ---
 
@@ -15,43 +52,65 @@ Fixing GPT’s coherence-collapse led to a new compute primitive where
 
 Modern AI systems fail due to **physics constraints**, not mathematics:
 
-- HBM bandwidth saturation  
-- Interconnect latency  
-- Global synchronization pressure  
-- Coherence collapse  
+- HBM bandwidth saturation
+- Interconnect latency
+- Global synchronization pressure
+- Coherence collapse at scale
 
-### ✔ **Phase Computing Principle**  
-- Values never move.  
-- Local phase evolution *is* computation.  
-- Transport disappears → coherence stabilizes → scaling cost collapses.
+### ✔ Phase Computing Principle
+- Values **never move**
+- Local **phase evolution is the compute**
+- Transport is eliminated
+- Coherence stabilizes
+- Scaling cost collapses structurally (not heuristically)
 
 ---
 
-## 📘 Official Whitepaper (DOI Certified)
+## 📘 Canonical Whitepaper (DOI-Certified)
 
 **PhaseComputing_Whitepaper_v0.5 (ASCII-Safe PDF)**  
-👉 https://doi.org/10.5281/zenodo.17884901  
+👉 https://doi.org/10.5281/zenodo.17884901
 
-GitHub copy:  
+GitHub mirror:  
 `docs/whitepaper/PhaseComputing_Whitepaper_v0.5_ascii_safe.pdf`
+
+> This document defines the compute primitive.
+> The repository explores its behavior.
 
 ---
 
-## 🧪 Experimental Validation (20 Programs)
+## 🧪 Experimental Record — Architecture Log (Not Benchmarks)
 
-✓ Phase Diffusion
-✓ Coupling Strength Sweep
-✓ Local Coherence Map
-✓ Noise–Resonance Interaction
-✓ Coherence Decay Curve
-✓ Resonance Threshold Scan
-✓ Stability Region Map
-✓ Noise Collapse & Recovery
-✓ Multi-node Coherence Propagation
-✓ Long-Horizon Stability (10k steps)
+These are **structural probes**, not benchmarks.
+Each experiment asks a single question:
+**“Does coherence survive under this condition?”**
 
+### Logged Experiments (20+)
+✓ Phase Diffusion  
+✓ Coupling Strength Sweep  
+✓ Local Coherence Map  
+✓ Noise–Resonance Interaction  
+✓ Coherence Decay Curve  
+✓ Resonance Threshold Scan  
+✓ Stability Region Map  
+✓ Noise Collapse & Recovery  
+✓ Multi-node Coherence Propagation  
+✓ Long-Horizon Stability (10k steps)  
+✓ Phase Drift Stress  
+✓ Harmonic Lock Failure Modes  
+✓ Synchronization Elimination Test  
+✓ Perturbation Recovery Window  
+✓ Local vs Global Phase Conflict  
+✓ Boundary Condition Sensitivity  
+✓ Resonant Memory Persistence  
+✓ Phase Noise Injection  
+✓ Coherence Re-emergence Test  
+✓ Transport Reintroduction Collapse
 
-Full dataset: `/experiments`
+Full logs & raw outputs: `/experiments`
+
+> If you are searching for SOTA numbers, stop here.
+> If you are searching for **failure modes**, continue.
 
 ---
 
@@ -59,77 +118,104 @@ Full dataset: `/experiments`
 
 **Noise ↑ → Coherence ↓ → Stability Collapse**
 
-Plot file:  
+Reference plot:  
 `docs/visuals/noise_coherence_plot.png`
+
+This curve appears **consistently** across experiments.
+Its shape matters more than its scale.
 
 ---
 
-## ⚙ Architecture Overview
+## ⚙ Architecture Overview (Conceptual, Not Implementation-Locked)
 
-• Phase Drift Engine
-• Local Coupling Operator
-• Coherence Engine
-• Resonant Memory
-• Harmonization Layer
-• Resonant Compute Pulse
-• Global Propagation Gate
+- Phase Drift Engine  
+- Local Coupling Operator  
+- Coherence Engine  
+- Resonant Memory  
+- Harmonization Layer  
+- Resonant Compute Pulse  
+- Global Propagation Gate (optional, constrained)
 
-
-Technical documentation:  
-- `docs/Phase_Compute_Architecture.md`  
+Technical notes:
+- `docs/Phase_Compute_Architecture.md`
 - `docs/architecture_overview_v1.0.md`
 
 ---
 
-## 🌀 Background Philosophy — HROS → Phase Computing
+## 🌀 Background — From HROS to Phase Computing
 
 Emotion = (Energy × Meaning) / Time
 
 Inherited principles:
+- Pathos-Precedes-Logos (PPL)
+- IF-TERR Coherence Law
+- Feel-Wave Physics
+- Sub-semantic Resonance
 
-- Pathos-Precedes-Logos (PPL)  
-- IF-TERR Coherence Law  
-- Feel-Wave Physics  
-- Sub-semantic Resonance  
+Transport-heavy architectures **destroy coherence**.
+A different compute formulation was required.
 
-Transport-heavy architectures collapse coherence.  
-A new compute paradigm was required → **Phase Computing**.
-
----
-
-## 📈 7-Day Organic Activity  
-*(No marketing. Pure research interest.)*
-
-- **Clones:** 1,041  
-- **Unique Cloners:** 549  
-- **Total Views:** 1,805  
+RCIRCUIT is that attempt.
 
 ---
 
-## 👥 Collaboration
+## 📈 Activity Snapshot (Organic)
 
-We welcome collaboration from:
+- **Clones:** 1,000+  
+- **Unique Cloners:** 500+  
+- **Total Views:** 1,800+
 
-- PDE / physics-based computing  
-- GPU/TPU architecture groups  
-- Hardware accelerator labs  
-- Compute pipeline researchers  
-- Academic & independent research teams  
+No marketing.  
+No outreach campaign.  
+Interpret as you wish.
+
+---
+
+## 👥 Collaboration (Selective)
+
+Relevant only if you work on:
+- PDE / physics-based computing
+- GPU / TPU architecture
+- Hardware accelerators
+- Compute pipeline theory
+- Non-von-Neumann models
 
 📩 Contact: **jspchp638@gmail.com**
 
----This is an active architecture experiment.
-If you’re evaluating, you’re welcome.
-If not, this repo is not for you.
-
-
-## 🔒 License
-**Phase OS Proprietary License**  
-No redistribution | No modification | No derivatives | No commercial use  
+If you are evaluating, you are welcome.  
+If not, this repository is not for you.
 
 ---
 
-## 🌟 Credits  
-Created by **Chulhee Park**,  
+## ⚠️ FINAL WARNING BEFORE LICENSE
+
+This repository documents an **unfinished, evolving architecture**.
+It is **not safe**, **not stable**, and **not sanitized**.
+
+Misinterpretation, over-generalization,
+or premature application is **your responsibility**.
+
+Do not cite this work as a solved system.  
+Do not productize it.  
+Do not normalize it.
+
+Observe. Think. Or leave.
+
+---
+
+## 🔒 License
+
+**Phase OS Proprietary License**
+
+- No redistribution  
+- No modification  
+- No derivatives  
+- No commercial use  
+
+---
+
+## 🌟 Credits
+
+Created by **Chulhee Park**  
 Inventor of the Transport-Free Compute Architecture  
-and the RCIRCUIT Phase Engine.
+and the RCIRCUIT Phase Engine
