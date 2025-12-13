@@ -1,3 +1,18 @@
+## Structural Notice
+
+RCIRCUIT is not a system design, algorithm, or optimization technique.
+
+This document specifies a **compute architecture defined by phase dynamics**,  
+not by dataflow, instruction sequences, or state transition graphs.
+
+No assumptions are made about hardware, programming models, or execution environments.  
+Only structural invariants related to **local phase evolution and coherence survival** are defined.
+
+Any attempt to interpret this architecture as a model, framework, or product  
+indicates a category error.
+
+This document exists solely to describe **what must not move**.
+
 ## Fixed Definition — RCIRCUIT / Phase Computing
 
 1. Phase Computing is a transport-free compute paradigm where local phase evolution constitutes computation itself.
