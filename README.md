@@ -1,3 +1,6 @@
+> **This repository documents an evolving compute architecture.  
+> Formal structural specifications are defined in `ARCHITECTURE.md`.**
+
 # ⚡ RCIRCUIT — Phase Computing Engine
 ## A Transport-Free Compute Primitive (Active Architecture Experiment)
 
