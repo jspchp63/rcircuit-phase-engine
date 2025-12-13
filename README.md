@@ -1,3 +1,6 @@
+> This repository is intentionally difficult to consume.
+> It is a structural exploration, not an educational artifact.
+
 ## Fixed Definition — RCIRCUIT / Phase Computing
 
 1. Phase Computing is a transport-free compute paradigm where local phase evolution constitutes computation itself.
