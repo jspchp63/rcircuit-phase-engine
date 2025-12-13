@@ -1,8 +1,10 @@
-## Definition 
+## Fixed Definition — RCIRCUIT / Phase Computing
 
-Phase Computing is a transport-free compute paradigm where local phase evolution constitutes computation itself.
-No values are moved, synchronized, or globally aggregated; coherence emerges solely from local coupling.
-The architecture targets scalability limits caused by bandwidth, synchronization, and coherence collapse in conventional systems.
+1. Phase Computing is a transport-free compute paradigm where local phase evolution constitutes computation itself.
+2. No values are moved, synchronized, or globally aggregated; coherence emerges solely from local coupling.
+3. The architecture targets scalability limits caused by bandwidth, synchronization, and coherence collapse in conventional systems.
+
+This document describes structure, not implementation.
 > **This repository documents an evolving compute architecture.  
 > Formal structural specifications are defined in `ARCHITECTURE.md`.**
 
