@@ -1,3 +1,8 @@
+## Definition 
+
+Phase Computing is a transport-free compute paradigm where local phase evolution constitutes computation itself.
+No values are moved, synchronized, or globally aggregated; coherence emerges solely from local coupling.
+The architecture targets scalability limits caused by bandwidth, synchronization, and coherence collapse in conventional systems.
 > **This repository documents an evolving compute architecture.  
 > Formal structural specifications are defined in `ARCHITECTURE.md`.**
 
