@@ -17,6 +17,9 @@ This document describes structure, not implementation.
 **Invented by Chulhee Park**
 
 ---
+> **New (v3): One-Page Technical Brief (DOI)**  
+> A concise structural entry point for first-time evaluators.  
+> https://doi.org/10.5281/zenodo.17925222
 
 ## ⚠️ READ THIS FIRST — ENTRY FILTER
 
