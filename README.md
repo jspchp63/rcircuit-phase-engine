@@ -1,16 +1,29 @@
-If you are not researching transport, coherence, or non-von-Neumann compute architectures, this repository is not for you.
+# ⚠️ ENTRY FILTER
+
+If you are not researching **transport**, **coherence**, or **non-von-Neumann compute architectures**,  
+**this repository is not for you.**
+
+---
 
 ## Fixed Definition — RCIRCUIT / Phase Computing
 
-1. Phase Computing is a transport-free compute paradigm where local phase evolution constitutes computation itself.
-2. No values are moved, synchronized, or globally aggregated; coherence emerges solely from local coupling.
-3. The architecture targets scalability limits caused by bandwidth, synchronization, and coherence collapse in conventional systems.
+- **Phase Computing** is a *transport-free compute paradigm* where **local phase evolution constitutes computation itself**.
+- **No values are moved, synchronized, or globally aggregated**; coherence emerges solely from **local coupling**.
+- The architecture targets scalability limits caused by **bandwidth**, **synchronization**, and **coherence collapse** in conventional systems.
 
-This document describes structure, not implementation.
-> **This repository documents an evolving compute architecture.  
-> Formal structural specifications are defined in `ARCHITECTURE.md`.**
+> This document describes **structure**, not **implementation**.
+
+---
+
+## Repository Scope
+
+This repository documents an **evolving compute architecture**, not a finished system.  
+Formal structural specifications are defined in **`ARCHITECTURE.md`**.
+
+---
 
 # ⚡ RCIRCUIT — Phase Computing Engine
+
 ## A Transport-Free Compute Primitive (Active Architecture Experiment)
 
 **Invented by Chulhee Park**
