@@ -1,6 +1,4 @@
-This repository is written for system architects and compute researchers investigating transport, coherence, and physical limits of computation — not for general readers.
-> This repository is intentionally difficult to consume.
-> It is a structural exploration, not an educational artifact.
+If you are not researching transport, coherence, or non-von-Neumann compute architectures, this repository is not for you.
 
 ## Fixed Definition — RCIRCUIT / Phase Computing
 
