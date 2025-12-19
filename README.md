@@ -212,3 +212,7 @@ Created by **Chulhee Park**
 Inventor of the Transport-Free Compute Architecture  
 and the RCIRCUIT Phase Computing Engine 
 
+
+For a concrete falsification path, see:
+docs/HOW_TO_DISPROVE_RCIRCUIT.md
+
