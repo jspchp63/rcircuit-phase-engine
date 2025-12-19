@@ -216,3 +216,11 @@ and the RCIRCUIT Phase Computing Engine
 For a concrete falsification path, see:
 docs/HOW_TO_DISPROVE_RCIRCUIT.md
 
+If this architecture fails,
+it will fail here.
+
+If you think it already does,
+show me.
+
+
+
