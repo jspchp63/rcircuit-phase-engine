@@ -1,3 +1,145 @@
+# RCIRCUIT — Architecture Specification
+
+This document defines the **structural architecture** of RCIRCUIT.
+
+It does **not** describe:
+- an implementation
+- an optimization strategy
+- a performance claim
+- a task-level system
+
+It defines **what must remain invariant** for the architecture to exist.
+
+---
+
+## Architectural Boundary
+
+RCIRCUIT is defined by a single constraint:
+
+> **Computation must occur without value transport.**
+
+Any system that:
+- moves values between compute units
+- aggregates state globally
+- synchronizes via centralized control
+
+is **outside** the RCIRCUIT architecture,
+regardless of performance or scale.
+
+---
+
+## Core Assumptions
+
+RCIRCUIT assumes:
+
+1. **Local phase evolution constitutes computation**
+2. **Coherence is a structural invariant, not an emergent byproduct**
+3. **Synchronization is a failure mode, not a solution**
+4. **Transport introduces irreducible instability at scale**
+
+These assumptions are architectural.
+They are not tunable parameters.
+
+---
+
+## What RCIRCUIT Is Not
+
+RCIRCUIT is **not**:
+- a neural network architecture
+- a faster accelerator
+- a training framework
+- a scheduling optimization
+- a replacement for FLOPs-based scaling
+
+Any interpretation that treats RCIRCUIT
+as a performance improvement is incorrect.
+
+---
+
+## Structural Components
+
+At the architectural level, RCIRCUIT consists of:
+
+- **Phase Nodes**  
+  Local state units evolving without external coordination
+
+- **Local Coupling Rules**  
+  Interaction limited to immediate neighbors
+
+- **Coherence Constraints**  
+  Conditions under which phase alignment is preserved or lost
+
+No component requires:
+- global clocks
+- shared memory
+- broadcast signals
+- centralized control paths
+
+---
+
+## Failure-First Design Principle
+
+RCIRCUIT is designed to be **falsifiable**.
+
+The architecture is considered invalid if:
+
+- coherence survives arbitrary value transport
+- global synchronization improves stability
+- scale alone resolves phase divergence
+
+Experiments are constructed to **break** the architecture,
+not to showcase success cases.
+
+---
+
+## Scope of This Document
+
+This document specifies:
+- architectural invariants
+- allowed structural transformations
+- disallowed operations
+
+It does **not** specify:
+- code structure
+- APIs
+- hardware layouts
+- performance targets
+
+Those belong to implementation layers
+*outside* this specification.
+
+---
+
+## Relationship to Experiments
+
+All experiments in this repository exist to test
+whether this architecture **fails under constraint**.
+
+If experimental results contradict this document,
+the architecture must be revised or discarded.
+
+---
+
+## Canonical Reference
+
+The formal definition of the compute primitive is given in:
+
+**Phase Computing Engine (R CIRCUIT):  
+A Transport-Free Compute Architecture**
+
+DOI: https://doi.org/10.5281/zenodo.17925222
+
+---
+
+## Final Constraint
+
+If RCIRCUIT works,
+it must work **without transport**.
+
+If it requires transport,
+it is not RCIRCUIT.
+
+No exceptions.
 ## Structural Notice
 
 RCIRCUIT is not a system design, algorithm, or optimization technique.
