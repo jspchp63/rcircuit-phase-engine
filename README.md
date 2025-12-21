@@ -1,3 +1,17 @@
+## What this repository is
+
+This repository does not propose a faster model.
+
+It tests a single question:
+
+**Does computation fail because of insufficient FLOPs,
+or because of transport and synchronization?**
+
+RCIRCUIT is a phase-based computing engine designed to
+*falsify* architectures that assume scale fixes coherence.
+
+All experiments here are minimal, failure-first,
+and intentionally run before optimization.
 # ⚠️READ BEFORE PROCEEDING
 
 This repository is **not** written for general AI users, students, or content consumers.
