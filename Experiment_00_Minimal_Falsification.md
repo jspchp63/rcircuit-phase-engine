@@ -4,6 +4,10 @@
 Compute failure is not caused by insufficient FLOPs,
 but by transport and synchronization.
 
+## Scope
+This experiment does not address performance or task accuracy,
+only structural coherence stability.
+
 ## Setup (Thought Experiment)
 Case A: Local phase-only interaction (no value transport)
 Case B: Identical system with minimal value transport (1-bit)
