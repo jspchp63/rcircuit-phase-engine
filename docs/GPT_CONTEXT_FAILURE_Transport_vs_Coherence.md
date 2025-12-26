@@ -2,7 +2,7 @@
 ## Transport, Memory, and Coherence Collapse
 ### — Why Conversational AI Loses Meaning at Scale
 
-**Author:** Chulhee Park (朴哲熙)  
+**Author:** Chulhee Park 
 **Status:** Conceptual Whitepaper (Failure Analysis)  
 **Scope:** Architecture / Systems / AI Infrastructure  
 **Claims:** None (failure-first analysis only)
