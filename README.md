@@ -85,6 +85,24 @@ RCIRCUIT removes **movement** from computation.
 
 ---
 
+## Related Failure Analysis (Conversational AI)
+
+The same transport-driven coherence failure appears not only in large-scale
+compute systems, but also in **conversational AI memory architectures**.
+
+A separate conceptual whitepaper analyzes why GPT-style systems lose
+context, meaning, and continuity across sessions — not due to insufficient
+intelligence, but due to **transport-based memory and reconstruction**.
+
+- **GPT Context Failure — Transport vs Coherence**  
+  *Failure analysis of conversational AI memory collapse under value transport.*  
+  See: `docs/GPT_CONTEXT_FAILURE_Transport_vs_Coherence.md`
+
+This document proposes no solution.  
+It isolates a structural failure mode shared across AI scaling and dialogue systems.
+
+---
+
 ## What Phase Computing Changes
 
 Traditional compute assumes:  
