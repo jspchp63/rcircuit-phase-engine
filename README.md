@@ -103,6 +103,22 @@ It isolates a structural failure mode shared across AI scaling and dialogue syst
 
 ---
 
+## Related Experimental Evidence
+
+The coherence failure described above is not only conceptual.
+It is directly observable in minimal phase-based simulations
+when transport or global synchronization is introduced.
+
+- **Experiment 06 — Coherence Decay Curve**  
+  Minimal experiment measuring how coherence collapses as transport
+  and synchronization pressure increase, independent of scale or FLOPs.  
+  See: `Experiment_06_Coherence_Decay.Curve.txt`
+
+This experiment does not benchmark performance.  
+It isolates **coherence decay as a function of movement alone**.
+
+---
+
 ## What Phase Computing Changes
 
 Traditional compute assumes:  
