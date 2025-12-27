@@ -85,37 +85,100 @@ RCIRCUIT removes **movement** from computation.
 
 ---
 
-## Related Failure Analysis (Conversational AI)
+## Case Studies — Coherence Failure by Transport
 
-The same transport-driven coherence failure appears not only in large-scale
-compute systems, but also in **conversational AI memory architectures**.
+RCIRCUIT investigates coherence failure not only in compute systems,  
+but also in **conversational and cognitive architectures** where meaning,
+state, and continuity are reconstructed via transport.
 
-A separate conceptual whitepaper analyzes why GPT-style systems lose
-context, meaning, and continuity across sessions — not due to insufficient
-intelligence, but due to **transport-based memory and reconstruction**.
+### CASE 01 — Coherence Failure Under Minimal Transport
 
-- **GPT Context Failure — Transport vs Coherence**  
-  *Failure analysis of conversational AI memory collapse under value transport.*  
-  See: `docs/GPT_CONTEXT_FAILURE_Transport_vs_Coherence.md`
+**CASE_01** establishes the baseline failure mode:
 
-This document proposes no solution.  
-It isolates a structural failure mode shared across AI scaling and dialogue systems.
+- Even minimal value transport introduces
+  - phase misalignment
+  - synchronization pressure
+  - coherence decay
+- Failure occurs **before** scale, FLOPs, or numerical precision become relevant
+
+This case formalizes the hypothesis:
+
+> **Coherence does not scale by moving information.  
+> It scales by local resonance.**
+
+See:  
+`CASE_01.md`
 
 ---
 
-## Related Experimental Evidence
+### CASE 02 — GPT Context Coherence Failure (Live System)
 
-The coherence failure described above is not only conceptual.
-It is directly observable in minimal phase-based simulations
+**CASE_02** extends the same failure mode into a real-world system:
+
+- GPT-style conversational AI
+- Session boundaries
+- Context windows
+- Memory summarization
+- Retrieval-based reconstruction
+
+Observed effects:
+- loss of conversational continuity
+- emotional and philosophical discontinuity
+- forced re-explanation
+- user anxiety caused by apparent “memory resets”
+
+This is **not** attributed to:
+- insufficient intelligence
+- lack of parameters
+- poor training
+
+It is attributed to the same root cause:
+
+> **Meaning is forced to move.  
+> Coherence collapses under transport.**
+
+CASE_02 documents this failure **as it occurs live**,  
+without proposing a solution or alternative architecture.
+
+See:  
+`docs/CASE02_GPT_COHERENCE_FAILURE_LIVE.md`
+
+---
+
+## Related Conceptual Whitepaper (Conversational AI)
+
+A separate conceptual whitepaper isolates this failure mode formally:
+
+- **GPT Context Failure — Transport vs Coherence**  
+  *Failure analysis of conversational AI memory collapse under value transport.*
+
+This document:
+- proposes no solution
+- introduces no new model
+- offers no benchmark
+
+It places only the question—precisely.
+
+See:  
+`docs/GPT_CONTEXT_FAILURE_Transport_vs_Coherence.md`  
+DOI (Zenodo): https://doi.org/10.5281/zenodo.17925222
+
+---
+
+## Related Experimental Evidence (Phase-Based Systems)
+
+The same coherence failure is observable in minimal phase simulations
 when transport or global synchronization is introduced.
 
 - **Experiment 06 — Coherence Decay Curve**  
-  Minimal experiment measuring how coherence collapses as transport
-  and synchronization pressure increase, independent of scale or FLOPs.  
-  See: `Experiment_06_Coherence_Decay.Curve.txt`
+  Measures coherence collapse as a function of transport pressure alone,  
+  independent of scale or FLOPs.
 
-This experiment does not benchmark performance.  
-It isolates **coherence decay as a function of movement alone**.
+See:  
+`Experiment_06_Coherence_Decay.Curve.txt`
+
+This experiment does **not** benchmark performance.  
+It isolates **movement as the failure variable**.
 
 ---
 
@@ -129,19 +192,6 @@ Phase Computing assumes:
 
 This is **not** an optimization.  
 It is a **redefinition of compute**.
-
----
-
-## Canonical Whitepaper (DOI)
-
-**Phase Computing Engine (R CIRCUIT):  
-A Transport-Free Compute Architecture**
-
-DOI (latest):  
-https://doi.org/10.5281/zenodo.17925222
-
-This document defines the **compute primitive**.  
-This repository explores its **failure behavior**.
 
 ---
 
@@ -187,7 +237,4 @@ it will fail here.
 
 If you think it already does,  
 **show me.**
-
-
-
-
+ 
