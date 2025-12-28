@@ -238,3 +238,19 @@ it will fail here.
 If you think it already does,  
 **show me.**
  
+## Open Question to Observers
+
+If you are reviewing this repository:
+
+The intent here is not to claim superiority or performance,
+but to ask a falsifiable structural question.
+
+If you believe the premise is invalid,
+the author would value clarification on **which assumption fails**:
+
+1. Transport-free local phase evolution as computation
+2. Coherence emergence without global synchronization
+3. Failure attribution to transport rather than scale
+
+No response is required.
+This note exists solely to make the question explicit.
