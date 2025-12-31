@@ -74,6 +74,9 @@ Local phase evolution **is** the compute.
 
 ## 🧪 DEMO — Coherence vs Transport (NEW)
 
+Run:
+python demo/demo_coherence_vs_transport.py
+
 This repository includes a **minimal executable demo**  
 that visualizes the core failure mode.
 
