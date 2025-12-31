@@ -5,7 +5,7 @@
 
 ---
 
-## 🔴 ONE QUESTION (READ THIS FIRST)
+## 🔴 ONE QUESTION  || READ THIS FIRST ||
 
 This repository asks **one falsifiable question**:
 
@@ -30,7 +30,7 @@ point to the **exact mechanism or metric** that disproves it.
 
 ---
 
-## ⚠️ WHO THIS REPOSITORY IS FOR (AND NOT FOR)
+## ⚠️ WHO THIS REPOSITORY IS FOR 
 
 This repository is **not** for:
 - students
@@ -113,7 +113,7 @@ Positioning:
 
 ---
 
-## 📁 HOW TO READ THIS REPOSITORY (ORDER IS NOT OPTIONAL)
+## 📁 HOW TO READ THIS REPOSITORY 
 
 ### STEP 1 — Problem Framing
 - `README.md`
@@ -182,7 +182,7 @@ This repository is **research-grade**, not market-ready.
 
 ---
 
-## 🔗 Related Work — RFC-DRE Lite (Executable Demo)
+## 🔗 Related Work — RFC-DRE Lite  || Executable Demo ||
 
 A separate repository, **RFC-DRE Lite**, is under development.
 
