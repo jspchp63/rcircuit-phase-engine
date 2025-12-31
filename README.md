@@ -1,314 +1,217 @@
-## 🔥 Phase Engine v0.5 — Experimental Release
-
-RCIRCUIT now includes:
-- Local phase-update kernel (v0.5)
-- Coupling & coherence computation
-- Drift & resonance modeling
-- 8 experimental validation files under docs/experiments
-
-Purpose:
-Validate transport-free compute behavior via coherence, drift, and threshold gate scans.
-
-See: docs/experiments/
-
 # RCIRCUIT — Phase Computing Engine
-### Transport-Free Compute Model for Post-MatMul AI  
-**Compute_E = (PhaseAmplitude × CouplingStrength) / PropagationTime**
 
-A compute paradigm where **values never move** —  
-only **local phase evolution** performs computation.
+> **Transport-free compute research framework**  
+> Falsifying the assumption that scale fixes coherence.
 
 ---
 
-## 1. Why Phase Computing Matters
-Modern AI is collapsing under physics —  
-not math, not FLOPS, but **electricity and movement**.
+## 🔴 ONE QUESTION (READ THIS FIRST)
 
-### The Modern Bottleneck: Tensor Transport
-AI workloads today are dominated by transport:
+This repository asks **one falsifiable question**:
 
-- move  
-- multiply  
-- accumulate  
-- move again  
+**Does large-scale computation fail primarily because of insufficient compute,  
+or because coherence collapses when state is transported and synchronized?**
 
-Physics pushes back:
+**Claim (to be falsified):**  
+Transport-based state reconstruction fails to preserve long-term coherence.  
+Local phase evolution without transport preserves coherence longer.
 
-- HBM saturates  
-- interconnect latency dominates  
-- wire delay explodes  
-- thermal jitter breaks coherence  
-- GPUs stall waiting for data, not compute  
+This claim should be falsified if **any** of the following holds:
 
-**The real bottleneck = movement**  
-**The real cost = electricity**  
-**The real failure mode = physics**
+1. Coherence remains stable as transport pressure increases  
+2. Global synchronization outperforms local-only coupling in long-horizon stability  
+3. Noise degrades transport-free systems more than transport-based systems  
 
----
+All documents, cases, and experiments in this repository exist **solely**  
+to test this question.
 
-## 2. RCIRCUIT: A New Compute Direction
-A compute model where no values move —  
-only **local phase-state evolution** computes.
-
-Transport → expensive  
-Local phase evolution → scalable
+If you believe this question is already answered,  
+point to the **exact mechanism or metric** that disproves it.
 
 ---
 
-## 3. Why This Exists — Transport Collapse Physics
-As models scale:
+## ⚠️ WHO THIS REPOSITORY IS FOR (AND NOT FOR)
 
-- memory traffic dominates latency  
-- sync cost becomes nonlinear  
-- thermal noise accumulates  
-- power becomes the fundamental limit  
+This repository is **not** for:
+- students
+- beginners
+- prompt engineers
+- product demo seekers
 
-MatMul fails due to **transport limits**, not arithmetic.
+It is written **exclusively** for:
+- system architects
+- compute / interconnect researchers
+- AI hardware designers
+- researchers investigating **coherence, transport, and physical limits of computation**
 
-RCIRCUIT replaces **global transport**  
-with **O(N)** local-only phase updates.
-
----
-
-## 4. Compute Primitive Shift
-### MatMul (traditional)
-- value transport  
-- energy-heavy  
-- long wires  
-- global sync  
-- thermal accumulation  
-
-### RCIRCUIT
-- no value movement  
-- only local updates  
-- coherence preserved locally  
-- scaling bound by locality  
-
-#### Comparison Table
-
-| Property | MatMul AI | RCIRCUIT |
-|---------|-----------|----------|
-| Compute unit | tensor multiply | phase evolution |
-| Movement | global | local |
-| Scaling limit | bandwidth | locality |
-| Sync | global | none |
-| Heat | accumulated | localized |
-| Complexity | O(N²) transport | O(N) updates |
+If the problem statement feels obvious,  
+you are expected to **disprove it**, not agree with it.
 
 ---
 
-## 5. Core RCIRCUIT Principle
-RCIRCUIT eliminates:
+## 🧠 CORE PREMISE
 
-- tensors  
-- global sync  
-- long-distance propagation  
+Modern AI systems do not fail because of mathematics.  
+They fail because **computation still moves**.
 
-It uses only four primitives:
+At scale:
+- activations move  
+- gradients move  
+- weights move  
+- memory moves  
+- synchronization moves  
 
-1. phase registers  
-2. Δ-signal transitions  
-3. local resonance coupling  
-4. coherence evolution  
+This movement dominates:
+- latency
+- energy
+- coherence loss
+- system instability
 
-Computation becomes a **local physical process**,  
-not a global movement process.
-
----
-
-## 6. Formal Minimal Architecture
-
-### 6.1 RCIRCUIT Cell
-struct RC_Cell {
-float phase;
-float delta;
-float coupling;
-};
-
-
-### 6.2 Update Rule
-delta_i(t+1) = γ Σ_j∈N(i)( phase_j - phase_i )
-phase_i(t+1) = phase_i(t) + α · delta_i(t+1)
-
-
-### 6.3 PDE Approximation
-∂φ/∂t = α ∇²φ + γ R(φ)
-
+**RCIRCUIT removes movement from computation.**  
+Local phase evolution **is** the compute.
 
 ---
 
-## 7. Directory Structure (Expanded)
-This repository contains the full RCIRCUIT research stack.
+## 🧪 DEMO — Coherence vs Transport (NEW)
 
-### 📁 docs/
-- RCIRCUIT_whitepaper_V2.0.md  
-- RCIRCUIT_ComputeE_Technical_Overview_v1.0.txt  
-- Phase_OS_WhitePaper_v0.2_FigureEdition.md  
-- Phase_Compute_Architecture.md  
-- v1.3_phase_coupling_model.md  
-- v1.4_local_coherence_map.md  
-- v1.5_resonance_field_accumulator.md  
-- v1.8_resonance_flow_graph.md  
-- experiments/  
-  - experiment_01_phase_xor.txt  
-  - experiment_02_local_coherence_sim.txt  
-  - experiment_03_resonance_drift_test.txt  
-  - experiment_04_threshold_gate_scan.txt  
+This repository includes a **minimal executable demo**  
+that visualizes the core failure mode.
 
-### 📁 src/
-- phase_engine_core_v1.py  
-- phase_node.py  
-- phase_coupling.py  
-- phase_propagation_kernel.py  
-- coherence_metric.py  
-- resonance_score.py  
-- phase_state_snapshot.py  
-- phase_xor_poc_v01.py  
-- phase_and_poc.py  
-- utils/  
-  - grid_init.py  
-  - noise_injector.py  
-  - coupling_visualizer.py  
+### What the demo shows
 
-### 📁 assets/ (planned)
-- animations/  
-- coherence_maps/  
-- phase_evolution_videos/  
+- Two systems with identical dynamics:
+  - **Transport-based update**
+  - **Local-only phase evolution**
+- Increasing noise / perturbation
+- Measured coherence over time
+
+**Result:**  
+Transport-based systems lose coherence significantly faster,  
+even under minimal transport pressure.
+
+📂 **Location:**  
+`/demo/demo_coherence_vs_transport.py`
+
+📸 **Output:**  
+Local plot comparing coherence decay curves
+
+> This is **not a product demo**.  
+> It is a **falsification-oriented evidence demo**.
 
 ---
 
-## 8. POC #1 — Phase XOR Gate
-Logic emerging from **phase**, not data movement.
+## 🧩 HOW THIS DEMO FITS THE RESEARCH STACK
 
-Δφ = |φ₁ - φ₂|
-XOR = 1 if Δφ > θ
+The demo is **not RFC-DRE Lite**.  
+It is the **foundational evidence layer** that RFC-DRE depends on.
 
-Run:
-python src/phase_xor_poc_v01.py
+Positioning:
 
-
-Example:
-φ1=-0.134, φ2=-0.722 → XOR=1
-φ1=-0.406, φ2=-0.491 → XOR=0
-
+- RCIRCUIT → explains **why transport fails**
+- Demo → shows **coherence collapse is structural**
+- RFC-DRE Lite (future) → exploits this to recover continuity
 
 ---
 
-## 9. Scaling & Cost Models (v1.5)
+## 📁 HOW TO READ THIS REPOSITORY (ORDER IS NOT OPTIONAL)
 
-### Transport Cost Model
-| Operation | MatMul Cost | RCIRCUIT Cost |
-|----------|-------------|----------------|
-| Move (HBM) | 100 | 0 |
-| Multiply | 1 | 0.4 |
-| Local Phase Step | — | 0.1 |
+### STEP 1 — Problem Framing
+- `README.md`
 
-### Scaling
-MatMul:  
-`T(N) = O(N²) transport + O(N) compute`
+### STEP 2 — Structural Assumptions
+- `ARCHITECTURE.md`
 
-RCIRCUIT:  
-`T(N) = O(N) local updates`
+Check for internal consistency:
+- transport-free local phase evolution
+- no global synchronization
+- coherence as a stability property
 
-Transport collapse begins at **N ≈ 10⁸**.
+### STEP 3 — Minimal Failure Baseline
+- `CASE_01.md`
 
----
+Establishes coherence decay caused by **transport alone**.
 
-## 10. Commercial & Infra Impact
-Eliminating value movement reduces:
+### STEP 4 — Real-System Analogy
+- `docs/CASE02_GPT_COHERENCE_FAILURE_LIVE.md`
 
-- energy per token  
-- datacenter cooling  
-- interconnect burden  
-- rack-level OPEX  
+Documents live conversational coherence failure  
+under forced context transport.
 
-Enables:
+### STEP 5 — Experiments (Structural Probes)
+- `Experiment_*`
+- `src/`
 
-- hyperscale AI under power limits  
-- defense-grade compute  
-- low-power inference  
-- edge compute with no transport cost  
+These are **not benchmarks**.  
+Each asks one question only:
+
+> Does coherence survive under this condition?
 
 ---
 
-## 11. Practical Use Cases
-RCIRCUIT is usable today for:
+## ❗ WHAT THIS REPOSITORY IS NOT
 
-- transport-dominated regime analysis  
-- scaling-limit prediction  
-- coherence-failure simulation  
-- local-update compute experiments  
-- new-primitive prototyping  
+- not a finished system  
+- not a performance benchmark  
+- not an SDK  
+- not a product pitch  
+- not an AGI proposal  
+
+If you are searching for SOTA numbers, stop here.
 
 ---
-## RCIRCUIT v0.6 — Phase Engine Upgrade Release
-This release adds the minimal experimental set required for researchers to
-evaluate RCIRCUIT as a transport-free compute primitive.
 
-### ✔ New in v0.6
-1. **Phase AND Gate (PoC #2)**
-   - Implemented in `src/phase_and_poc.py`
-   - Demonstrates logical conjunction emerging from phase thresholds
-   - No value movement, no global sync
+## 🧱 CURRENT STATUS 
 
-2. **Experiment 05 — Coupling Sweep**
-   - File: `docs/experiments/experiment_05_coupling_sweep.txt`
-   - Studies how γ (coupling strength) controls stability vs. resonance amplification
-   - Useful for PDE model calibration
+- ✅ Structural theory defined
+- ✅ Multiple coherence experiments completed
+- ✅ Executable coherence-vs-transport demo added
+- ❌ RFC-DRE Lite not yet implemented
+- ❌ No persistent state or session reconstruction
+- ❌ No commercial product
 
-3. **v1.9 — Phase Evolution Map (Text Edition)**
-   - File: `docs/v1.9_phase_evolution_map.txt`
-   - Describes stable/unstable phase trajectories without requiring visualization assets
-   - Provides a map for identifying logical regions in phase-space
+This repository is **research-grade**, not market-ready.
 
-4. **README Structural Update**
-   - “Experiments” section now includes experiments 01–05
-   - “PoC Directory” updated with AND gate
+---
 
-### ✔ Compatibility
-- Backwards-compatible with v0.5
-- No breaking changes to `phase_engine_core_v1.py`
+## 🛣️ INTENDED NEXT STEPS
 
-### ✔ Next Roadmap
-- v0.7: NAND universal gate draft
-- v0.8: Coherence-driven scheduler baseline
-- v0.9: PDE-backed stability model
-- v1.0: Formal whitepaper + Phase OS integration
+1. Extend demo → resonance / DRE score
+2. Add minimal persistent state vector
+3. Demonstrate cross-session coherence reconstruction
+4. Split RFC-DRE Lite into a separate repository
 
-RCIRCUIT remains the first public framework proposing
-**transport-free compute via local phase evolution.**
-## 📣 Call for Experimental Collaboration — RCIRCUIT Phase Computing
+---
 
-RCIRCUIT has reached the point where further progress requires 
-**team-based experimental validation.**
+## 📜 LICENSE
 
-Already completed:
-- Transport-free compute model
-- Compute_E law formulation
-- PDE-based phase evolution framework
-- Phase Engine v0.5 implementation
-- 8 experimental prototypes
-- XOR PoC (logic without value movement)
+**Phase OS Proprietary License**
 
-Needed next:
-- Large-scale phase-field stability tests
-- Resonance coherence measurement
-- Gate composition (XOR → NAND)
-- Scaling validation vs transport-dominated models
+Inspection and evaluation only.  
+No redistribution.  
+No modification.  
+No commercial use.
 
-Why external teams:
-Phase-based compute is a frontier-class problem requiring HPC clusters, 
-PDE specialists, numerical experts, and architecture researchers.
+---
 
-Who should contact:
-- GPU/TPU architects
-- PDE / numerical simulation researchers
-- AI hardware labs
-- PhD students, postdocs, deep-tech teams
+## ✍️ AUTHOR
 
-Contact:
+**Chulhee Park**  
+Inventor — Transport-Free Compute Architecture  
+RCIRCUIT / Phase Computing Engine
 
-📩 jspchp638@gmail.com
+Falsification guide:  
+`docs/HOW_TO_DISPROVE_RCIRCUIT.md`
+
+---
+
+## FINAL NOTE
+
+This repository is intentionally dense.  
+Intentionally selective.  
+Intentionally uncomfortable.
+
+If coherence matters to you, continue.  
+If not, this repository is already working as intended.
 
 ---
 
