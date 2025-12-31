@@ -182,6 +182,28 @@ This repository is **research-grade**, not market-ready.
 
 ---
 
+## 🔗 Related Work — RFC-DRE Lite (Executable Demo)
+
+A separate repository, **RFC-DRE Lite**, is under development.
+
+Purpose:
+- Provide a minimal executable demo
+- Explore coherence reconstruction and continuity
+- Operate strictly at the software / session level
+
+Important:
+- RFC-DRE Lite does NOT implement RCIRCUIT
+- It does NOT validate Phase Computing
+- It depends on the same coherence-failure premise demonstrated here
+
+Relationship:
+- RCIRCUIT → explains why transport fails (structural)
+- This demo → shows coherence collapse experimentally
+- RFC-DRE Lite → tests recovery strategies under the same constraint
+
+RFC-DRE Lite is intentionally separated
+to preserve the falsification integrity of this repository.
+
 ## 📜 LICENSE
 
 **Phase OS Proprietary License**
@@ -215,25 +237,4 @@ If not, this repository is already working as intended.
 
 ---
 
-## 🔗 Related Work — RFC-DRE Lite (Executable Demo)
-
-A separate repository, **RFC-DRE Lite**, is under development.
-
-Purpose:
-- Provide a minimal executable demo
-- Explore coherence reconstruction and continuity
-- Operate strictly at the software / session level
-
-Important:
-- RFC-DRE Lite does NOT implement RCIRCUIT
-- It does NOT validate Phase Computing
-- It depends on the same coherence-failure premise demonstrated here
-
-Relationship:
-- RCIRCUIT → explains why transport fails (structural)
-- This demo → shows coherence collapse experimentally
-- RFC-DRE Lite → tests recovery strategies under the same constraint
-
-RFC-DRE Lite is intentionally separated
-to preserve the falsification integrity of this repository.
 
