@@ -1,243 +1,117 @@
-# RCIRCUIT — Phase Computing Engine
+# RCIRCUIT — Phase Computing
 
-> **Transport-free compute research framework**  
-> Falsifying the assumption that scale fixes coherence.
+> Transport-free coherence experiment  
+> Testing whether computation collapses due to state transport.
 
 ---
 
-## 🔴 ONE QUESTION  || READ THIS FIRST ||
+## ONE EXPERIMENTAL QUESTION
 
-This repository asks **one falsifiable question**:
+Does coherence collapse because computation moves?
 
-**Does large-scale computation fail primarily because of insufficient compute,  
-or because coherence collapses when state is transported and synchronized?**
+---
 
-**Claim (to be falsified):**  
-Transport-based state reconstruction fails to preserve long-term coherence.  
+## HYPOTHESIS (FALSIFIABLE)
+
+Transport-based state updates destroy long-horizon coherence.  
 Local phase evolution without transport preserves coherence longer.
 
-This claim should be falsified if **any** of the following holds:
-
-1. Coherence remains stable as transport pressure increases  
-2. Global synchronization outperforms local-only coupling in long-horizon stability  
-3. Noise degrades transport-free systems more than transport-based systems  
-
-All documents, cases, and experiments in this repository exist **solely**  
-to test this question.
-
-If you believe this question is already answered,  
-point to the **exact mechanism or metric** that disproves it.
+This repository exists only to falsify this hypothesis.
 
 ---
 
-## ⚠️ WHO THIS REPOSITORY IS FOR 
+## WHAT IS TESTED
 
-This repository is **not** for:
-- students
-- beginners
-- prompt engineers
-- product demo seekers
+Two systems with identical dynamics:
 
-It is written **exclusively** for:
-- system architects
-- compute / interconnect researchers
-- AI hardware designers
-- researchers investigating **coherence, transport, and physical limits of computation**
+1. Transport-based update
+   - state movement
+   - global synchronization
 
-If the problem statement feels obvious,  
-you are expected to **disprove it**, not agree with it.
+2. Transport-free phase evolution
+   - no state movement
+   - local phase coupling only
+
+Measured variable:
+- coherence decay over time under increasing noise
 
 ---
 
-## 🧠 CORE PREMISE
-
-Modern AI systems do not fail because of mathematics.  
-They fail because **computation still moves**.
-
-At scale:
-- activations move  
-- gradients move  
-- weights move  
-- memory moves  
-- synchronization moves  
-
-This movement dominates:
-- latency
-- energy
-- coherence loss
-- system instability
-
-**RCIRCUIT removes movement from computation.**  
-Local phase evolution **is** the compute.
-
----
-
-## 🧪 DEMO — Coherence vs Transport (NEW)
+## EXECUTABLE DEMO
 
 Run:
+
 python demo/demo_coherence_vs_transport.py
 
-This repository includes a **minimal executable demo**  
-that visualizes the core failure mode.
+Produces:
+- coherence decay curves
+- identical initial conditions
+- increasing perturbation
 
-### What the demo shows
+Observed:
+- transport-based updates lose coherence faster
 
-- Two systems with identical dynamics:
-  - **Transport-based update**
-  - **Local-only phase evolution**
-- Increasing noise / perturbation
-- Measured coherence over time
-
-**Result:**  
-Transport-based systems lose coherence significantly faster,  
-even under minimal transport pressure.
-
-📂 **Location:**  
-`/demo/demo_coherence_vs_transport.py`
-
-📸 **Output:**  
-Local plot comparing coherence decay curves
-
-> This is **not a product demo**.  
-> It is a **falsification-oriented evidence demo**.
+This is not a benchmark.
+This is not a learning task.
+This is a structural failure probe.
 
 ---
 
-## 🧩 HOW THIS DEMO FITS THE RESEARCH STACK
+## DATA OVER CLAIMS
 
-The demo is **not RFC-DRE Lite**.  
-It is the **foundational evidence layer** that RFC-DRE depends on.
-
-Positioning:
-
-- RCIRCUIT → explains **why transport fails**
-- Demo → shows **coherence collapse is structural**
-- RFC-DRE Lite (future) → exploits this to recover continuity
+If coherence remains stable under transport,
+this repository is wrong.
 
 ---
 
-## 📁 HOW TO READ THIS REPOSITORY 
+## RELATION TO RFC-DRE LITE
 
-### STEP 1 — Problem Framing
-- `README.md`
+RCIRCUIT:
+- explains why coherence collapses
 
-### STEP 2 — Structural Assumptions
-- `ARCHITECTURE.md`
+RFC-DRE Lite:
+- explores partial recovery strategies
 
-Check for internal consistency:
-- transport-free local phase evolution
-- no global synchronization
-- coherence as a stability property
-
-### STEP 3 — Minimal Failure Baseline
-- `CASE_01.md`
-
-Establishes coherence decay caused by **transport alone**.
-
-### STEP 4 — Real-System Analogy
-- `docs/CASE02_GPT_COHERENCE_FAILURE_LIVE.md`
-
-Documents live conversational coherence failure  
-under forced context transport.
-
-### STEP 5 — Experiments (Structural Probes)
-- `Experiment_*`
-- `src/`
-
-These are **not benchmarks**.  
-Each asks one question only:
-
-> Does coherence survive under this condition?
+RFC-DRE Lite is not implemented here.
 
 ---
 
-## ❗ WHAT THIS REPOSITORY IS NOT
+## WHAT THIS IS NOT
 
-- not a finished system  
-- not a performance benchmark  
-- not an SDK  
-- not a product pitch  
-- not an AGI proposal  
-
-If you are searching for SOTA numbers, stop here.
+- not a product
+- not an SDK
+- not AGI theory
+- not performance research
 
 ---
 
-## 🧱 CURRENT STATUS 
+## CURRENT STATE
 
-- ✅ Structural theory defined
-- ✅ Multiple coherence experiments completed
-- ✅ Executable coherence-vs-transport demo added
-- ❌ RFC-DRE Lite not yet implemented
-- ❌ No persistent state or session reconstruction
-- ❌ No commercial product
+- hypothesis defined
+- transport vs local-phase demo implemented
+- coherence probes completed
+- no persistence layer
+- no session reconstruction
 
-This repository is **research-grade**, not market-ready.
-
----
-
-## 🛣️ INTENDED NEXT STEPS
-
-1. Extend demo → resonance / DRE score
-2. Add minimal persistent state vector
-3. Demonstrate cross-session coherence reconstruction
-4. Split RFC-DRE Lite into a separate repository
+research only
 
 ---
 
-## 🔗 Related Work — RFC-DRE Lite  || Executable Demo ||
+## LICENSE
 
-A separate repository, **RFC-DRE Lite**, is under development.
-
-Purpose:
-- Provide a minimal executable demo
-- Explore coherence reconstruction and continuity
-- Operate strictly at the software / session level
-
-Important:
-- RFC-DRE Lite does NOT implement RCIRCUIT
-- It does NOT validate Phase Computing
-- It depends on the same coherence-failure premise demonstrated here
-
-Relationship:
-- RCIRCUIT → explains why transport fails (structural)
-- This demo → shows coherence collapse experimentally
-- RFC-DRE Lite → tests recovery strategies under the same constraint
-
-RFC-DRE Lite is intentionally separated
-to preserve the falsification integrity of this repository.
-
-## 📜 LICENSE
-
-**Phase OS Proprietary License**
-
-Inspection and evaluation only.  
-No redistribution.  
-No modification.  
-No commercial use.
+Phase OS Research License  
+inspection and evaluation only
 
 ---
 
-## ✍️ AUTHOR
+## AUTHOR
 
-**Chulhee Park**  
-Inventor — Transport-Free Compute Architecture  
-RCIRCUIT / Phase Computing Engine
-
-Falsification guide:  
-`docs/HOW_TO_DISPROVE_RCIRCUIT.md`
+Chulhee Park  
+RCIRCUIT / Phase Computing
 
 ---
 
-## FINAL NOTE
+## FINAL FENCE
 
-This repository is intentionally dense.  
-Intentionally selective.  
-Intentionally uncomfortable.
-
-If coherence matters to you, continue.  
-If not, this repository is already working as intended.
-
----
-
-
+If transport does not destroy coherence,
+discard this work.
