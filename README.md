@@ -11,7 +11,7 @@ Does coherence collapse because computation moves?
 
 ---
 
-## HYPOTHESIS (FALSIFIABLE)
+## HYPOTHESIS 
 
 Transport-based state updates destroy long-horizon coherence.  
 Local phase evolution without transport preserves coherence longer.
@@ -92,8 +92,6 @@ RFC-DRE Lite is not implemented here.
 - coherence probes completed
 - no persistence layer
 - no session reconstruction
-
-research only
 
 ---
 
