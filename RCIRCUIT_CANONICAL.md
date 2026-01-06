@@ -157,6 +157,90 @@ RCIRCUIT → RFC-DRE → HROS
 If RCIRCUIT is falsified, all downstream work is void.
 
 ---
+## Cross-Reference Authority Rules
+
+This document is canonically bound with:
+
+- **RCIRCUIT_CANONICAL.md**
+- **RFC-DRE_CANONICAL.md**
+
+The following authority rules are absolute:
+
+### Rule 1 — Causality Order
+RCIRCUIT defines **structural cause**.  
+RFC-DRE defines **observed consequence**.
+
+> Cause always overrides consequence.
+
+If RFC-DRE observations contradict RCIRCUIT results,  
+RFC-DRE is invalid until RCIRCUIT is falsified.
+
+---
+
+### Rule 2 — Failure Propagation
+If RCIRCUIT is falsified:
+- All RFC-DRE claims collapse
+- All HROS-layer interpretations collapse
+- All downstream applications are void
+
+If RFC-DRE is falsified:
+- RCIRCUIT remains valid
+- Measurement strategy must be revised
+
+---
+
+### Rule 3 — No Upward Dependency
+RCIRCUIT **must not** depend on:
+- RFC-DRE metrics
+- HROS narratives
+- Human-centered interpretation
+
+Any reference implying upward dependency is incorrect.
+
+---
+
+### Rule 4 — Repository Authority
+Executable truth lives in:
+- `rcircuit-phase-engine`
+
+Interpretive and measurement logic lives in:
+- `rfc-dre-lite`
+
+Documentation and physics framing live in:
+- `HROS-RCIRCUIT-LAB`
+
+No repository may override another outside this hierarchy.
+
+---
+
+### Rule 5 — External Communication Constraint
+Public claims must follow this order:
+
+RCIRCUIT (structure)  
+→ RFC-DRE (measurement)  
+→ HROS (human meaning)
+
+Any public statement reversing this order is non-canonical.
+
+---
+
+### Rule 6 — Chat Is Not Canon
+Chat logs, threads, or conversations:
+- do not define truth
+- do not override canonical files
+- exist only to generate canonical text
+
+Only committed canonical files define system reality.
+
+---
+
+### Rule 7 — Amendment Rule
+Canonical files may only be modified when:
+1. New executable evidence exists, or
+2. A falsification is demonstrated
+
+Narrative, popularity, or confusion are not valid reasons.
+
 
 ## 9. Current Status (Truth)
 
