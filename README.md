@@ -76,6 +76,13 @@ RFC-DRE Lite is not implemented here.
 
 ---
 
+## REPOSITORY RECOVERY MAP
+
+This is the canonical RCIRCUIT repository.  
+See [REPOSITORY_RECOVERY_MAP.md](REPOSITORY_RECOVERY_MAP.md) for the roles of the canonical engine, supporting lab, experimental scaffold, legacy placeholders, and unrelated practice repositories.
+
+---
+
 ## WHAT THIS IS NOT
 
 - not a product
